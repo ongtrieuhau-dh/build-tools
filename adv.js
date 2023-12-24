@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.0100=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.0104=== */
 (() => {
   var __webpack_modules__ = {
       441: function(e, t, r) {
@@ -1012,7 +1012,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1225.0100]:${e}`)
+              console.log(`[STARTED;1.23.1225.0104]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -1487,7 +1487,7 @@
                   e.error = t, e.errorString = t + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1225.0100"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1225.0104"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -4632,7 +4632,7 @@
         throw e.code = "MODULE_NOT_FOUND", e
       }())))
     } catch (e) {}
-    console.log(`startAt:${n.Time.nowFormatVN()}:${t.basename(__filename)}:${JSON.stringify({__dirname,__filename,"process.cwd()":process.cwd()})}`);
+    console.log(`startAt:${n.Time.nowFormatVN()}:${t.basename(__filename)}:\r\n${JSON.stringify({__dirname,__filename,"process.cwd()":process.cwd()},null,2)}`);
     const i = {
       Deploy_Libraries: "..\\Deploy_Libraries",
       Name: "create option for advanced installer build Hospital Fees",
@@ -4723,4 +4723,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.0100===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.0104===  */

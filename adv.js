@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1427=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1432=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1225.1427]:${e}`)
+              console.log(`[STARTED;1.23.1225.1432]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1225.1427"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1225.1432"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -7879,7 +7879,7 @@
         }
       })(), await (async () => {
         try {
-          let e = a.join(d, c.MainExe)`E:/CLOUDCODE/github.com/o-adv/fees.exe/Fees.exe`;
+          let e = a.join(d, c.MainExe);
           f = await o.getAssemblyFile(e), v = n.Object.GetValueByPathForceString(f, "AssemblyVersion")
         } catch (e) {
           console.error(`error:initializeAssembly:${e.message}`), console.error(`${JSON.stringify(e.message)}`)
@@ -7930,4 +7930,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1427===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1432===  */

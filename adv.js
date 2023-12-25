@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.0104=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1004=== */
 (() => {
   var __webpack_modules__ = {
       441: function(e, t, r) {
@@ -184,14 +184,14 @@
             c = function(e, t, r) {
               var l, u, h, f = e & c.F,
                 p = e & c.G,
-                d = e & c.S,
-                y = e & c.P,
+                y = e & c.S,
+                d = e & c.P,
                 m = e & c.B,
                 g = e & c.W,
                 v = p ? i : i[t] || (i[t] = {}),
-                _ = v[a],
-                S = p ? n : d ? n[t] : (n[t] || {})[a];
-              for (l in p && (r = t), r)(u = !f && S && void 0 !== S[l]) && l in v || (h = u ? S[l] : r[l], v[l] = p && "function" != typeof S[l] ? r[l] : m && u ? o(h, n) : g && S[l] == h ? function(e) {
+                S = v[a],
+                _ = p ? n : y ? n[t] : (n[t] || {})[a];
+              for (l in p && (r = t), r)(u = !f && _ && void 0 !== _[l]) && l in v || (h = u ? _[l] : r[l], v[l] = p && "function" != typeof _[l] ? r[l] : m && u ? o(h, n) : g && _[l] == h ? function(e) {
                 var t = function(t, r, n) {
                   if (this instanceof e) {
                     switch (arguments.length) {
@@ -207,7 +207,7 @@
                   return e.apply(this, arguments)
                 };
                 return t[a] = e[a], t
-              }(h) : y && "function" == typeof h ? o(Function.call, h) : h, y && ((v.virtual || (v.virtual = {}))[l] = h, e & c.R && _ && !_[l] && s(_, l, h)))
+              }(h) : d && "function" == typeof h ? o(Function.call, h) : h, d && ((v.virtual || (v.virtual = {}))[l] = h, e & c.R && S && !S[l] && s(S, l, h)))
             };
           c.F = 1, c.G = 2, c.S = 4, c.P = 8, c.B = 16, c.W = 32, c.U = 64, c.R = 128, e.exports = c
         }, function(e, t) {
@@ -241,18 +241,18 @@
             h = r(52),
             f = r(1)("iterator"),
             p = !([].keys && "next" in [].keys()),
-            d = "@@iterator",
-            y = "keys",
+            y = "@@iterator",
+            d = "keys",
             m = "values",
             g = function() {
               return this
             };
-          e.exports = function(e, t, r, v, _, S, w) {
+          e.exports = function(e, t, r, v, S, _, b) {
             l(r, t, v);
-            var b, E, A, x = function(e) {
-                if (!p && e in I) return I[e];
+            var w, A, E, x = function(e) {
+                if (!p && e in F) return F[e];
                 switch (e) {
-                  case y:
+                  case d:
                   case m:
                     return function() {
                       return new r(this, e)
@@ -262,25 +262,25 @@
                   return new r(this, e)
                 }
               },
-              B = t + " Iterator",
-              O = _ == m,
-              N = !1,
-              I = e.prototype,
-              C = I[f] || I[d] || _ && I[_],
-              F = C || x(_),
-              R = _ ? O ? x("entries") : F : void 0,
-              P = "Array" == t && I.entries || C;
-            if (P && (A = h(P.call(new e))) !== Object.prototype && (u(A, B, !0), n || a(A, f) || s(A, f, g)), O && C && C.name !== m && (N = !0, F = function() {
-                return C.call(this)
-              }), n && !w || !p && !N && I[f] || s(I, f, F), c[t] = F, c[B] = g, _)
-              if (b = {
-                  values: O ? F : x(m),
-                  keys: S ? F : x(y),
-                  entries: R
-                }, w)
-                for (E in b) E in I || o(I, E, b[E]);
-              else i(i.P + i.F * (p || N), t, b);
-            return b
+              N = t + " Iterator",
+              B = S == m,
+              O = !1,
+              F = e.prototype,
+              I = F[f] || F[y] || S && F[S],
+              C = I || x(S),
+              P = S ? B ? x("entries") : C : void 0,
+              T = "Array" == t && F.entries || I;
+            if (T && (E = h(T.call(new e))) !== Object.prototype && (u(E, N, !0), n || a(E, f) || s(E, f, g)), B && I && I.name !== m && (O = !0, C = function() {
+                return I.call(this)
+              }), n && !b || !p && !O && F[f] || s(F, f, C), c[t] = C, c[N] = g, S)
+              if (w = {
+                  values: B ? C : x(m),
+                  keys: _ ? C : x(d),
+                  entries: P
+                }, b)
+                for (A in w) A in F || o(F, A, w[A]);
+              else i(i.P + i.F * (p || O), t, w);
+            return w
           }
         }, function(e, t) {
           e.exports = !0
@@ -300,8 +300,8 @@
             h = u.process,
             f = u.setImmediate,
             p = u.clearImmediate,
-            d = u.MessageChannel,
-            y = 0,
+            y = u.MessageChannel,
+            d = 0,
             m = {},
             g = "onreadystatechange",
             v = function() {
@@ -311,21 +311,21 @@
                 delete m[e], t()
               }
             },
-            _ = function(e) {
+            S = function(e) {
               v.call(e.data)
             };
           f && p || (f = function(e) {
             for (var t = [], r = 1; arguments.length > r;) t.push(arguments[r++]);
-            return m[++y] = function() {
+            return m[++d] = function() {
               a("function" == typeof e ? e : Function(e), t)
-            }, n(y), y
+            }, n(d), d
           }, p = function(e) {
             delete m[e]
           }, "process" == r(11)(h) ? n = function(e) {
             h.nextTick(s(v, e, 1))
-          } : d ? (o = (i = new d).port2, i.port1.onmessage = _, n = s(o.postMessage, o, 1)) : u.addEventListener && "function" == typeof postMessage && !u.importScripts ? (n = function(e) {
+          } : y ? (o = (i = new y).port2, i.port1.onmessage = S, n = s(o.postMessage, o, 1)) : u.addEventListener && "function" == typeof postMessage && !u.importScripts ? (n = function(e) {
             u.postMessage(e + "", "*")
-          }, u.addEventListener("message", _, !1)) : n = g in l("script") ? function(e) {
+          }, u.addEventListener("message", S, !1)) : n = g in l("script") ? function(e) {
             c.appendChild(l("script"))[g] = function() {
               c.removeChild(this), v.call(e)
             }
@@ -461,18 +461,18 @@
             l = {},
             u = {};
           t = e.exports = function(e, t, r, h, f) {
-            var p, d, y, m, g = f ? function() {
+            var p, y, d, m, g = f ? function() {
                 return e
               } : c(e),
               v = n(r, h, t ? 2 : 1),
-              _ = 0;
+              S = 0;
             if ("function" != typeof g) throw TypeError(e + " is not iterable!");
             if (o(g)) {
-              for (p = a(e.length); p > _; _++)
-                if ((m = t ? v(s(d = e[_])[0], d[1]) : v(e[_])) === l || m === u) return m
+              for (p = a(e.length); p > S; S++)
+                if ((m = t ? v(s(y = e[S])[0], y[1]) : v(e[S])) === l || m === u) return m
             } else
-              for (y = g.call(e); !(d = y.next()).done;)
-                if ((m = i(y, v, d.value, t)) === l || m === u) return m
+              for (d = g.call(e); !(y = d.next()).done;)
+                if ((m = i(d, v, y.value, t)) === l || m === u) return m
           }, t.BREAK = l, t.RETURN = u
         }, function(e, t) {
           e.exports = function(e, t, r) {
@@ -782,43 +782,43 @@
             h = r(9),
             f = (r(3), r(14)),
             p = r(38),
-            d = r(40),
-            y = (r(58).set, r(60)),
+            y = r(40),
+            d = (r(58).set, r(60)),
             m = r(30).set,
             g = r(48)(),
             v = "Promise",
-            _ = a.TypeError,
-            S = a.process,
-            w = a[v],
-            b = "process" == l(S = a.process),
-            E = function() {},
-            A = !! function() {
+            S = a.TypeError,
+            _ = a.process,
+            b = a[v],
+            w = "process" == l(_ = a.process),
+            A = function() {},
+            E = !! function() {
               try {
-                var e = w.resolve(1),
+                var e = b.resolve(1),
                   t = (e.constructor = {})[r(1)("species")] = function(e) {
-                    e(E, E)
+                    e(A, A)
                   };
-                return (b || "function" == typeof PromiseRejectionEvent) && e.then(E) instanceof t
+                return (w || "function" == typeof PromiseRejectionEvent) && e.then(A) instanceof t
               } catch (e) {}
             }(),
             x = function(e, t) {
-              return e === t || e === w && t === o
+              return e === t || e === b && t === o
             },
-            B = function(e) {
+            N = function(e) {
               var t;
               return !(!h(e) || "function" != typeof(t = e.then)) && t
             },
-            O = function(e) {
-              return x(w, e) ? new N(e) : new i(e)
+            B = function(e) {
+              return x(b, e) ? new O(e) : new i(e)
             },
-            N = i = function(e) {
+            O = i = function(e) {
               var t, r;
               this.promise = new e((function(e, n) {
-                if (void 0 !== t || void 0 !== r) throw _("Bad Promise constructor");
+                if (void 0 !== t || void 0 !== r) throw S("Bad Promise constructor");
                 t = e, r = n
               })), this.resolve = f(t), this.reject = f(r)
             },
-            I = function(e) {
+            F = function(e) {
               try {
                 e()
               } catch (e) {
@@ -827,7 +827,7 @@
                 }
               }
             },
-            C = function(e, t) {
+            I = function(e, t) {
               if (!e._n) {
                 e._n = !0;
                 var r = e._c;
@@ -838,116 +838,116 @@
                         c = t.reject,
                         l = t.domain;
                       try {
-                        s ? (i || (2 == e._h && P(e), e._h = 1), !0 === s ? r = n : (l && l.enter(), r = s(n), l && l.exit()), r === t.promise ? c(_("Promise-chain cycle")) : (o = B(r)) ? o.call(r, a, c) : a(r)) : c(n)
+                        s ? (i || (2 == e._h && T(e), e._h = 1), !0 === s ? r = n : (l && l.enter(), r = s(n), l && l.exit()), r === t.promise ? c(S("Promise-chain cycle")) : (o = N(r)) ? o.call(r, a, c) : a(r)) : c(n)
                       } catch (e) {
                         c(e)
                       }
                     }; r.length > o;) s(r[o++]);
-                  e._c = [], e._n = !1, t && !e._h && F(e)
+                  e._c = [], e._n = !1, t && !e._h && C(e)
                 }))
               }
             },
-            F = function(e) {
+            C = function(e) {
               m.call(a, (function() {
                 var t, r, n, i = e._v;
-                if (R(e) && (t = I((function() {
-                    b ? S.emit("unhandledRejection", i, e) : (r = a.onunhandledrejection) ? r({
+                if (P(e) && (t = F((function() {
+                    w ? _.emit("unhandledRejection", i, e) : (r = a.onunhandledrejection) ? r({
                       promise: e,
                       reason: i
                     }) : (n = a.console) && n.error && n.error("Unhandled promise rejection", i)
-                  })), e._h = b || R(e) ? 2 : 1), e._a = void 0, t) throw t.error
+                  })), e._h = w || P(e) ? 2 : 1), e._a = void 0, t) throw t.error
               }))
             },
-            R = function(e) {
+            P = function(e) {
               if (1 == e._h) return !1;
               for (var t, r = e._a || e._c, n = 0; r.length > n;)
-                if ((t = r[n++]).fail || !R(t.promise)) return !1;
+                if ((t = r[n++]).fail || !P(t.promise)) return !1;
               return !0
             },
-            P = function(e) {
+            T = function(e) {
               m.call(a, (function() {
                 var t;
-                b ? S.emit("rejectionHandled", e) : (t = a.onrejectionhandled) && t({
+                w ? _.emit("rejectionHandled", e) : (t = a.onrejectionhandled) && t({
                   promise: e,
                   reason: e._v
                 })
               }))
             },
-            T = function(e) {
+            R = function(e) {
               var t = this;
-              t._d || (t._d = !0, (t = t._w || t)._v = e, t._s = 2, t._a || (t._a = t._c.slice()), C(t, !0))
+              t._d || (t._d = !0, (t = t._w || t)._v = e, t._s = 2, t._a || (t._a = t._c.slice()), I(t, !0))
             },
             k = function(e) {
               var t, r = this;
               if (!r._d) {
                 r._d = !0, r = r._w || r;
                 try {
-                  if (r === e) throw _("Promise can't be resolved itself");
-                  (t = B(e)) ? g((function() {
+                  if (r === e) throw S("Promise can't be resolved itself");
+                  (t = N(e)) ? g((function() {
                     var n = {
                       _w: r,
                       _d: !1
                     };
                     try {
-                      t.call(e, c(k, n, 1), c(T, n, 1))
+                      t.call(e, c(k, n, 1), c(R, n, 1))
                     } catch (e) {
-                      T.call(n, e)
+                      R.call(n, e)
                     }
-                  })): (r._v = e, r._s = 1, C(r, !1))
+                  })): (r._v = e, r._s = 1, I(r, !1))
                 } catch (e) {
-                  T.call({
+                  R.call({
                     _w: r,
                     _d: !1
                   }, e)
                 }
               }
             };
-          A || (w = function(e) {
-            p(this, w, v, "_h"), f(e), n.call(this);
+          E || (b = function(e) {
+            p(this, b, v, "_h"), f(e), n.call(this);
             try {
-              e(c(k, this, 1), c(T, this, 1))
+              e(c(k, this, 1), c(R, this, 1))
             } catch (e) {
-              T.call(this, e)
+              R.call(this, e)
             }
           }, (n = function(e) {
             this._c = [], this._a = void 0, this._s = 0, this._d = !1, this._v = void 0, this._h = 0, this._n = !1
-          }).prototype = r(56)(w.prototype, {
+          }).prototype = r(56)(b.prototype, {
             then: function(e, t) {
-              var r = O(y(this, w));
-              return r.ok = "function" != typeof e || e, r.fail = "function" == typeof t && t, r.domain = b ? S.domain : void 0, this._c.push(r), this._a && this._a.push(r), this._s && C(this, !1), r.promise
+              var r = B(d(this, b));
+              return r.ok = "function" != typeof e || e, r.fail = "function" == typeof t && t, r.domain = w ? _.domain : void 0, this._c.push(r), this._a && this._a.push(r), this._s && I(this, !1), r.promise
             },
             catch: function(e) {
               return this.then(void 0, e)
             }
-          }), N = function() {
+          }), O = function() {
             var e = new n;
-            this.promise = e, this.resolve = c(k, e, 1), this.reject = c(T, e, 1)
-          }), u(u.G + u.W + u.F * !A, {
-            Promise: w
-          }), r(18)(w, v), r(59)(v), o = r(6)[v], u(u.S + u.F * !A, v, {
+            this.promise = e, this.resolve = c(k, e, 1), this.reject = c(R, e, 1)
+          }), u(u.G + u.W + u.F * !E, {
+            Promise: b
+          }), r(18)(b, v), r(59)(v), o = r(6)[v], u(u.S + u.F * !E, v, {
             reject: function(e) {
-              var t = O(this);
+              var t = B(this);
               return (0, t.reject)(e), t.promise
             }
-          }), u(u.S + u.F * (s || !A), v, {
+          }), u(u.S + u.F * (s || !E), v, {
             resolve: function(e) {
-              if (e instanceof w && x(e.constructor, this)) return e;
-              var t = O(this);
+              if (e instanceof b && x(e.constructor, this)) return e;
+              var t = B(this);
               return (0, t.resolve)(e), t.promise
             }
-          }), u(u.S + u.F * !(A && r(46)((function(e) {
-            w.all(e).catch(E)
+          }), u(u.S + u.F * !(E && r(46)((function(e) {
+            b.all(e).catch(A)
           }))), v, {
             all: function(e) {
               var t = this,
-                r = O(t),
+                r = B(t),
                 n = r.resolve,
                 i = r.reject,
-                o = I((function() {
+                o = F((function() {
                   var r = [],
                     o = 0,
                     s = 1;
-                  d(e, !1, (function(e) {
+                  y(e, !1, (function(e) {
                     var a = o++,
                       c = !1;
                     r.push(void 0), s++, t.resolve(e).then((function(e) {
@@ -959,10 +959,10 @@
             },
             race: function(e) {
               var t = this,
-                r = O(t),
+                r = B(t),
                 n = r.reject,
-                i = I((function() {
-                  d(e, !1, (function(e) {
+                i = F((function() {
+                  y(e, !1, (function(e) {
                     t.resolve(e).then(r.resolve, n)
                   }))
                 }));
@@ -1012,7 +1012,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1225.0104]:${e}`)
+              console.log(`[STARTED;1.23.1225.1004]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -1487,7 +1487,7 @@
                   e.error = t, e.errorString = t + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1225.0104"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1225.1004"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -1599,8 +1599,8 @@
                 }
                 var n, i, o, s, a, c, l, u, h, f = new Array(80),
                   p = 1732584193,
-                  d = 4023233417,
-                  y = 2562383102,
+                  y = 4023233417,
+                  d = 2562383102,
                   m = 271733878,
                   g = 3285377520,
                   v = (e = function(e) {
@@ -1611,8 +1611,8 @@
                     }
                     return t
                   }(e)).length,
-                  _ = new Array;
-                for (i = 0; i < v - 3; i += 4) o = e.charCodeAt(i) << 24 | e.charCodeAt(i + 1) << 16 | e.charCodeAt(i + 2) << 8 | e.charCodeAt(i + 3), _.push(o);
+                  S = new Array;
+                for (i = 0; i < v - 3; i += 4) o = e.charCodeAt(i) << 24 | e.charCodeAt(i + 1) << 16 | e.charCodeAt(i + 2) << 8 | e.charCodeAt(i + 3), S.push(o);
                 switch (v % 4) {
                   case 0:
                     i = 2147483648;
@@ -1626,17 +1626,17 @@
                   case 3:
                     i = e.charCodeAt(v - 3) << 24 | e.charCodeAt(v - 2) << 16 | e.charCodeAt(v - 1) << 8 | 128
                 }
-                for (_.push(i); _.length % 16 != 14;) _.push(0);
-                for (_.push(v >>> 29), _.push(v << 3 & 4294967295), n = 0; n < _.length; n += 16) {
-                  for (i = 0; i < 16; i++) f[i] = _[n + i];
+                for (S.push(i); S.length % 16 != 14;) S.push(0);
+                for (S.push(v >>> 29), S.push(v << 3 & 4294967295), n = 0; n < S.length; n += 16) {
+                  for (i = 0; i < 16; i++) f[i] = S[n + i];
                   for (i = 16; i <= 79; i++) f[i] = t(f[i - 3] ^ f[i - 8] ^ f[i - 14] ^ f[i - 16], 1);
-                  for (s = p, a = d, c = y, l = m, u = g, i = 0; i <= 19; i++) h = t(s, 5) + (a & c | ~a & l) + u + f[i] + 1518500249 & 4294967295, u = l, l = c, c = t(a, 30), a = s, s = h;
+                  for (s = p, a = y, c = d, l = m, u = g, i = 0; i <= 19; i++) h = t(s, 5) + (a & c | ~a & l) + u + f[i] + 1518500249 & 4294967295, u = l, l = c, c = t(a, 30), a = s, s = h;
                   for (i = 20; i <= 39; i++) h = t(s, 5) + (a ^ c ^ l) + u + f[i] + 1859775393 & 4294967295, u = l, l = c, c = t(a, 30), a = s, s = h;
                   for (i = 40; i <= 59; i++) h = t(s, 5) + (a & c | a & l | c & l) + u + f[i] + 2400959708 & 4294967295, u = l, l = c, c = t(a, 30), a = s, s = h;
                   for (i = 60; i <= 79; i++) h = t(s, 5) + (a ^ c ^ l) + u + f[i] + 3395469782 & 4294967295, u = l, l = c, c = t(a, 30), a = s, s = h;
-                  p = p + s & 4294967295, d = d + a & 4294967295, y = y + c & 4294967295, m = m + l & 4294967295, g = g + u & 4294967295
+                  p = p + s & 4294967295, y = y + a & 4294967295, d = d + c & 4294967295, m = m + l & 4294967295, g = g + u & 4294967295
                 }
-                return (h = r(p) + r(d) + r(y) + r(m) + r(g)).toLowerCase()
+                return (h = r(p) + r(y) + r(d) + r(m) + r(g)).toLowerCase()
               },
               t = (() => {
                 function e(e, t) {
@@ -2096,29 +2096,44 @@
               arrIgnoreNames: r = [],
               arrExtensions: s = [],
               arrIgnoreExtensions: a = [],
-              arrFileNames: c = []
+              arrFileNames: c = [],
+              arrIgnoreStartwithNames: l = []
             } = {}) => {
-              let l = [];
-              const u = n.readdirSync(e, {
+              let u = [];
+              const h = n.readdirSync(e, {
                 withFileTypes: !0
               });
-              for (const n of u) {
-                if (!0 === !(Array.isArray(r) && r.includes(n.name))) {
-                  let u = i.join(e, n.name);
-                  if (n.isDirectory()) l = [...l, ...await t(`${u}`, {
+              for (const n of h) {
+                let h = !(Array.isArray(r) && r.includes(n.name));
+                if (!0 === h && Array.isArray(l))
+                  for (let e = 0; e < l.length; e++) {
+                    let t = l[e];
+                    if (console.log({
+                        "item.name.startsWith(itemStartWith) === true)": !0 === n.name.startsWith(t),
+                        arrIgnoreStartwithNames: l,
+                        item: n
+                      }), !0 === n.name.startsWith(t)) {
+                      h = !1;
+                      break
+                    }
+                  }
+                if (!0 === h) {
+                  let h = i.join(e, n.name);
+                  if (n.isDirectory()) u = [...u, ...await t(`${h}`, {
                     arrIgnoreNames: r,
                     arrExtensions: s,
                     arrIgnoreExtensions: a,
-                    arrFileNames: c
+                    arrFileNames: c,
+                    arrIgnoreStartwithNames: l
                   })];
                   else {
                     let e = o.String.getFileExtension(n.name),
                       t = !0;
-                    t && o.Type.IsArrayNotEmpty(s) && !1 === s.includes(e) && (t = !1), t && o.Type.IsArrayNotEmpty(a) && !0 === a.includes(e) && (t = !1), t && o.Type.IsArrayNotEmpty(c) && !1 === c.includes(n.name) && (t = !1), t && l.push(`${u}`)
+                    t && o.Type.IsArrayNotEmpty(s) && !1 === s.includes(e) && (t = !1), t && o.Type.IsArrayNotEmpty(a) && !0 === a.includes(e) && (t = !1), t && o.Type.IsArrayNotEmpty(c) && !1 === c.includes(n.name) && (t = !1), t && u.push(`${h}`)
                   }
                 }
               }
-              return l
+              return u
             };
             return {
               copyRecursiveSync: e,
@@ -2399,12 +2414,12 @@
                       f = i.join(s, `spawnBG.out-${e}-.log`), p = i.join(s, `spawnBG.err-${e}-.log`), void 0 === u && (u = n.openSync(f, "a")), void 0 === h && (h = n.openSync(p, "a"))
                     }
                   })();
-                  let d = {
+                  let y = {
                     detached: !0,
                     stdio: ["inherit", u, h]
                   };
-                  const y = c.spawn(e, t, d);
-                  return y.unref(), y
+                  const d = c.spawn(e, t, y);
+                  return d.unref(), d
                 } catch (e) {
                   throw e
                 } finally {
@@ -2413,13 +2428,13 @@
               }
             }
           })(),
-          d = {
+          y = {
             createSignature: (e, t) => {
               const r = s.createSign("RSA-SHA1");
               return r.write(e), r.end(), r.sign(t, "base64")
             }
           },
-          y = {
+          d = {
             copyString: e => {
               c.spawn("clip").stdin.end(e)
             }
@@ -2485,8 +2500,8 @@
             }
           },
           rChild_process: p,
-          SignData: d,
-          Clipboard: y,
+          SignData: y,
+          Clipboard: d,
           rfsUtf8: u,
           OnRunning: m,
           _LOG: (e = {}) => {
@@ -2517,20 +2532,20 @@
             var r = 0,
               n = 0;
             for (t = 0; t < 256; t++) {
-              var d = n ^ n << 1 ^ n << 2 ^ n << 3 ^ n << 4;
-              d = d >>> 8 ^ 255 & d ^ 99, i[r] = d, o[d] = r;
-              var y = e[r],
-                m = e[y],
+              var y = n ^ n << 1 ^ n << 2 ^ n << 3 ^ n << 4;
+              y = y >>> 8 ^ 255 & y ^ 99, i[r] = y, o[y] = r;
+              var d = e[r],
+                m = e[d],
                 g = e[m],
-                v = 257 * e[d] ^ 16843008 * d;
-              s[r] = v << 24 | v >>> 8, a[r] = v << 16 | v >>> 16, c[r] = v << 8 | v >>> 24, l[r] = v, v = 16843009 * g ^ 65537 * m ^ 257 * y ^ 16843008 * r, u[d] = v << 24 | v >>> 8, h[d] = v << 16 | v >>> 16, f[d] = v << 8 | v >>> 24, p[d] = v, r ? (r = y ^ e[e[e[g ^ y]]], n ^= e[e[n]]) : r = n = 1
+                v = 257 * e[y] ^ 16843008 * y;
+              s[r] = v << 24 | v >>> 8, a[r] = v << 16 | v >>> 16, c[r] = v << 8 | v >>> 24, l[r] = v, v = 16843009 * g ^ 65537 * m ^ 257 * d ^ 16843008 * r, u[y] = v << 24 | v >>> 8, h[y] = v << 16 | v >>> 16, f[y] = v << 8 | v >>> 24, p[y] = v, r ? (r = d ^ e[e[e[g ^ d]]], n ^= e[e[n]]) : r = n = 1
             }
           }();
-          var d = [0, 1, 2, 4, 8, 16, 32, 64, 128, 27, 54],
-            y = r.AES = t.extend({
+          var y = [0, 1, 2, 4, 8, 16, 32, 64, 128, 27, 54],
+            d = r.AES = t.extend({
               _doReset: function() {
                 if (!this._nRounds || this._keyPriorReset !== this._key) {
-                  for (var e = this._keyPriorReset = this._key, t = e.words, r = e.sigBytes / 4, n = 4 * ((this._nRounds = r + 6) + 1), o = this._keySchedule = [], s = 0; s < n; s++) s < r ? o[s] = t[s] : (l = o[s - 1], s % r ? r > 6 && s % r == 4 && (l = i[l >>> 24] << 24 | i[l >>> 16 & 255] << 16 | i[l >>> 8 & 255] << 8 | i[255 & l]) : (l = i[(l = l << 8 | l >>> 24) >>> 24] << 24 | i[l >>> 16 & 255] << 16 | i[l >>> 8 & 255] << 8 | i[255 & l], l ^= d[s / r | 0] << 24), o[s] = o[s - r] ^ l);
+                  for (var e = this._keyPriorReset = this._key, t = e.words, r = e.sigBytes / 4, n = 4 * ((this._nRounds = r + 6) + 1), o = this._keySchedule = [], s = 0; s < n; s++) s < r ? o[s] = t[s] : (l = o[s - 1], s % r ? r > 6 && s % r == 4 && (l = i[l >>> 24] << 24 | i[l >>> 16 & 255] << 16 | i[l >>> 8 & 255] << 8 | i[255 & l]) : (l = i[(l = l << 8 | l >>> 24) >>> 24] << 24 | i[l >>> 16 & 255] << 16 | i[l >>> 8 & 255] << 8 | i[255 & l], l ^= y[s / r | 0] << 24), o[s] = o[s - r] ^ l);
                   for (var a = this._invKeySchedule = [], c = 0; c < n; c++) {
                     if (s = n - c, c % 4) var l = o[s];
                     else l = o[s - 4];
@@ -2546,18 +2561,18 @@
                 e[t + 1] = e[t + 3], e[t + 3] = r, this._doCryptBlock(e, t, this._invKeySchedule, u, h, f, p, o), r = e[t + 1], e[t + 1] = e[t + 3], e[t + 3] = r
               },
               _doCryptBlock: function(e, t, r, n, i, o, s, a) {
-                for (var c = this._nRounds, l = e[t] ^ r[0], u = e[t + 1] ^ r[1], h = e[t + 2] ^ r[2], f = e[t + 3] ^ r[3], p = 4, d = 1; d < c; d++) {
-                  var y = n[l >>> 24] ^ i[u >>> 16 & 255] ^ o[h >>> 8 & 255] ^ s[255 & f] ^ r[p++],
+                for (var c = this._nRounds, l = e[t] ^ r[0], u = e[t + 1] ^ r[1], h = e[t + 2] ^ r[2], f = e[t + 3] ^ r[3], p = 4, y = 1; y < c; y++) {
+                  var d = n[l >>> 24] ^ i[u >>> 16 & 255] ^ o[h >>> 8 & 255] ^ s[255 & f] ^ r[p++],
                     m = n[u >>> 24] ^ i[h >>> 16 & 255] ^ o[f >>> 8 & 255] ^ s[255 & l] ^ r[p++],
                     g = n[h >>> 24] ^ i[f >>> 16 & 255] ^ o[l >>> 8 & 255] ^ s[255 & u] ^ r[p++],
                     v = n[f >>> 24] ^ i[l >>> 16 & 255] ^ o[u >>> 8 & 255] ^ s[255 & h] ^ r[p++];
-                  l = y, u = m, h = g, f = v
+                  l = d, u = m, h = g, f = v
                 }
-                y = (a[l >>> 24] << 24 | a[u >>> 16 & 255] << 16 | a[h >>> 8 & 255] << 8 | a[255 & f]) ^ r[p++], m = (a[u >>> 24] << 24 | a[h >>> 16 & 255] << 16 | a[f >>> 8 & 255] << 8 | a[255 & l]) ^ r[p++], g = (a[h >>> 24] << 24 | a[f >>> 16 & 255] << 16 | a[l >>> 8 & 255] << 8 | a[255 & u]) ^ r[p++], v = (a[f >>> 24] << 24 | a[l >>> 16 & 255] << 16 | a[u >>> 8 & 255] << 8 | a[255 & h]) ^ r[p++], e[t] = y, e[t + 1] = m, e[t + 2] = g, e[t + 3] = v
+                d = (a[l >>> 24] << 24 | a[u >>> 16 & 255] << 16 | a[h >>> 8 & 255] << 8 | a[255 & f]) ^ r[p++], m = (a[u >>> 24] << 24 | a[h >>> 16 & 255] << 16 | a[f >>> 8 & 255] << 8 | a[255 & l]) ^ r[p++], g = (a[h >>> 24] << 24 | a[f >>> 16 & 255] << 16 | a[l >>> 8 & 255] << 8 | a[255 & u]) ^ r[p++], v = (a[f >>> 24] << 24 | a[l >>> 16 & 255] << 16 | a[u >>> 8 & 255] << 8 | a[255 & h]) ^ r[p++], e[t] = d, e[t + 1] = m, e[t + 2] = g, e[t + 3] = v
               },
               keySize: 8
             });
-          e.AES = t._createHelper(y)
+          e.AES = t._createHelper(d)
         }(), n.AES)
       },
       458: function(e, t, r) {
@@ -2597,7 +2612,7 @@
               _DEC_XFORM_MODE: 2,
               _createHelper: function() {
                 function e(e) {
-                  return "string" == typeof e ? _ : g
+                  return "string" == typeof e ? S : g
                 }
                 return function(t) {
                   return {
@@ -2651,7 +2666,7 @@
                 }
               }), t
             }(),
-            d = (t.pad = {}).Pkcs7 = {
+            y = (t.pad = {}).Pkcs7 = {
               pad: function(e, t) {
                 for (var r = 4 * t, n = r - e.sigBytes % r, i = n << 24 | n << 16 | n << 8 | n, s = [], a = 0; a < n; a += 4) s.push(i);
                 var c = o.create(s, n);
@@ -2662,10 +2677,10 @@
                 e.sigBytes -= t
               }
             },
-            y = (r.BlockCipher = u.extend({
+            d = (r.BlockCipher = u.extend({
               cfg: u.cfg.extend({
                 mode: p,
-                padding: d
+                padding: y
               }),
               reset: function() {
                 var e;
@@ -2700,7 +2715,7 @@
               parse: function(e) {
                 var t, r = c.parse(e),
                   n = r.words;
-                return 1398893684 == n[0] && 1701076831 == n[1] && (t = o.create(n.slice(2, 4)), n.splice(0, 4), r.sigBytes -= 16), y.create({
+                return 1398893684 == n[0] && 1701076831 == n[1] && (t = o.create(n.slice(2, 4)), n.splice(0, 4), r.sigBytes -= 16), d.create({
                   ciphertext: r,
                   salt: t
                 })
@@ -2715,7 +2730,7 @@
                 var i = e.createEncryptor(r, n),
                   o = i.finalize(t),
                   s = i.cfg;
-                return y.create({
+                return d.create({
                   ciphertext: o,
                   key: r,
                   iv: s.iv,
@@ -2740,14 +2755,14 @@
                     keySize: t + r
                   }).compute(e, n),
                   s = o.create(i.words.slice(t), 4 * r);
-                return i.sigBytes = 4 * t, y.create({
+                return i.sigBytes = 4 * t, d.create({
                   key: i,
                   iv: s,
                   salt: n
                 })
               }
             },
-            _ = r.PasswordBasedCipher = g.extend({
+            S = r.PasswordBasedCipher = g.extend({
               cfg: g.cfg.extend({
                 kdf: v
               }),
@@ -2885,7 +2900,7 @@
                 return f.parse(unescape(encodeURIComponent(e)))
               }
             },
-            d = a.BufferedBlockAlgorithm = c.extend({
+            y = a.BufferedBlockAlgorithm = c.extend({
               reset: function() {
                 this._data = new l.init, this._nDataBytes = 0
               },
@@ -2912,13 +2927,13 @@
               },
               _minBufferSize: 0
             }),
-            y = (a.Hasher = d.extend({
+            d = (a.Hasher = y.extend({
               cfg: c.extend(),
               init: function(e) {
                 this.cfg = this.cfg.extend(e), this.reset()
               },
               reset: function() {
-                d.reset.call(this), this._doReset()
+                y.reset.call(this), this._doReset()
               },
               update: function(e) {
                 return this._append(e), this._process(), this
@@ -2934,7 +2949,7 @@
               },
               _createHmacHelper: function(e) {
                 return function(t, r) {
-                  return new y.HMAC.init(e, r).finalize(t)
+                  return new d.HMAC.init(e, r).finalize(t)
                 }
               }
             }), s.algo = {});
@@ -3175,24 +3190,24 @@
                 s = e[t + 0],
                 c = e[t + 1],
                 p = e[t + 2],
-                d = e[t + 3],
-                y = e[t + 4],
+                y = e[t + 3],
+                d = e[t + 4],
                 m = e[t + 5],
                 g = e[t + 6],
                 v = e[t + 7],
-                _ = e[t + 8],
-                S = e[t + 9],
-                w = e[t + 10],
-                b = e[t + 11],
-                E = e[t + 12],
-                A = e[t + 13],
+                S = e[t + 8],
+                _ = e[t + 9],
+                b = e[t + 10],
+                w = e[t + 11],
+                A = e[t + 12],
+                E = e[t + 13],
                 x = e[t + 14],
-                B = e[t + 15],
-                O = o[0],
-                N = o[1],
-                I = o[2],
-                C = o[3];
-              O = l(O, N, I, C, s, 7, a[0]), C = l(C, O, N, I, c, 12, a[1]), I = l(I, C, O, N, p, 17, a[2]), N = l(N, I, C, O, d, 22, a[3]), O = l(O, N, I, C, y, 7, a[4]), C = l(C, O, N, I, m, 12, a[5]), I = l(I, C, O, N, g, 17, a[6]), N = l(N, I, C, O, v, 22, a[7]), O = l(O, N, I, C, _, 7, a[8]), C = l(C, O, N, I, S, 12, a[9]), I = l(I, C, O, N, w, 17, a[10]), N = l(N, I, C, O, b, 22, a[11]), O = l(O, N, I, C, E, 7, a[12]), C = l(C, O, N, I, A, 12, a[13]), I = l(I, C, O, N, x, 17, a[14]), O = u(O, N = l(N, I, C, O, B, 22, a[15]), I, C, c, 5, a[16]), C = u(C, O, N, I, g, 9, a[17]), I = u(I, C, O, N, b, 14, a[18]), N = u(N, I, C, O, s, 20, a[19]), O = u(O, N, I, C, m, 5, a[20]), C = u(C, O, N, I, w, 9, a[21]), I = u(I, C, O, N, B, 14, a[22]), N = u(N, I, C, O, y, 20, a[23]), O = u(O, N, I, C, S, 5, a[24]), C = u(C, O, N, I, x, 9, a[25]), I = u(I, C, O, N, d, 14, a[26]), N = u(N, I, C, O, _, 20, a[27]), O = u(O, N, I, C, A, 5, a[28]), C = u(C, O, N, I, p, 9, a[29]), I = u(I, C, O, N, v, 14, a[30]), O = h(O, N = u(N, I, C, O, E, 20, a[31]), I, C, m, 4, a[32]), C = h(C, O, N, I, _, 11, a[33]), I = h(I, C, O, N, b, 16, a[34]), N = h(N, I, C, O, x, 23, a[35]), O = h(O, N, I, C, c, 4, a[36]), C = h(C, O, N, I, y, 11, a[37]), I = h(I, C, O, N, v, 16, a[38]), N = h(N, I, C, O, w, 23, a[39]), O = h(O, N, I, C, A, 4, a[40]), C = h(C, O, N, I, s, 11, a[41]), I = h(I, C, O, N, d, 16, a[42]), N = h(N, I, C, O, g, 23, a[43]), O = h(O, N, I, C, S, 4, a[44]), C = h(C, O, N, I, E, 11, a[45]), I = h(I, C, O, N, B, 16, a[46]), O = f(O, N = h(N, I, C, O, p, 23, a[47]), I, C, s, 6, a[48]), C = f(C, O, N, I, v, 10, a[49]), I = f(I, C, O, N, x, 15, a[50]), N = f(N, I, C, O, m, 21, a[51]), O = f(O, N, I, C, E, 6, a[52]), C = f(C, O, N, I, d, 10, a[53]), I = f(I, C, O, N, w, 15, a[54]), N = f(N, I, C, O, c, 21, a[55]), O = f(O, N, I, C, _, 6, a[56]), C = f(C, O, N, I, B, 10, a[57]), I = f(I, C, O, N, g, 15, a[58]), N = f(N, I, C, O, A, 21, a[59]), O = f(O, N, I, C, y, 6, a[60]), C = f(C, O, N, I, b, 10, a[61]), I = f(I, C, O, N, p, 15, a[62]), N = f(N, I, C, O, S, 21, a[63]), o[0] = o[0] + O | 0, o[1] = o[1] + N | 0, o[2] = o[2] + I | 0, o[3] = o[3] + C | 0
+                N = e[t + 15],
+                B = o[0],
+                O = o[1],
+                F = o[2],
+                I = o[3];
+              B = l(B, O, F, I, s, 7, a[0]), I = l(I, B, O, F, c, 12, a[1]), F = l(F, I, B, O, p, 17, a[2]), O = l(O, F, I, B, y, 22, a[3]), B = l(B, O, F, I, d, 7, a[4]), I = l(I, B, O, F, m, 12, a[5]), F = l(F, I, B, O, g, 17, a[6]), O = l(O, F, I, B, v, 22, a[7]), B = l(B, O, F, I, S, 7, a[8]), I = l(I, B, O, F, _, 12, a[9]), F = l(F, I, B, O, b, 17, a[10]), O = l(O, F, I, B, w, 22, a[11]), B = l(B, O, F, I, A, 7, a[12]), I = l(I, B, O, F, E, 12, a[13]), F = l(F, I, B, O, x, 17, a[14]), B = u(B, O = l(O, F, I, B, N, 22, a[15]), F, I, c, 5, a[16]), I = u(I, B, O, F, g, 9, a[17]), F = u(F, I, B, O, w, 14, a[18]), O = u(O, F, I, B, s, 20, a[19]), B = u(B, O, F, I, m, 5, a[20]), I = u(I, B, O, F, b, 9, a[21]), F = u(F, I, B, O, N, 14, a[22]), O = u(O, F, I, B, d, 20, a[23]), B = u(B, O, F, I, _, 5, a[24]), I = u(I, B, O, F, x, 9, a[25]), F = u(F, I, B, O, y, 14, a[26]), O = u(O, F, I, B, S, 20, a[27]), B = u(B, O, F, I, E, 5, a[28]), I = u(I, B, O, F, p, 9, a[29]), F = u(F, I, B, O, v, 14, a[30]), B = h(B, O = u(O, F, I, B, A, 20, a[31]), F, I, m, 4, a[32]), I = h(I, B, O, F, S, 11, a[33]), F = h(F, I, B, O, w, 16, a[34]), O = h(O, F, I, B, x, 23, a[35]), B = h(B, O, F, I, c, 4, a[36]), I = h(I, B, O, F, d, 11, a[37]), F = h(F, I, B, O, v, 16, a[38]), O = h(O, F, I, B, b, 23, a[39]), B = h(B, O, F, I, E, 4, a[40]), I = h(I, B, O, F, s, 11, a[41]), F = h(F, I, B, O, y, 16, a[42]), O = h(O, F, I, B, g, 23, a[43]), B = h(B, O, F, I, _, 4, a[44]), I = h(I, B, O, F, A, 11, a[45]), F = h(F, I, B, O, N, 16, a[46]), B = f(B, O = h(O, F, I, B, p, 23, a[47]), F, I, s, 6, a[48]), I = f(I, B, O, F, v, 10, a[49]), F = f(F, I, B, O, x, 15, a[50]), O = f(O, F, I, B, m, 21, a[51]), B = f(B, O, F, I, A, 6, a[52]), I = f(I, B, O, F, y, 10, a[53]), F = f(F, I, B, O, b, 15, a[54]), O = f(O, F, I, B, c, 21, a[55]), B = f(B, O, F, I, S, 6, a[56]), I = f(I, B, O, F, N, 10, a[57]), F = f(F, I, B, O, g, 15, a[58]), O = f(O, F, I, B, E, 21, a[59]), B = f(B, O, F, I, d, 6, a[60]), I = f(I, B, O, F, w, 10, a[61]), F = f(F, I, B, O, p, 15, a[62]), O = f(O, F, I, B, _, 21, a[63]), o[0] = o[0] + B | 0, o[1] = o[1] + O | 0, o[2] = o[2] + F | 0, o[3] = o[3] + I | 0
             },
             _doFinalize: function() {
               var t = this._data,
@@ -3417,9 +3432,9 @@
             for (var r = this.cfg, n = l.create(r.hasher, e), i = s.create(), o = s.create([1]), a = i.words, c = o.words, u = r.keySize, h = r.iterations; a.length < u;) {
               var f = n.update(t).finalize(o);
               n.reset();
-              for (var p = f.words, d = p.length, y = f, m = 1; m < h; m++) {
-                y = n.finalize(y), n.reset();
-                for (var g = y.words, v = 0; v < d; v++) p[v] ^= g[v]
+              for (var p = f.words, y = p.length, d = f, m = 1; m < h; m++) {
+                d = n.finalize(d), n.reset();
+                for (var g = d.words, v = 0; v < y; v++) p[v] ^= g[v]
               }
               i.concat(f), c[0]++
             }
@@ -3604,15 +3619,15 @@
                     i = e[n];
                   e[n] = 16711935 & (i << 8 | i >>> 24) | 4278255360 & (i << 24 | i >>> 8)
                 }
-                var o, s, p, S, w, b, E, A, x, B, O, N = this._hash.words,
-                  I = h.words,
-                  C = f.words,
-                  F = a.words,
-                  R = c.words,
-                  P = l.words,
-                  T = u.words;
-                for (b = o = N[0], E = s = N[1], A = p = N[2], x = S = N[3], B = w = N[4], r = 0; r < 80; r += 1) O = o + e[t + F[r]] | 0, O += r < 16 ? d(s, p, S) + I[0] : r < 32 ? y(s, p, S) + I[1] : r < 48 ? m(s, p, S) + I[2] : r < 64 ? g(s, p, S) + I[3] : v(s, p, S) + I[4], O = (O = _(O |= 0, P[r])) + w | 0, o = w, w = S, S = _(p, 10), p = s, s = O, O = b + e[t + R[r]] | 0, O += r < 16 ? v(E, A, x) + C[0] : r < 32 ? g(E, A, x) + C[1] : r < 48 ? m(E, A, x) + C[2] : r < 64 ? y(E, A, x) + C[3] : d(E, A, x) + C[4], O = (O = _(O |= 0, T[r])) + B | 0, b = B, B = x, x = _(A, 10), A = E, E = O;
-                O = N[1] + p + x | 0, N[1] = N[2] + S + B | 0, N[2] = N[3] + w + b | 0, N[3] = N[4] + o + E | 0, N[4] = N[0] + s + A | 0, N[0] = O
+                var o, s, p, _, b, w, A, E, x, N, B, O = this._hash.words,
+                  F = h.words,
+                  I = f.words,
+                  C = a.words,
+                  P = c.words,
+                  T = l.words,
+                  R = u.words;
+                for (w = o = O[0], A = s = O[1], E = p = O[2], x = _ = O[3], N = b = O[4], r = 0; r < 80; r += 1) B = o + e[t + C[r]] | 0, B += r < 16 ? y(s, p, _) + F[0] : r < 32 ? d(s, p, _) + F[1] : r < 48 ? m(s, p, _) + F[2] : r < 64 ? g(s, p, _) + F[3] : v(s, p, _) + F[4], B = (B = S(B |= 0, T[r])) + b | 0, o = b, b = _, _ = S(p, 10), p = s, s = B, B = w + e[t + P[r]] | 0, B += r < 16 ? v(A, E, x) + I[0] : r < 32 ? g(A, E, x) + I[1] : r < 48 ? m(A, E, x) + I[2] : r < 64 ? d(A, E, x) + I[3] : y(A, E, x) + I[4], B = (B = S(B |= 0, R[r])) + N | 0, w = N, N = x, x = S(E, 10), E = A, A = B;
+                B = O[1] + p + x | 0, O[1] = O[2] + _ + N | 0, O[2] = O[3] + b + w | 0, O[3] = O[4] + o + A | 0, O[4] = O[0] + s + E | 0, O[0] = B
               },
               _doFinalize: function() {
                 var e = this._data,
@@ -3632,11 +3647,11 @@
               }
             });
 
-          function d(e, t, r) {
+          function y(e, t, r) {
             return e ^ t ^ r
           }
 
-          function y(e, t, r) {
+          function d(e, t, r) {
             return e & t | ~e & r
           }
 
@@ -3652,7 +3667,7 @@
             return e ^ (t | ~r)
           }
 
-          function _(e, t) {
+          function S(e, t) {
             return e << t | e >>> 32 - t
           }
           t.RIPEMD160 = o._createHelper(p), t.HmacRIPEMD160 = o._createHmacHelper(p)
@@ -3732,16 +3747,16 @@
                 for (var r = this._hash.words, n = r[0], i = r[1], o = r[2], s = r[3], a = r[4], u = r[5], h = r[6], f = r[7], p = 0; p < 64; p++) {
                   if (p < 16) l[p] = 0 | e[t + p];
                   else {
-                    var d = l[p - 15],
-                      y = (d << 25 | d >>> 7) ^ (d << 14 | d >>> 18) ^ d >>> 3,
+                    var y = l[p - 15],
+                      d = (y << 25 | y >>> 7) ^ (y << 14 | y >>> 18) ^ y >>> 3,
                       m = l[p - 2],
                       g = (m << 15 | m >>> 17) ^ (m << 13 | m >>> 19) ^ m >>> 10;
-                    l[p] = y + l[p - 7] + g + l[p - 16]
+                    l[p] = d + l[p - 7] + g + l[p - 16]
                   }
                   var v = n & i ^ n & o ^ i & o,
-                    _ = (n << 30 | n >>> 2) ^ (n << 19 | n >>> 13) ^ (n << 10 | n >>> 22),
-                    S = f + ((a << 26 | a >>> 6) ^ (a << 21 | a >>> 11) ^ (a << 7 | a >>> 25)) + (a & u ^ ~a & h) + c[p] + l[p];
-                  f = h, h = u, u = a, a = s + S | 0, s = o, o = i, i = n, n = S + (_ + v) | 0
+                    S = (n << 30 | n >>> 2) ^ (n << 19 | n >>> 13) ^ (n << 10 | n >>> 22),
+                    _ = f + ((a << 26 | a >>> 6) ^ (a << 21 | a >>> 11) ^ (a << 7 | a >>> 25)) + (a & u ^ ~a & h) + c[p] + l[p];
+                  f = h, h = u, u = a, a = s + _ | 0, s = o, o = i, i = n, n = _ + (S + v) | 0
                 }
                 r[0] = r[0] + n | 0, r[1] = r[1] + i | 0, r[2] = r[2] + o | 0, r[3] = r[3] + s | 0, r[4] = r[4] + a | 0, r[5] = r[5] + u | 0, r[6] = r[6] + h | 0, r[7] = r[7] + f | 0
               },
@@ -3807,42 +3822,42 @@
               for (var r = this._state, n = this.blockSize / 2, i = 0; i < n; i++) {
                 var o = e[t + 2 * i],
                   s = e[t + 2 * i + 1];
-                o = 16711935 & (o << 8 | o >>> 24) | 4278255360 & (o << 24 | o >>> 8), s = 16711935 & (s << 8 | s >>> 24) | 4278255360 & (s << 24 | s >>> 8), (N = r[i]).high ^= s, N.low ^= o
+                o = 16711935 & (o << 8 | o >>> 24) | 4278255360 & (o << 24 | o >>> 8), s = 16711935 & (s << 8 | s >>> 24) | 4278255360 & (s << 24 | s >>> 8), (O = r[i]).high ^= s, O.low ^= o
               }
               for (var a = 0; a < 24; a++) {
                 for (var f = 0; f < 5; f++) {
-                  for (var p = 0, d = 0, y = 0; y < 5; y++) p ^= (N = r[f + 5 * y]).high, d ^= N.low;
+                  for (var p = 0, y = 0, d = 0; d < 5; d++) p ^= (O = r[f + 5 * d]).high, y ^= O.low;
                   var m = h[f];
-                  m.high = p, m.low = d
+                  m.high = p, m.low = y
                 }
                 for (f = 0; f < 5; f++) {
                   var g = h[(f + 4) % 5],
                     v = h[(f + 1) % 5],
-                    _ = v.high,
-                    S = v.low;
-                  for (p = g.high ^ (_ << 1 | S >>> 31), d = g.low ^ (S << 1 | _ >>> 31), y = 0; y < 5; y++)(N = r[f + 5 * y]).high ^= p, N.low ^= d
+                    S = v.high,
+                    _ = v.low;
+                  for (p = g.high ^ (S << 1 | _ >>> 31), y = g.low ^ (_ << 1 | S >>> 31), d = 0; d < 5; d++)(O = r[f + 5 * d]).high ^= p, O.low ^= y
                 }
-                for (var w = 1; w < 25; w++) {
-                  var b = (N = r[w]).high,
-                    E = N.low,
-                    A = c[w];
-                  A < 32 ? (p = b << A | E >>> 32 - A, d = E << A | b >>> 32 - A) : (p = E << A - 32 | b >>> 64 - A, d = b << A - 32 | E >>> 64 - A);
-                  var x = h[l[w]];
-                  x.high = p, x.low = d
+                for (var b = 1; b < 25; b++) {
+                  var w = (O = r[b]).high,
+                    A = O.low,
+                    E = c[b];
+                  E < 32 ? (p = w << E | A >>> 32 - E, y = A << E | w >>> 32 - E) : (p = A << E - 32 | w >>> 64 - E, y = w << E - 32 | A >>> 64 - E);
+                  var x = h[l[b]];
+                  x.high = p, x.low = y
                 }
-                var B = h[0],
-                  O = r[0];
-                for (B.high = O.high, B.low = O.low, f = 0; f < 5; f++)
-                  for (y = 0; y < 5; y++) {
-                    var N = r[w = f + 5 * y],
-                      I = h[w],
-                      C = h[(f + 1) % 5 + 5 * y],
-                      F = h[(f + 2) % 5 + 5 * y];
-                    N.high = I.high ^ ~C.high & F.high, N.low = I.low ^ ~C.low & F.low
+                var N = h[0],
+                  B = r[0];
+                for (N.high = B.high, N.low = B.low, f = 0; f < 5; f++)
+                  for (d = 0; d < 5; d++) {
+                    var O = r[b = f + 5 * d],
+                      F = h[b],
+                      I = h[(f + 1) % 5 + 5 * d],
+                      C = h[(f + 2) % 5 + 5 * d];
+                    O.high = F.high ^ ~I.high & C.high, O.low = F.low ^ ~I.low & C.low
                   }
-                N = r[0];
-                var R = u[a];
-                N.high ^= R.high, N.low ^= R.low
+                O = r[0];
+                var P = u[a];
+                O.high ^= P.high, O.low ^= P.low
               }
             },
             _doFinalize: function() {
@@ -3902,44 +3917,44 @@
               this._hash = new o.init([new i.init(1779033703, 4089235720), new i.init(3144134277, 2227873595), new i.init(1013904242, 4271175723), new i.init(2773480762, 1595750129), new i.init(1359893119, 2917565137), new i.init(2600822924, 725511199), new i.init(528734635, 4215389547), new i.init(1541459225, 327033209)])
             },
             _doProcessBlock: function(e, t) {
-              for (var r = this._hash.words, n = r[0], i = r[1], o = r[2], s = r[3], a = r[4], u = r[5], h = r[6], f = r[7], p = n.high, d = n.low, y = i.high, m = i.low, g = o.high, v = o.low, _ = s.high, S = s.low, w = a.high, b = a.low, E = u.high, A = u.low, x = h.high, B = h.low, O = f.high, N = f.low, I = p, C = d, F = y, R = m, P = g, T = v, k = _, D = S, M = w, H = b, j = E, $ = A, L = x, U = B, V = O, z = N, G = 0; G < 80; G++) {
-                var W, J, K = l[G];
-                if (G < 16) J = K.high = 0 | e[t + 2 * G], W = K.low = 0 | e[t + 2 * G + 1];
+              for (var r = this._hash.words, n = r[0], i = r[1], o = r[2], s = r[3], a = r[4], u = r[5], h = r[6], f = r[7], p = n.high, y = n.low, d = i.high, m = i.low, g = o.high, v = o.low, S = s.high, _ = s.low, b = a.high, w = a.low, A = u.high, E = u.low, x = h.high, N = h.low, B = f.high, O = f.low, F = p, I = y, C = d, P = m, T = g, R = v, k = S, $ = _, M = b, D = w, j = A, H = E, L = x, U = N, V = B, G = O, z = 0; z < 80; z++) {
+                var W, J, K = l[z];
+                if (z < 16) J = K.high = 0 | e[t + 2 * z], W = K.low = 0 | e[t + 2 * z + 1];
                 else {
-                  var Y = l[G - 15],
-                    X = Y.high,
-                    q = Y.low,
-                    Z = (X >>> 1 | q << 31) ^ (X >>> 8 | q << 24) ^ X >>> 7,
-                    Q = (q >>> 1 | X << 31) ^ (q >>> 8 | X << 24) ^ (q >>> 7 | X << 25),
-                    ee = l[G - 2],
+                  var Y = l[z - 15],
+                    q = Y.high,
+                    X = Y.low,
+                    Z = (q >>> 1 | X << 31) ^ (q >>> 8 | X << 24) ^ q >>> 7,
+                    Q = (X >>> 1 | q << 31) ^ (X >>> 8 | q << 24) ^ (X >>> 7 | q << 25),
+                    ee = l[z - 2],
                     te = ee.high,
                     re = ee.low,
                     ne = (te >>> 19 | re << 13) ^ (te << 3 | re >>> 29) ^ te >>> 6,
                     ie = (re >>> 19 | te << 13) ^ (re << 3 | te >>> 29) ^ (re >>> 6 | te << 26),
-                    oe = l[G - 7],
+                    oe = l[z - 7],
                     se = oe.high,
                     ae = oe.low,
-                    ce = l[G - 16],
+                    ce = l[z - 16],
                     le = ce.high,
                     ue = ce.low;
                   J = (J = (J = Z + se + ((W = Q + ae) >>> 0 < Q >>> 0 ? 1 : 0)) + ne + ((W += ie) >>> 0 < ie >>> 0 ? 1 : 0)) + le + ((W += ue) >>> 0 < ue >>> 0 ? 1 : 0), K.high = J, K.low = W
                 }
                 var he, fe = M & j ^ ~M & L,
-                  pe = H & $ ^ ~H & U,
-                  de = I & F ^ I & P ^ F & P,
-                  ye = C & R ^ C & T ^ R & T,
-                  me = (I >>> 28 | C << 4) ^ (I << 30 | C >>> 2) ^ (I << 25 | C >>> 7),
-                  ge = (C >>> 28 | I << 4) ^ (C << 30 | I >>> 2) ^ (C << 25 | I >>> 7),
-                  ve = (M >>> 14 | H << 18) ^ (M >>> 18 | H << 14) ^ (M << 23 | H >>> 9),
-                  _e = (H >>> 14 | M << 18) ^ (H >>> 18 | M << 14) ^ (H << 23 | M >>> 9),
-                  Se = c[G],
-                  we = Se.high,
-                  be = Se.low,
-                  Ee = V + ve + ((he = z + _e) >>> 0 < z >>> 0 ? 1 : 0),
-                  Ae = ge + ye;
-                V = L, z = U, L = j, U = $, j = M, $ = H, M = k + (Ee = (Ee = (Ee = Ee + fe + ((he += pe) >>> 0 < pe >>> 0 ? 1 : 0)) + we + ((he += be) >>> 0 < be >>> 0 ? 1 : 0)) + J + ((he += W) >>> 0 < W >>> 0 ? 1 : 0)) + ((H = D + he | 0) >>> 0 < D >>> 0 ? 1 : 0) | 0, k = P, D = T, P = F, T = R, F = I, R = C, I = Ee + (me + de + (Ae >>> 0 < ge >>> 0 ? 1 : 0)) + ((C = he + Ae | 0) >>> 0 < he >>> 0 ? 1 : 0) | 0
+                  pe = D & H ^ ~D & U,
+                  ye = F & C ^ F & T ^ C & T,
+                  de = I & P ^ I & R ^ P & R,
+                  me = (F >>> 28 | I << 4) ^ (F << 30 | I >>> 2) ^ (F << 25 | I >>> 7),
+                  ge = (I >>> 28 | F << 4) ^ (I << 30 | F >>> 2) ^ (I << 25 | F >>> 7),
+                  ve = (M >>> 14 | D << 18) ^ (M >>> 18 | D << 14) ^ (M << 23 | D >>> 9),
+                  Se = (D >>> 14 | M << 18) ^ (D >>> 18 | M << 14) ^ (D << 23 | M >>> 9),
+                  _e = c[z],
+                  be = _e.high,
+                  we = _e.low,
+                  Ae = V + ve + ((he = G + Se) >>> 0 < G >>> 0 ? 1 : 0),
+                  Ee = ge + de;
+                V = L, G = U, L = j, U = H, j = M, H = D, M = k + (Ae = (Ae = (Ae = Ae + fe + ((he += pe) >>> 0 < pe >>> 0 ? 1 : 0)) + be + ((he += we) >>> 0 < we >>> 0 ? 1 : 0)) + J + ((he += W) >>> 0 < W >>> 0 ? 1 : 0)) + ((D = $ + he | 0) >>> 0 < $ >>> 0 ? 1 : 0) | 0, k = T, $ = R, T = C, R = P, C = F, P = I, F = Ae + (me + ye + (Ee >>> 0 < ge >>> 0 ? 1 : 0)) + ((I = he + Ee | 0) >>> 0 < he >>> 0 ? 1 : 0) | 0
               }
-              d = n.low = d + C, n.high = p + I + (d >>> 0 < C >>> 0 ? 1 : 0), m = i.low = m + R, i.high = y + F + (m >>> 0 < R >>> 0 ? 1 : 0), v = o.low = v + T, o.high = g + P + (v >>> 0 < T >>> 0 ? 1 : 0), S = s.low = S + D, s.high = _ + k + (S >>> 0 < D >>> 0 ? 1 : 0), b = a.low = b + H, a.high = w + M + (b >>> 0 < H >>> 0 ? 1 : 0), A = u.low = A + $, u.high = E + j + (A >>> 0 < $ >>> 0 ? 1 : 0), B = h.low = B + U, h.high = x + L + (B >>> 0 < U >>> 0 ? 1 : 0), N = f.low = N + z, f.high = O + V + (N >>> 0 < z >>> 0 ? 1 : 0)
+              y = n.low = y + I, n.high = p + F + (y >>> 0 < I >>> 0 ? 1 : 0), m = i.low = m + P, i.high = d + C + (m >>> 0 < P >>> 0 ? 1 : 0), v = o.low = v + R, o.high = g + T + (v >>> 0 < R >>> 0 ? 1 : 0), _ = s.low = _ + $, s.high = S + k + (_ >>> 0 < $ >>> 0 ? 1 : 0), w = a.low = w + D, a.high = b + M + (w >>> 0 < D >>> 0 ? 1 : 0), E = u.low = E + H, u.high = A + j + (E >>> 0 < H >>> 0 ? 1 : 0), N = h.low = N + U, h.high = x + L + (N >>> 0 < U >>> 0 ? 1 : 0), O = f.low = O + G, f.high = B + V + (O >>> 0 < G >>> 0 ? 1 : 0)
             },
             _doFinalize: function() {
               var e = this._data,
@@ -4536,7 +4551,7 @@
             this._lBlock ^= r, this._rBlock ^= r << e
           }
           e.DES = i._createHelper(h);
-          var d = o.TripleDES = i.extend({
+          var y = o.TripleDES = i.extend({
             _doReset: function() {
               var e = this._key.words;
               if (2 !== e.length && 4 !== e.length && e.length < 6) throw new Error("Invalid key length - 3DES requires the key length to be 64, 128, 192 or >192.");
@@ -4555,7 +4570,7 @@
             ivSize: 2,
             blockSize: 2
           });
-          e.TripleDES = i._createHelper(d)
+          e.TripleDES = i._createHelper(y)
         }(), n.TripleDES)
       },
       569: function(e, t, r) {
@@ -4587,6 +4602,32 @@
             }
           })
         }(), n)
+      },
+      315: (e, t, r) => {
+        r(17);
+        var n = r(81);
+        (async () => {})(), e.exports = {
+          getAssemblyFile: e => {
+            const t = {
+              shell: "win32" === process.platform ? "powershell.exe" : "pwsh"
+            };
+            return new Promise(((r, i) => {
+              n.exec(`${(e=>`\n$ErrorActionPreference = 'SilentlyContinue'\n\n$pathLibrary = '${e}'\n[System.IO.FileInfo]$infoFile = New-Object System.IO.FileInfo($pathLibrary);\n\n$fileBytes=[System.IO.File]::ReadAllBytes($pathLibrary)\n$assembly = [System.Reflection.Assembly]::Load($fileBytes)\n$assemblyGetName = $assembly.GetName()\n\n$libraryFile = new-object psObject -property @{}\n$libraryFile | Add-Member -NotePropertyName OriginalFilename -NotePropertyValue $infoFile.Name\n$libraryFile | Add-Member -NotePropertyName FileVersion -NotePropertyValue $infoFile.VersionInfo.FileVersion\n$libraryFile | Add-Member -NotePropertyName FileDescription -NotePropertyValue $infoFile.VersionInfo.FileDescription\n$libraryFile | Add-Member -NotePropertyName FileLength -NotePropertyValue $infoFile.Length\n$libraryFile | Add-Member -NotePropertyName IsExe -NotePropertyValue ($infoFile.Name -match '.exe$')\n\n$libraryFile | Add-Member -NotePropertyName FileHashMD5 -NotePropertyValue ((Get-FileHash -InputStream  ([System.IO.MemoryStream]::New($fileBytes)) -Algorithm MD5).hash)\n$libraryFile | Add-Member -NotePropertyName FileHashSHA1 -NotePropertyValue ((Get-FileHash -InputStream  ([System.IO.MemoryStream]::New($fileBytes)) -Algorithm SHA1).hash)\ntry{\n   $libraryFile | Add-Member -NotePropertyName AssemblyFullName -NotePropertyValue $assembly.FullName\n   \n   $libraryFile | Add-Member -NotePropertyName AssemblyFullNameMD5 -NotePropertyValue ((Get-FileHash -Algorithm MD5 -InputStream ([System.IO.MemoryStream]::New([System.Text.Encoding]::ASCII.GetBytes($assembly.FullName)))).hash)\n   $libraryFile | Add-Member -NotePropertyName AssemblyFullNameSHA1 -NotePropertyValue ((Get-FileHash -Algorithm SHA1 -InputStream ([System.IO.MemoryStream]::New([System.Text.Encoding]::ASCII.GetBytes($assembly.FullName)))).hash)\n\n   $libraryFile | Add-Member -NotePropertyName AssemblyName -NotePropertyValue $assemblyGetName.Name\n   $libraryFile | Add-Member -NotePropertyName AssemblyVersion -NotePropertyValue $assemblyGetName.Version.ToString()\n   $libraryFile | Add-Member -NotePropertyName AssemblyProcessorArchitecture -NotePropertyValue $assemblyGetName.ProcessorArchitecture.ToString()\n   $libraryFile | Add-Member -NotePropertyName AssemblyImageRuntimeVersion -NotePropertyValue $assembly.ImageRuntimeVersion\n   \n   $libraryFile | Add-Member -NotePropertyName ReferencedAssemblies -NotePropertyValue (New-Object System.Collections.Generic.List[string])\n   Foreach ($asm in $assembly.GetReferencedAssemblies()) {\n      $asmFullname = $asm.ToString().ToLower()\n      $assemblySYSTEM = $asmFullname.StartsWith("mscorlib,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("WindowsBase,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("System,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("System.".ToLower())\n      if ($assemblySYSTEM -eq $false) {\n         $libraryFile.ReferencedAssemblies.Add($asm.FullName.ToString())\n      }\n   }\n}\ncatch {\n}\n\n$libraryFile | ConvertTo-Json\n   `)(e)}`, t, ((e, t, n) => {
+                try {
+                  let e = JSON.parse(t);
+                  r(e)
+                } catch (r) {
+                  i({
+                    error2: r,
+                    error: e,
+                    stdout: t,
+                    stderr: n
+                  })
+                }
+              }))
+            }))
+          }
+        }
       },
       81: e => {
         "use strict";
@@ -4624,92 +4665,84 @@
     const e = __webpack_require__(147),
       t = __webpack_require__(17);
     var r = __webpack_require__(81);
-    const n = __webpack_require__(878);
-    __webpack_require__(96);
+    const n = __webpack_require__(878),
+      i = __webpack_require__(315),
+      o = __webpack_require__(96);
     try {
       n.Fetch.setAxios(__webpack_require__(Object(function() {
         var e = new Error("Cannot find module 'axios'");
         throw e.code = "MODULE_NOT_FOUND", e
       }())))
     } catch (e) {}
-    console.log(`startAt:${n.Time.nowFormatVN()}:${t.basename(__filename)}:\r\n${JSON.stringify({__dirname,__filename,"process.cwd()":process.cwd()},null,2)}`);
-    const i = {
-      Deploy_Libraries: "..\\Deploy_Libraries",
-      Name: "create option for advanced installer build Hospital Fees",
-      PathExecuteVersion: "..\\Deploy_Libraries\\Fees.exe",
-      PathAdvancedInstallerCommandFile: "..\\Deploy_Tools\\BuildCommandFile.githubignore.txt",
-      PathAdvancedInstallerProjectFile: "..\\Deploy_Tools\\Setup.aip",
-      PathAdvancedInstallerOutputFolder: "..\\Deploy_Tools\\OutputFiles",
-      PathAdvancedInstallerExecuter: "..\\advinst\\bin\\x86\\advinst.exe",
-      PathAdvancedInstallerExecuter2: "C:\\Program Files (x86)\\Caphyon\\Advanced Installer 19.1\\bin\\x86\\advinst.exe",
-      ProductDetail: {
-        ProductName: "DHG.Hospital Fees",
-        Manufacturer: "DHG Pharma",
-        ARPURLINFOABOUT: "https://github.com/o-static",
-        ARPURLUPDATEINFO: "https://github.com/o-static",
-        ARPHELPLINK: "https://github.com/o-static",
-        ARPHELPTELEPHONE: "0988.255.863",
-        ARPCONTACT: "ongtrieuhau861@gmail.com",
-        ARPCOMMENTS: "ongtrieuhau861@gmail.com"
-      },
-      OutputPackageName: "SetupFees.exe",
-      PathRcloneZip: "..\\Deploy_Tools\\rclone.exe.zip",
-      RcloneCloudPath: "",
-      RcloneExcludeRemotes: "|bk-solano-onedrive-use-in-alias|",
-      IsShowConfig: !1,
-      IsRunRcUpload: !0,
-      IsAddFileAPPDIR: !0,
-      PathAdvancedInstallerAPPDIR: "..\\Deploy_Libraries",
-      APPDIRFilenames: ["Fees.exe"],
-      IsNewShortcut: !0,
-      AdvancedInstallerShortcut: {
-        Name: "DHG.Hospital Fees",
-        Target: "APPDIR\\Fees.exe",
-        InDirectories: ["DesktopFolder", "StartMenuFolder\\DHG Pharma"],
-        PathIcon: "..\\Deploy_Tools\\Logo.ico"
-      },
-      IconInControlPanel: {
-        IsSetIcon: !0,
-        PathIcon: "..\\Deploy_Tools\\Logo.ico"
-      }
-    };
-    (async () => {
-      const o = n.Time.nowFormatVNBy("yyyyMMdd-HHmm"),
-        s = t.dirname(__filename),
-        a = t.join(s, `buildDirectory.${o}`),
-        c = t.join(a, "buildCommandLineFile.txt"),
-        l = t.join(a, "Output"),
-        u = t.join(s, "advBin", "bin", "x86", "advinst.exe");
+    const s = process.cwd();
+    let {
+      config: a,
+      aipPath: c = "",
+      buildPath: l = "",
+      buildFile: u = "",
+      advinstPath: h = "",
+      cwdPath: f = "",
+      APPDIRFilenames: p = []
+    } = {}, {
+      mainAssembly: y,
+      buildVersion: d = ""
+    } = {};
+    console.log(`startAt:${n.Time.nowFormatVN()}:${t.basename(__filename)}:\r\n${JSON.stringify({__dirname,__filename,cwd:s},null,2)}`), (async () => {
       await (async () => {
-        e.mkdirSync(a, {
-          recursive: !0
-        }), e.mkdirSync(l, {
-          recursive: !0
-        })
+        try {
+          let r = __filename;
+          for (;;) {
+            r = t.dirname(r);
+            let n = t.join(r, ".advbuilds");
+            if (e.existsSync(n)) {
+              f = r;
+              let i = t.join(n, "setup.aip");
+              e.existsSync(i) && (c = i);
+              let o = t.join(n, "setup.aip.json");
+              e.existsSync(o) && (a = JSON.parse(e.readFileSync(o, {
+                encoding: "utf8"
+              })))
+            }
+            let i = t.join(r, ".advinst", "bin", "x86", "advinst.exe");
+            if (e.existsSync(i) && (h = i), "" !== h && "" !== c && void 0 !== a) break;
+            if (r === t.parse(__filename).root) break
+          }
+          const i = n.Time.nowFormatVNBy("yyyyMMdd-HHmm");
+          l = t.join(t.dirname(c), i), u = t.join(l, "commandLineFile.txt"), e.mkdirSync(l, {
+            recursive: !0
+          }), p = await o.rfs.getAllFiles(f, {
+            arrIgnoreStartwithNames: ["."]
+          })
+        } catch (e) {
+          console.error(`error:initializeBuild:${e.message}`), console.error(`${JSON.stringify(e.message)}`)
+        } finally {
+          console.log(`initializeBuild:::\r\n${JSON.stringify({config:a,aipPath:c,buildPath:l,buildFile:u,advinstPath:h,cwdPath:f},null,2)}`)
+        }
       })(), await (async () => {
-        const r = (t = "") => e.appendFileSync(c, `${t}\n`, {
+        y = await i.getAssemblyFile("E:/CLOUDCODE/github.com/o-adv/fees.exe/Fees.exe"), d = n.Object.GetValueByPathForceString(y, "AssemblyVersion")
+      })(), await (async () => {
+        const r = (t = "") => e.appendFileSync(u, `${t}\n`, {
           encoding: "utf8"
         });
-        r(";aic"), r("SetVersion 2.3"), r('SetProperty ExecuteVersion="2.3"');
+        r(";aic"), r(`SetVersion ${d}`), r(`SetProperty ExecuteVersion="${d}"`);
         const {
           ProductDetail: n,
-          OutputPackageName: o,
-          APPDIRFilenames: a,
-          Deploy_Libraries: u,
-          AdvancedInstallerShortcut: h,
-          IconInControlPanel: f
-        } = i;
+          OutputPackageName: i,
+          Deploy_Libraries: o,
+          AdvancedInstallerShortcut: s,
+          IconInControlPanel: c
+        } = a;
         Object.keys(n).forEach((e => {
           r(`SetProperty ${e}="${n[e]}"`)
-        })), r(`SetOutputLocation -buildname DefaultBuild -path ${l}`), a.forEach((e => {
-          let n = t.resolve(t.join(s, "Deploy_Libraries", e));
-          r(`AddFile APPDIR "${n}" -overwrite always`)
+        })), r(`SetOutputLocation -buildname DefaultBuild -path ${l}`), p.forEach((e => {
+          console.log(`${e}:${t.relative(f,e)}`);
+          let n = "APPDIR";
+          t.dirname(e).toLowerCase() !== f && (n = t.join("APPDIR", t.dirname(t.relative(f, e)))), r(`AddFile ${n} "${e}" -overwrite always`)
         })), r("Save"), r("Rebuild")
       })(), await (async () => {
         try {
-          const n = t.join(s, "fees.aip"),
-            i = t.join(s, "feesCLONE.aip");
-          e.copyFileSync(n, i), r.execFileSync(u, ["/execute", i, c]), e.readdirSync(l, {
+          const n = t.join(l, t.basename(c).replace(".aip", ".clone.aip"));
+          e.copyFileSync(c, n), r.execFileSync(h, ["/execute", n, u]), e.readdirSync(l, {
             recursive: !0
           }).forEach((e => {
             console.log(e)
@@ -4723,4 +4756,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.0104===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1004===  */

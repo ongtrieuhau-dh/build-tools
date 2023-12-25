@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1445=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1607=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1225.1445]:${e}`)
+              console.log(`[STARTED;1.23.1225.1607]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1225.1445"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1225.1607"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -4684,7 +4684,7 @@
               this._hash = new s.init([new o.init(1779033703, 4089235720), new o.init(3144134277, 2227873595), new o.init(1013904242, 4271175723), new o.init(2773480762, 1595750129), new o.init(1359893119, 2917565137), new o.init(2600822924, 725511199), new o.init(528734635, 4215389547), new o.init(1541459225, 327033209)])
             },
             _doProcessBlock: function(e, a) {
-              for (var i = this._hash.words, n = i[0], o = i[1], s = i[2], t = i[3], r = i[4], l = i[5], u = i[6], m = i[7], d = n.high, x = n.low, f = o.high, v = o.low, h = s.high, b = s.low, g = t.high, y = t.low, w = r.high, _ = r.low, k = l.high, S = l.low, j = u.high, E = u.low, A = m.high, O = m.low, T = d, N = x, B = f, R = v, F = h, z = b, C = g, P = y, I = w, L = _, D = k, U = S, q = j, M = E, $ = A, H = O, V = 0; V < 80; V++) {
+              for (var i = this._hash.words, n = i[0], o = i[1], s = i[2], t = i[3], r = i[4], l = i[5], u = i[6], m = i[7], d = n.high, x = n.low, f = o.high, v = o.low, h = s.high, b = s.low, g = t.high, y = t.low, w = r.high, _ = r.low, k = l.high, S = l.low, j = u.high, E = u.low, A = m.high, O = m.low, T = d, N = x, B = f, R = v, F = h, z = b, C = g, P = y, I = w, L = _, D = k, U = S, M = j, q = E, $ = A, H = O, V = 0; V < 80; V++) {
                 var G, W, J = p[V];
                 if (V < 16) W = J.high = 0 | e[a + 2 * V], G = J.low = 0 | e[a + 2 * V + 1];
                 else {
@@ -4706,8 +4706,8 @@
                     le = ce.low;
                   W = (W = (W = Z + te + ((G = Q + re) >>> 0 < Q >>> 0 ? 1 : 0)) + ne + ((G += oe) >>> 0 < oe >>> 0 ? 1 : 0)) + pe + ((G += le) >>> 0 < le >>> 0 ? 1 : 0), J.high = W, J.low = G
                 }
-                var ue, me = I & D ^ ~I & q,
-                  de = L & U ^ ~L & M,
+                var ue, me = I & D ^ ~I & M,
+                  de = L & U ^ ~L & q,
                   xe = T & B ^ T & F ^ B & F,
                   fe = N & R ^ N & z ^ R & z,
                   ve = (T >>> 28 | N << 4) ^ (T << 30 | N >>> 2) ^ (T << 25 | N >>> 7),
@@ -4719,9 +4719,9 @@
                   _e = ye.low,
                   ke = $ + be + ((ue = H + ge) >>> 0 < H >>> 0 ? 1 : 0),
                   Se = he + fe;
-                $ = q, H = M, q = D, M = U, D = I, U = L, I = C + (ke = (ke = (ke = ke + me + ((ue += de) >>> 0 < de >>> 0 ? 1 : 0)) + we + ((ue += _e) >>> 0 < _e >>> 0 ? 1 : 0)) + W + ((ue += G) >>> 0 < G >>> 0 ? 1 : 0)) + ((L = P + ue | 0) >>> 0 < P >>> 0 ? 1 : 0) | 0, C = F, P = z, F = B, z = R, B = T, R = N, T = ke + (ve + xe + (Se >>> 0 < he >>> 0 ? 1 : 0)) + ((N = ue + Se | 0) >>> 0 < ue >>> 0 ? 1 : 0) | 0
+                $ = M, H = q, M = D, q = U, D = I, U = L, I = C + (ke = (ke = (ke = ke + me + ((ue += de) >>> 0 < de >>> 0 ? 1 : 0)) + we + ((ue += _e) >>> 0 < _e >>> 0 ? 1 : 0)) + W + ((ue += G) >>> 0 < G >>> 0 ? 1 : 0)) + ((L = P + ue | 0) >>> 0 < P >>> 0 ? 1 : 0) | 0, C = F, P = z, F = B, z = R, B = T, R = N, T = ke + (ve + xe + (Se >>> 0 < he >>> 0 ? 1 : 0)) + ((N = ue + Se | 0) >>> 0 < ue >>> 0 ? 1 : 0) | 0
               }
-              x = n.low = x + N, n.high = d + T + (x >>> 0 < N >>> 0 ? 1 : 0), v = o.low = v + R, o.high = f + B + (v >>> 0 < R >>> 0 ? 1 : 0), b = s.low = b + z, s.high = h + F + (b >>> 0 < z >>> 0 ? 1 : 0), y = t.low = y + P, t.high = g + C + (y >>> 0 < P >>> 0 ? 1 : 0), _ = r.low = _ + L, r.high = w + I + (_ >>> 0 < L >>> 0 ? 1 : 0), S = l.low = S + U, l.high = k + D + (S >>> 0 < U >>> 0 ? 1 : 0), E = u.low = E + M, u.high = j + q + (E >>> 0 < M >>> 0 ? 1 : 0), O = m.low = O + H, m.high = A + $ + (O >>> 0 < H >>> 0 ? 1 : 0)
+              x = n.low = x + N, n.high = d + T + (x >>> 0 < N >>> 0 ? 1 : 0), v = o.low = v + R, o.high = f + B + (v >>> 0 < R >>> 0 ? 1 : 0), b = s.low = b + z, s.high = h + F + (b >>> 0 < z >>> 0 ? 1 : 0), y = t.low = y + P, t.high = g + C + (y >>> 0 < P >>> 0 ? 1 : 0), _ = r.low = _ + L, r.high = w + I + (_ >>> 0 < L >>> 0 ? 1 : 0), S = l.low = S + U, l.high = k + D + (S >>> 0 < U >>> 0 ? 1 : 0), E = u.low = E + q, u.high = j + M + (E >>> 0 < q >>> 0 ? 1 : 0), O = m.low = O + H, m.high = A + $ + (O >>> 0 < H >>> 0 ? 1 : 0)
             },
             _doFinalize: function() {
               var e = this._data,
@@ -5785,28 +5785,30 @@
       9315: (e, a, i) => {
         i(1017);
         var n = i(2081);
+        const o = i(878),
+          s = i(6096);
         (async () => {})(), e.exports = {
-          getAssemblyFile: e => {
+          getAssemblyFile: async e => {
             const a = {
               shell: "win32" === process.platform ? "powershell.exe" : "pwsh"
             };
-            return new Promise(((i, o) => {
-              n.exec(`${(e=>`\n$ErrorActionPreference = 'SilentlyContinue'\n\n$pathLibrary = '${e}'\n[System.IO.FileInfo]$infoFile = New-Object System.IO.FileInfo($pathLibrary);\n\n$fileBytes=[System.IO.File]::ReadAllBytes($pathLibrary)\n$assembly = [System.Reflection.Assembly]::Load($fileBytes)\n$assemblyGetName = $assembly.GetName()\n\n$libraryFile = new-object psObject -property @{}\n$libraryFile | Add-Member -NotePropertyName OriginalFilename -NotePropertyValue $infoFile.Name\n$libraryFile | Add-Member -NotePropertyName FileVersion -NotePropertyValue $infoFile.VersionInfo.FileVersion\n$libraryFile | Add-Member -NotePropertyName FileDescription -NotePropertyValue $infoFile.VersionInfo.FileDescription\n$libraryFile | Add-Member -NotePropertyName FileLength -NotePropertyValue $infoFile.Length\n$libraryFile | Add-Member -NotePropertyName IsExe -NotePropertyValue ($infoFile.Name -match '.exe$')\n\n$libraryFile | Add-Member -NotePropertyName FileHashMD5 -NotePropertyValue ((Get-FileHash -InputStream  ([System.IO.MemoryStream]::New($fileBytes)) -Algorithm MD5).hash)\n$libraryFile | Add-Member -NotePropertyName FileHashSHA1 -NotePropertyValue ((Get-FileHash -InputStream  ([System.IO.MemoryStream]::New($fileBytes)) -Algorithm SHA1).hash)\ntry{\n   $libraryFile | Add-Member -NotePropertyName AssemblyFullName -NotePropertyValue $assembly.FullName\n   \n   $libraryFile | Add-Member -NotePropertyName AssemblyFullNameMD5 -NotePropertyValue ((Get-FileHash -Algorithm MD5 -InputStream ([System.IO.MemoryStream]::New([System.Text.Encoding]::ASCII.GetBytes($assembly.FullName)))).hash)\n   $libraryFile | Add-Member -NotePropertyName AssemblyFullNameSHA1 -NotePropertyValue ((Get-FileHash -Algorithm SHA1 -InputStream ([System.IO.MemoryStream]::New([System.Text.Encoding]::ASCII.GetBytes($assembly.FullName)))).hash)\n\n   $libraryFile | Add-Member -NotePropertyName AssemblyName -NotePropertyValue $assemblyGetName.Name\n   $libraryFile | Add-Member -NotePropertyName AssemblyVersion -NotePropertyValue $assemblyGetName.Version.ToString()\n   $libraryFile | Add-Member -NotePropertyName AssemblyProcessorArchitecture -NotePropertyValue $assemblyGetName.ProcessorArchitecture.ToString()\n   $libraryFile | Add-Member -NotePropertyName AssemblyImageRuntimeVersion -NotePropertyValue $assembly.ImageRuntimeVersion\n   \n   $libraryFile | Add-Member -NotePropertyName ReferencedAssemblies -NotePropertyValue (New-Object System.Collections.Generic.List[string])\n   Foreach ($asm in $assembly.GetReferencedAssemblies()) {\n      $asmFullname = $asm.ToString().ToLower()\n      $assemblySYSTEM = $asmFullname.StartsWith("mscorlib,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("WindowsBase,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("System,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("System.".ToLower())\n      if ($assemblySYSTEM -eq $false) {\n         $libraryFile.ReferencedAssemblies.Add($asm.FullName.ToString())\n      }\n   }\n}\ncatch {\n}\n\n$libraryFile | ConvertTo-Json\n   `)(e)}`, a, ((e, a, n) => {
+            return new Promise(((i, t) => {
+              n.exec(`${(e=>`\n$ErrorActionPreference = 'SilentlyContinue'\n\n$pathLibrary = '${e}'\n[System.IO.FileInfo]$infoFile = New-Object System.IO.FileInfo($pathLibrary);\n\n$fileBytes=[System.IO.File]::ReadAllBytes($pathLibrary)\n$assembly = [System.Reflection.Assembly]::Load($fileBytes)\n$assemblyGetName = $assembly.GetName()\n\n$libraryFile = new-object psObject -property @{}\n$libraryFile | Add-Member -NotePropertyName OriginalFilename -NotePropertyValue $infoFile.Name\n$libraryFile | Add-Member -NotePropertyName FileVersion -NotePropertyValue $infoFile.VersionInfo.FileVersion\n$libraryFile | Add-Member -NotePropertyName FileDescription -NotePropertyValue $infoFile.VersionInfo.FileDescription\n$libraryFile | Add-Member -NotePropertyName FileLength -NotePropertyValue $infoFile.Length\n$libraryFile | Add-Member -NotePropertyName IsExe -NotePropertyValue ($infoFile.Name -match '.exe$')\n\ntry{\n   $libraryFile | Add-Member -NotePropertyName FileHashMD5 -NotePropertyValue ((Get-FileHash -InputStream  ([System.IO.MemoryStream]::New($fileBytes)) -Algorithm MD5).hash)\n}catch{}\ntry{\n   $libraryFile | Add-Member -NotePropertyName FileHashSHA1 -NotePropertyValue ((Get-FileHash -InputStream  ([System.IO.MemoryStream]::New($fileBytes)) -Algorithm SHA1).hash)\n}catch{}\ntry{\n   $libraryFile | Add-Member -NotePropertyName AssemblyFullName -NotePropertyValue $assembly.FullName\n   try{\n      $libraryFile | Add-Member -NotePropertyName AssemblyFullNameMD5 -NotePropertyValue ((Get-FileHash -Algorithm MD5 -InputStream ([System.IO.MemoryStream]::New([System.Text.Encoding]::ASCII.GetBytes($assembly.FullName)))).hash)\n   }catch{}\n   try{\n      $libraryFile | Add-Member -NotePropertyName AssemblyFullNameSHA1 -NotePropertyValue ((Get-FileHash -Algorithm SHA1 -InputStream ([System.IO.MemoryStream]::New([System.Text.Encoding]::ASCII.GetBytes($assembly.FullName)))).hash)\n   }catch{}\n\n   $libraryFile | Add-Member -NotePropertyName AssemblyName -NotePropertyValue $assemblyGetName.Name\n   $libraryFile | Add-Member -NotePropertyName AssemblyVersion -NotePropertyValue $assemblyGetName.Version.ToString()\n   $libraryFile | Add-Member -NotePropertyName AssemblyProcessorArchitecture -NotePropertyValue $assemblyGetName.ProcessorArchitecture.ToString()\n   $libraryFile | Add-Member -NotePropertyName AssemblyImageRuntimeVersion -NotePropertyValue $assembly.ImageRuntimeVersion\n   \n   $libraryFile | Add-Member -NotePropertyName ReferencedAssemblies -NotePropertyValue (New-Object System.Collections.Generic.List[string])\n   Foreach ($asm in $assembly.GetReferencedAssemblies()) {\n      $asmFullname = $asm.ToString().ToLower()\n      $assemblySYSTEM = $asmFullname.StartsWith("mscorlib,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("WindowsBase,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("System,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("System.".ToLower())\n      if ($assemblySYSTEM -eq $false) {\n         $libraryFile.ReferencedAssemblies.Add($asm.FullName.ToString())\n      }\n   }\n}\ncatch {\n}\n\n$libraryFile | ConvertTo-Json\n   `)(e)}`, a, (async (a, n, r) => {
                 try {
-                  let o = JSON.parse(a);
-                  i(o)
-                } catch (i) {
-                  o({
-                    error2: i,
-                    error: e,
-                    stdout: a,
-                    stderr: n
+                  let t = JSON.parse(n);
+                  o.Object.GetValueByPathForceString(t, "FileHashMD5") && (t.FileHashMD5 = await s.rCrypto.hashMd5File(e)), o.Object.GetValueByPathForceString(t, "AssemblyFullNameMD5") && (t.AssemblyFullNameMD5 = await s.rCrypto.hashMd5(t.AssemblyFullName)), i(t)
+                } catch (e) {
+                  t({
+                    error2: e,
+                    error: a,
+                    stdout: n,
+                    stderr: r
                   })
                 } finally {
                   console.log("getAssemblyFile:::"), console.log(JSON.stringify({
-                    error: e,
-                    stdout: a,
-                    stderr: n
+                    error: a,
+                    stdout: n,
+                    stderr: r
                   }))
                 }
               }))
@@ -6078,8 +6080,8 @@
           L = O("Date"),
           D = O("File"),
           U = O("Blob"),
-          q = O("FileList"),
-          M = O("URLSearchParams");
+          M = O("FileList"),
+          q = O("URLSearchParams");
 
         function $(e, a, {
           allOwnKeys: i = !1
@@ -6155,9 +6157,9 @@
             isRegExp: X,
             isFunction: z,
             isStream: e => P(e) && z(e.pipe),
-            isURLSearchParams: M,
+            isURLSearchParams: q,
             isTypedArray: W,
-            isFileList: q,
+            isFileList: M,
             forEach: $,
             merge: function e() {
               const {
@@ -6785,9 +6787,9 @@
           const a = /^([-+\w]{1,25})(:?\/\/|:)/.exec(e);
           return a && a[1] || ""
         }
-        const qe = /^(?:([^;]+);)?(?:[^;]+;)?(base64|),([\s\S]*)$/;
+        const Me = /^(?:([^;]+);)?(?:[^;]+;)?(base64|),([\s\S]*)$/;
 
-        function Me(e, a) {
+        function qe(e, a) {
           e = e || 10;
           const i = new Array(e),
             n = new Array(e);
@@ -6834,7 +6836,7 @@
                 bytes: 0,
                 onReadCallback: null
               },
-              n = Me(i.ticksRate * e.samplesCount, i.timeWindow);
+              n = qe(i.ticksRate * e.samplesCount, i.timeWindow);
             this.on("newListener", (e => {
               "progress" === e && (i.isCaptured || (i.isCaptured = !0))
             }));
@@ -7096,7 +7098,7 @@
                       o = Ue(e);
                     if (void 0 === a && n && (a = !0), "data" === o) {
                       e = o.length ? e.slice(o.length + 1) : e;
-                      const i = qe.exec(e);
+                      const i = Me.exec(e);
                       if (!i) throw new oe("Invalid URL", oe.ERR_INVALID_URL);
                       const s = i[1],
                         t = i[2],
@@ -7344,7 +7346,7 @@
 
         function xa(e, a) {
           let i = 0;
-          const n = Me(50, 250);
+          const n = qe(50, 250);
           return o => {
             const s = o.loaded,
               t = o.lengthComputable ? o.total : void 0,
@@ -7936,4 +7938,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1445===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1607===  */

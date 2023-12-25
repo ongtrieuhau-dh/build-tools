@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1004=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1043=== */
 (() => {
   var __webpack_modules__ = {
       441: function(e, t, r) {
@@ -1012,7 +1012,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1225.1004]:${e}`)
+              console.log(`[STARTED;1.23.1225.1043]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -1487,7 +1487,7 @@
                   e.error = t, e.errorString = t + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1225.1004"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1225.1043"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2108,11 +2108,7 @@
                 if (!0 === h && Array.isArray(l))
                   for (let e = 0; e < l.length; e++) {
                     let t = l[e];
-                    if (console.log({
-                        "item.name.startsWith(itemStartWith) === true)": !0 === n.name.startsWith(t),
-                        arrIgnoreStartwithNames: l,
-                        item: n
-                      }), !0 === n.name.startsWith(t)) {
+                    if (!0 === n.name.startsWith(t)) {
                       h = !1;
                       break
                     }
@@ -4756,4 +4752,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1004===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1043===  */

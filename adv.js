@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1607=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1610=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1225.1607]:${e}`)
+              console.log(`[STARTED;1.23.1225.1610]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1225.1607"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1225.1610"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -5796,7 +5796,7 @@
               n.exec(`${(e=>`\n$ErrorActionPreference = 'SilentlyContinue'\n\n$pathLibrary = '${e}'\n[System.IO.FileInfo]$infoFile = New-Object System.IO.FileInfo($pathLibrary);\n\n$fileBytes=[System.IO.File]::ReadAllBytes($pathLibrary)\n$assembly = [System.Reflection.Assembly]::Load($fileBytes)\n$assemblyGetName = $assembly.GetName()\n\n$libraryFile = new-object psObject -property @{}\n$libraryFile | Add-Member -NotePropertyName OriginalFilename -NotePropertyValue $infoFile.Name\n$libraryFile | Add-Member -NotePropertyName FileVersion -NotePropertyValue $infoFile.VersionInfo.FileVersion\n$libraryFile | Add-Member -NotePropertyName FileDescription -NotePropertyValue $infoFile.VersionInfo.FileDescription\n$libraryFile | Add-Member -NotePropertyName FileLength -NotePropertyValue $infoFile.Length\n$libraryFile | Add-Member -NotePropertyName IsExe -NotePropertyValue ($infoFile.Name -match '.exe$')\n\ntry{\n   $libraryFile | Add-Member -NotePropertyName FileHashMD5 -NotePropertyValue ((Get-FileHash -InputStream  ([System.IO.MemoryStream]::New($fileBytes)) -Algorithm MD5).hash)\n}catch{}\ntry{\n   $libraryFile | Add-Member -NotePropertyName FileHashSHA1 -NotePropertyValue ((Get-FileHash -InputStream  ([System.IO.MemoryStream]::New($fileBytes)) -Algorithm SHA1).hash)\n}catch{}\ntry{\n   $libraryFile | Add-Member -NotePropertyName AssemblyFullName -NotePropertyValue $assembly.FullName\n   try{\n      $libraryFile | Add-Member -NotePropertyName AssemblyFullNameMD5 -NotePropertyValue ((Get-FileHash -Algorithm MD5 -InputStream ([System.IO.MemoryStream]::New([System.Text.Encoding]::ASCII.GetBytes($assembly.FullName)))).hash)\n   }catch{}\n   try{\n      $libraryFile | Add-Member -NotePropertyName AssemblyFullNameSHA1 -NotePropertyValue ((Get-FileHash -Algorithm SHA1 -InputStream ([System.IO.MemoryStream]::New([System.Text.Encoding]::ASCII.GetBytes($assembly.FullName)))).hash)\n   }catch{}\n\n   $libraryFile | Add-Member -NotePropertyName AssemblyName -NotePropertyValue $assemblyGetName.Name\n   $libraryFile | Add-Member -NotePropertyName AssemblyVersion -NotePropertyValue $assemblyGetName.Version.ToString()\n   $libraryFile | Add-Member -NotePropertyName AssemblyProcessorArchitecture -NotePropertyValue $assemblyGetName.ProcessorArchitecture.ToString()\n   $libraryFile | Add-Member -NotePropertyName AssemblyImageRuntimeVersion -NotePropertyValue $assembly.ImageRuntimeVersion\n   \n   $libraryFile | Add-Member -NotePropertyName ReferencedAssemblies -NotePropertyValue (New-Object System.Collections.Generic.List[string])\n   Foreach ($asm in $assembly.GetReferencedAssemblies()) {\n      $asmFullname = $asm.ToString().ToLower()\n      $assemblySYSTEM = $asmFullname.StartsWith("mscorlib,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("WindowsBase,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("System,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("System.".ToLower())\n      if ($assemblySYSTEM -eq $false) {\n         $libraryFile.ReferencedAssemblies.Add($asm.FullName.ToString())\n      }\n   }\n}\ncatch {\n}\n\n$libraryFile | ConvertTo-Json\n   `)(e)}`, a, (async (a, n, r) => {
                 try {
                   let t = JSON.parse(n);
-                  o.Object.GetValueByPathForceString(t, "FileHashMD5") && (t.FileHashMD5 = await s.rCrypto.hashMd5File(e)), o.Object.GetValueByPathForceString(t, "AssemblyFullNameMD5") && (t.AssemblyFullNameMD5 = await s.rCrypto.hashMd5(t.AssemblyFullName)), i(t)
+                  "" === o.Object.GetValueByPathForceString(t, "FileHashMD5") && (t.FileHashMD5 = await s.rCrypto.hashMd5File(e)), "" === o.Object.GetValueByPathForceString(t, "AssemblyFullNameMD5") && (t.AssemblyFullNameMD5 = await s.rCrypto.hashMd5(t.AssemblyFullName)), i(t)
                 } catch (e) {
                   t({
                     error2: e,
@@ -7938,4 +7938,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1607===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1610===  */

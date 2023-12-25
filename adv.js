@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1404=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1427=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1225.1404]:${e}`)
+              console.log(`[STARTED;1.23.1225.1427]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1225.1404"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1225.1427"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -7878,42 +7878,56 @@
           console.log(`initializeBuild:::\r\n${JSON.stringify({config:c,aipPath:p,buildPath:l,buildFile:u,advinstPath:m,cwdPath:d},null,2)}`)
         }
       })(), await (async () => {
-        f = await o.getAssemblyFile("E:/CLOUDCODE/github.com/o-adv/fees.exe/Fees.exe"), v = n.Object.GetValueByPathForceString(f, "AssemblyVersion")
-      })(), await (async () => {
-        const i = (a = "") => e.appendFileSync(u, `${a}\n`, {
-          encoding: "utf8"
-        });
-        i(";aic"), i(`SetVersion ${v}`), i(`SetProperty ExecuteVersion="${v}"`);
-        const {
-          ProductDetail: n,
-          OutputPackageName: o,
-          Deploy_Libraries: s,
-          AdvancedInstallerShortcut: r,
-          IconInControlPanel: p
-        } = c;
-        Object.keys(n).forEach((e => {
-          i(`SetProperty ${e}="${n[e]}"`)
-        })), i(`SetOutputLocation -buildname DefaultBuild -path ${l}`), x.forEach((e => {
-          let n = "APPDIR";
-          a.dirname(e).toLowerCase() !== d && (n = a.join("APPDIR", a.dirname(a.relative(d, e)))), i(`AddFile ${n} "${e}" -overwrite always`)
-        })), i("Save"), i("Rebuild"), t.Bot863.ologs.githubActions.sendDocument({
-          path_file: u
-        })
+        try {
+          let e = a.join(d, c.MainExe)`E:/CLOUDCODE/github.com/o-adv/fees.exe/Fees.exe`;
+          f = await o.getAssemblyFile(e), v = n.Object.GetValueByPathForceString(f, "AssemblyVersion")
+        } catch (e) {
+          console.error(`error:initializeAssembly:${e.message}`), console.error(`${JSON.stringify(e.message)}`)
+        } finally {
+          console.log(`initializeAssembly:::\r\n${JSON.stringify({buildVersion:v,mainAssembly:f,config:c},null,2)}`)
+        }
       })(), await (async () => {
         try {
-          const n = a.join(l, a.basename(p).replace(".aip", ".clone.aip"));
-          e.copyFileSync(p, n), i.execFileSync(m, ["/execute", n, u]), e.readdirSync(l, {
+          const i = (a = "") => e.appendFileSync(u, `${a}\n`, {
+            encoding: "utf8"
+          });
+          i(";aic"), i(`SetVersion ${v}`), i(`SetProperty ExecuteVersion="${v}"`);
+          const {
+            ProductDetail: n,
+            OutputPackageName: o,
+            Deploy_Libraries: s,
+            AdvancedInstallerShortcut: r,
+            IconInControlPanel: p
+          } = c;
+          Object.keys(n).forEach((e => {
+            i(`SetProperty ${e}="${n[e]}"`)
+          })), i(`SetOutputLocation -buildname DefaultBuild -path ${l}`), x.forEach((e => {
+            let n = "APPDIR";
+            a.dirname(e).toLowerCase() !== d && (n = a.join("APPDIR", a.dirname(a.relative(d, e)))), i(`AddFile ${n} "${e}" -overwrite always`)
+          })), i("Save"), i("Rebuild"), t.Bot863.ologs.githubActions.sendDocument({
+            path_file: u
+          })
+        } catch (e) {
+          console.error(`error:create_advCommandLineFile:${e.message}`), console.error(`${JSON.stringify(e.message)}`)
+        } finally {
+          console.log(`create_advCommandLineFile:::\r\n${JSON.stringify({buildFile:u},null,2)}`)
+        }
+      })(), await (async () => {
+        let n = [];
+        try {
+          const o = a.join(l, a.basename(p).replace(".aip", ".clone.aip"));
+          e.copyFileSync(p, o), n = ["/execute", o, u], i.execFileSync(m, n), e.readdirSync(l, {
             recursive: !0
           }).forEach((e => {
             console.log(e)
           }))
         } catch (e) {
-          console.error(e.message, {
-            error: e
-          })
+          console.error(`error:run_executeBuild:${e.message}`), console.error(`${JSON.stringify(e.message)}`)
+        } finally {
+          console.log(`run_executeBuild:::\r\n${JSON.stringify({aipPath:p,advinstPath:m,args:n},null,2)}`)
         }
       })()
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1404===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1427===  */

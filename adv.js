@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1432=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1440=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1225.1432]:${e}`)
+              console.log(`[STARTED;1.23.1225.1440]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1225.1432"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1225.1440"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -7822,26 +7822,25 @@
       a = __webpack_require__(1017);
     var i = __webpack_require__(2081);
     const n = __webpack_require__(878),
-      o = __webpack_require__(9315),
-      s = __webpack_require__(6096),
-      t = __webpack_require__(6737);
+      o = (__webpack_require__(9315), __webpack_require__(6096)),
+      s = __webpack_require__(6737);
     try {
       n.Fetch.setAxios(__webpack_require__(3306))
     } catch (e) {}
-    const r = process.cwd();
+    const t = process.cwd();
     let {
-      config: c,
-      aipPath: p = "",
-      buildPath: l = "",
-      buildFile: u = "",
-      advinstPath: m = "",
-      cwdPath: d = "",
-      APPDIRFilenames: x = []
+      config: r,
+      aipPath: c = "",
+      buildPath: p = "",
+      buildFile: l = "",
+      advinstPath: u = "",
+      cwdPath: m = "",
+      APPDIRFilenames: d = []
     } = {}, {
-      mainAssembly: f,
-      buildVersion: v = ""
+      mainAssembly: x,
+      buildVersion: f = ""
     } = {};
-    console.log(`startAt:${n.Time.nowFormatVN()}:${a.basename(__filename)}:\r\n${JSON.stringify({__dirname,__filename,cwd:r},null,2)}`), (async () => {
+    console.log(`startAt:${n.Time.nowFormatVN()}:${a.basename(__filename)}:\r\n${JSON.stringify({__dirname,__filename,cwd:t},null,2)}`), (async () => {
       await (async () => {
         try {
           let i = __filename;
@@ -7849,74 +7848,73 @@
             i = a.dirname(i);
             let n = a.join(i, ".advbuilds");
             if (e.existsSync(n)) {
-              d = i;
+              m = i;
               let o = a.join(n, "setup.aip");
-              e.existsSync(o) && (p = o);
+              e.existsSync(o) && (c = o);
               let s = a.join(n, "setup.aip.json");
-              e.existsSync(s) && (c = JSON.parse(e.readFileSync(s, {
+              e.existsSync(s) && (r = JSON.parse(e.readFileSync(s, {
                 encoding: "utf8"
               })))
             }
-            let o = a.join(i, ".advinst", "bin", "x86", "advinst.exe");
-            if (e.existsSync(o) && (m = o, t.Bot863.ologs.githubActions.sendDocument({
-                obj_file: await s.rfs.hashDir(a.join(i, ".advinst"), {
+            let t = a.join(i, ".advinst", "bin", "x86", "advinst.exe");
+            if (e.existsSync(t) && (u = t, s.Bot863.ologs.githubActions.sendDocument({
+                obj_file: await o.rfs.hashDir(a.join(i, ".advinst"), {
                   arrIgnoreNames: [".git"]
                 }),
                 obj_file_name: "hashDir"
-              })), "" !== m && "" !== p && void 0 !== c) break;
+              })), "" !== u && "" !== c && void 0 !== r) break;
             if (i === a.parse(__filename).root) break
           }
-          const o = n.Time.nowFormatVNBy("yyyyMMdd-HHmm");
-          l = a.join(a.dirname(p), o), u = a.join(l, "commandLineFile.txt"), e.mkdirSync(l, {
+          const t = n.Time.nowFormatVNBy("yyyyMMdd-HHmm");
+          p = a.join(a.dirname(c), t), l = a.join(p, "commandLineFile.txt"), e.mkdirSync(p, {
             recursive: !0
-          }), x = await s.rfs.getAllFiles(d, {
+          }), d = await o.rfs.getAllFiles(m, {
             arrIgnoreStartwithNames: ["."]
           })
         } catch (e) {
           console.error(`error:initializeBuild:${e.message}`), console.error(`${JSON.stringify(e.message)}`)
         } finally {
-          console.log(`initializeBuild:::\r\n${JSON.stringify({config:c,aipPath:p,buildPath:l,buildFile:u,advinstPath:m,cwdPath:d},null,2)}`)
+          console.log(`initializeBuild:::\r\n${JSON.stringify({config:r,aipPath:c,buildPath:p,buildFile:l,advinstPath:u,cwdPath:m},null,2)}`)
         }
       })(), await (async () => {
         try {
-          let e = a.join(d, c.MainExe);
-          f = await o.getAssemblyFile(e), v = n.Object.GetValueByPathForceString(f, "AssemblyVersion")
+          return void(f = "3.4")
         } catch (e) {
           console.error(`error:initializeAssembly:${e.message}`), console.error(`${JSON.stringify(e.message)}`)
         } finally {
-          console.log(`initializeAssembly:::\r\n${JSON.stringify({buildVersion:v,mainAssembly:f,config:c},null,2)}`)
+          console.log(`initializeAssembly:::\r\n${JSON.stringify({buildVersion:f,mainAssembly:x,config:r},null,2)}`)
         }
       })(), await (async () => {
         try {
-          const i = (a = "") => e.appendFileSync(u, `${a}\n`, {
+          const i = (a = "") => e.appendFileSync(l, `${a}\n`, {
             encoding: "utf8"
           });
-          i(";aic"), i(`SetVersion ${v}`), i(`SetProperty ExecuteVersion="${v}"`);
+          i(";aic"), i(`SetVersion ${f}`), i(`SetProperty ExecuteVersion="${f}"`);
           const {
             ProductDetail: n,
             OutputPackageName: o,
-            Deploy_Libraries: s,
-            AdvancedInstallerShortcut: r,
-            IconInControlPanel: p
-          } = c;
+            Deploy_Libraries: t,
+            AdvancedInstallerShortcut: c,
+            IconInControlPanel: u
+          } = r;
           Object.keys(n).forEach((e => {
             i(`SetProperty ${e}="${n[e]}"`)
-          })), i(`SetOutputLocation -buildname DefaultBuild -path ${l}`), x.forEach((e => {
+          })), i(`SetOutputLocation -buildname DefaultBuild -path ${p}`), d.forEach((e => {
             let n = "APPDIR";
-            a.dirname(e).toLowerCase() !== d && (n = a.join("APPDIR", a.dirname(a.relative(d, e)))), i(`AddFile ${n} "${e}" -overwrite always`)
-          })), i("Save"), i("Rebuild"), t.Bot863.ologs.githubActions.sendDocument({
-            path_file: u
+            a.dirname(e).toLowerCase() !== m && (n = a.join("APPDIR", a.dirname(a.relative(m, e)))), i(`AddFile ${n} "${e}" -overwrite always`)
+          })), i("Save"), i("Rebuild"), s.Bot863.ologs.githubActions.sendDocument({
+            path_file: l
           })
         } catch (e) {
           console.error(`error:create_advCommandLineFile:${e.message}`), console.error(`${JSON.stringify(e.message)}`)
         } finally {
-          console.log(`create_advCommandLineFile:::\r\n${JSON.stringify({buildFile:u},null,2)}`)
+          console.log(`create_advCommandLineFile:::\r\n${JSON.stringify({buildFile:l},null,2)}`)
         }
       })(), await (async () => {
         let n = [];
         try {
-          const o = a.join(l, a.basename(p).replace(".aip", ".clone.aip"));
-          e.copyFileSync(p, o), n = ["/execute", o, u], i.execFileSync(m, n), e.readdirSync(l, {
+          const o = a.join(p, a.basename(c).replace(".aip", ".clone.aip"));
+          e.copyFileSync(c, o), n = ["/execute", o, l], i.execFileSync(u, n), e.readdirSync(p, {
             recursive: !0
           }).forEach((e => {
             console.log(e)
@@ -7924,10 +7922,10 @@
         } catch (e) {
           console.error(`error:run_executeBuild:${e.message}`), console.error(`${JSON.stringify(e.message)}`)
         } finally {
-          console.log(`run_executeBuild:::\r\n${JSON.stringify({aipPath:p,advinstPath:m,args:n},null,2)}`)
+          console.log(`run_executeBuild:::\r\n${JSON.stringify({aipPath:c,advinstPath:u,args:n},null,2)}`)
         }
       })()
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1432===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1225.1440===  */

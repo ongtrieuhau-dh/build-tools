@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1457=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1518=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1226.1457]:${e}`)
+              console.log(`[STARTED;1.23.1226.1518]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1226.1457"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1226.1518"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2771,7 +2771,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1226.1457",
+              WEBPACK_BUILD_VERSION: "1.23.1226.1518",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -7989,11 +7989,11 @@
           let n = [];
           try {
             const o = a.join(c.buildPath, a.basename(c.aipPath).replace(".aip", ".clone.aip"));
-            return e.copyFileSync(c.aipPath, o), n = ["/execute", o, c.buildFile], i.execFileSync(c.advinstPath, n), e.readdirSync(c.buildPath, {
+            e.copyFileSync(c.aipPath, o), n = ["/execute", o, c.buildFile], i.execFileSync(c.advinstPath, n);
+            let s = e.readdirSync(c.buildPath, {
               recursive: !0
-            }).forEach((e => {
-              console.log(e)
-            })), "OK"
+            });
+            return `OK:${JSON.stringify(s)}`
           } catch (e) {
             return r.handleError(e, "run_executeBuild"), "ERROR"
           }
@@ -8011,4 +8011,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1457===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1518===  */

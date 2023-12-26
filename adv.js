@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1539=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1552=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1226.1539]:${e}`)
+              console.log(`[STARTED;1.23.1226.1552]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1226.1539"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1226.1552"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2771,7 +2771,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1226.1539",
+              WEBPACK_BUILD_VERSION: "1.23.1226.1552",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -7920,13 +7920,21 @@
         buildVersion: ""
       };
     (async () => {
+      const p = async () => {
+        r.VAR = c, await t.Bot863.ologs.githubActions.sendDocument({
+          obj_file: r,
+          obj_file_name: r.utilsRandomJsonFileName()
+        }), process.exit(0)
+      };
       try {
         if (r.startTask({
             showLog: !0,
             input: {
               __filename
             }
-          }), r["1.initializeBuild"] = await (async () => {
+          }), setTimeout((async () => {
+            r.handleError(new Error("Vượt quá thời gian thực hiện 5 phút!")), await p()
+          }), 3e5), r["1.initializeBuild"] = await (async () => {
             try {
               let i = __filename;
               for (;;) {
@@ -8009,12 +8017,9 @@
       } catch (e) {
         r.handleError(e)
       } finally {
-        r.VAR = c, t.Bot863.ologs.githubActions.sendDocument({
-          obj_file: r,
-          obj_file_name: r.utilsRandomJsonFileName()
-        })
+        await p()
       }
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1539===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1552===  */

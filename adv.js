@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1441=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1457=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1226.1441]:${e}`)
+              console.log(`[STARTED;1.23.1226.1457]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1226.1441"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1226.1457"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2771,7 +2771,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1226.1441",
+              WEBPACK_BUILD_VERSION: "1.23.1226.1457",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -2807,6 +2807,9 @@
               __at: new Date
             };
             this.endTime = new Date, this.endTimeVN = rTime.formatVN(this.endTime), this.errors.push(i), console.error(`🚫${JSON.stringify(i)}🚫`)
+          }
+          checkStepOK(e = "") {
+            return rObject.GetValueByPathForceString(this, e).startsWith("OK")
           }
           utilsGetElapsedSeconds() {
             return void 0 === this.startTime || void 0 === this.endTime ? 0 : (this.endTime.getTime() - this.startTime.getTime()) / 1e3
@@ -7945,7 +7948,7 @@
             } catch (e) {
               return r.handleError(e, "initializeBuild"), "ERROR"
             }
-          })(), "OK" != r["1.initializeBuild"]) return;
+          })(), !0 !== r.checkStepOK("1.initializeBuild")) return;
         if (r["2.initializeAssembly"] = await (async () => {
             let i = null;
             try {
@@ -7958,7 +7961,7 @@
                 pathFile: i
               }), "ERROR"
             }
-          })(), "OK" != r["2.initializeAssembly"]) return;
+          })(), !0 !== r.checkStepOK("2.initializeAssembly")) return;
         if (r["3.create_advCommandLineFile"] = await (async () => {
             try {
               const i = (a = "") => e.appendFileSync(c.buildFile, `${a}\n`, {
@@ -7981,7 +7984,7 @@
             } catch (e) {
               return r.handleError(e, "create_advCommandLineFile"), "ERROR"
             }
-          })(), "OK" != r["3.create_advCommandLineFile"]) return;
+          })(), !0 !== r.checkStepOK("3.create_advCommandLineFile")) return;
         r["4.run_executeBuild"] = await (async () => {
           let n = [];
           try {
@@ -8008,4 +8011,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1441===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1457===  */

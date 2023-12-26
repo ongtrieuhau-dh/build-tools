@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1518=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1526=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1226.1518]:${e}`)
+              console.log(`[STARTED;1.23.1226.1526]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1226.1518"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1226.1526"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2771,7 +2771,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1226.1518",
+              WEBPACK_BUILD_VERSION: "1.23.1226.1526",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -2815,7 +2815,13 @@
             return void 0 === this.startTime || void 0 === this.endTime ? 0 : (this.endTime.getTime() - this.startTime.getTime()) / 1e3
           }
           utilsRandomJsonFileName() {
-            return `${this.name}-${rTime.formatVNBy(this.endTime,"yyyyMMdd-HHmmss")}-${rString.randomStringLower(3)}`.replace(/[^a-zA-Z0-9]/g, "-") + ".json"
+            let e = "";
+            try {
+              e = rTime.formatVNBy(this.endTime, "yyyyMMdd-HHmmss")
+            } catch (a) {
+              e = "errTime"
+            }
+            return `${this.name}-${e}-${rString.randomStringLower(3)}`.replace(/[^a-zA-Z0-9]/g, "-") + ".json"
           }
         }
         const rKiwi = {
@@ -8011,4 +8017,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1518===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1526===  */

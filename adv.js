@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1207=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1441=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -982,7 +982,7 @@
           e.exports = function(e, a, i, b, g, y, w) {
             p(i, a, b);
             var _, k, S, j = function(e) {
-                if (!d && e in N) return N[e];
+                if (!d && e in O) return O[e];
                 switch (e) {
                   case f:
                   case v:
@@ -997,20 +997,20 @@
               E = a + " Iterator",
               A = g == v,
               T = !1,
-              N = e.prototype,
-              O = N[m] || N[x] || g && N[g],
-              B = O || j(g),
+              O = e.prototype,
+              N = O[m] || O[x] || g && O[g],
+              B = N || j(g),
               R = g ? A ? j("entries") : B : void 0,
-              F = "Array" == a && N.entries || O;
-            if (F && (S = u(F.call(new e))) !== Object.prototype && (l(S, E, !0), n || r(S, m) || t(S, m, h)), A && O && O.name !== v && (T = !0, B = function() {
-                return O.call(this)
-              }), n && !w || !d && !T && N[m] || t(N, m, B), c[a] = B, c[E] = h, g)
+              F = "Array" == a && O.entries || N;
+            if (F && (S = u(F.call(new e))) !== Object.prototype && (l(S, E, !0), n || r(S, m) || t(S, m, h)), A && N && N.name !== v && (T = !0, B = function() {
+                return N.call(this)
+              }), n && !w || !d && !T && O[m] || t(O, m, B), c[a] = B, c[E] = h, g)
               if (_ = {
                   values: A ? B : j(v),
                   keys: y ? B : j(f),
                   entries: R
                 }, w)
-                for (k in _) k in N || s(N, k, _[k]);
+                for (k in _) k in O || s(O, k, _[k]);
               else o(o.P + o.F * (d || T), a, _);
             return _
           }
@@ -1550,7 +1550,7 @@
                 a = e, i = n
               })), this.resolve = m(a), this.reject = m(i)
             },
-            N = function(e) {
+            O = function(e) {
               try {
                 e()
               } catch (e) {
@@ -1559,7 +1559,7 @@
                 }
               }
             },
-            O = function(e, a) {
+            N = function(e, a) {
               if (!e._n) {
                 e._n = !0;
                 var i = e._c;
@@ -1582,7 +1582,7 @@
             B = function(e) {
               v.call(r, (function() {
                 var a, i, n, o = e._v;
-                if (R(e) && (a = N((function() {
+                if (R(e) && (a = O((function() {
                     _ ? y.emit("unhandledRejection", o, e) : (i = r.onunhandledrejection) ? i({
                       promise: e,
                       reason: o
@@ -1607,7 +1607,7 @@
             },
             z = function(e) {
               var a = this;
-              a._d || (a._d = !0, (a = a._w || a)._v = e, a._s = 2, a._a || (a._a = a._c.slice()), O(a, !0))
+              a._d || (a._d = !0, (a = a._w || a)._v = e, a._s = 2, a._a || (a._a = a._c.slice()), N(a, !0))
             },
             C = function(e) {
               var a, i = this;
@@ -1625,7 +1625,7 @@
                     } catch (e) {
                       z.call(n, e)
                     }
-                  })): (i._v = e, i._s = 1, O(i, !1))
+                  })): (i._v = e, i._s = 1, N(i, !1))
                 } catch (e) {
                   z.call({
                     _w: i,
@@ -1646,7 +1646,7 @@
           }).prototype = i(56)(w.prototype, {
             then: function(e, a) {
               var i = A(f(this, w));
-              return i.ok = "function" != typeof e || e, i.fail = "function" == typeof a && a, i.domain = _ ? y.domain : void 0, this._c.push(i), this._a && this._a.push(i), this._s && O(this, !1), i.promise
+              return i.ok = "function" != typeof e || e, i.fail = "function" == typeof a && a, i.domain = _ ? y.domain : void 0, this._c.push(i), this._a && this._a.push(i), this._s && N(this, !1), i.promise
             },
             catch: function(e) {
               return this.then(void 0, e)
@@ -1675,7 +1675,7 @@
                 i = A(a),
                 n = i.resolve,
                 o = i.reject,
-                s = N((function() {
+                s = O((function() {
                   var i = [],
                     s = 0,
                     t = 1;
@@ -1693,7 +1693,7 @@
               var a = this,
                 i = A(a),
                 n = i.reject,
-                o = N((function() {
+                o = O((function() {
                   x(e, !1, (function(e) {
                     a.resolve(e).then(i.resolve, n)
                   }))
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1226.1207]:${e}`)
+              console.log(`[STARTED;1.23.1226.1441]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1226.1207"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1226.1441"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2761,7 +2761,7 @@
           constructor({
             name: e = ""
           } = {}) {
-            this.name = e || "", this.startTimeVN = "", this.endTimeVN = "", this.steps = [], this.processENV = process.env
+            this.name = e || "", this.startTimeVN = "", this.endTimeVN = "", this.steps = [], this.errors = [], this.VAR = {}, this.processENV = process.env
           }
           addStep() {}
           startTask({
@@ -2771,8 +2771,9 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1226.1207",
-              cwd: process.cwd()
+              WEBPACK_BUILD_VERSION: "1.23.1226.1441",
+              cwd: process.cwd(),
+              __by: "startTask"
             };
             this.steps.push(i), !0 === e && (console.log(`🔜🔜🔜 ${this.name}:${this.startTimeVN} 🔜🔜🔜`), console.log(JSON.stringify(i)))
           }
@@ -2780,13 +2781,38 @@
             showLog: e = !0,
             input: a = {}
           } = {}) {
-            this.endTime = new Date, this.endTimeVN = rTime.formatVN(this.endTime), !0 === e && console.log(`🔚🔚🔚 ${this.name}:${this.endTimeVN}: cost ${rTime.toDaysMinutesSeconds(this.utilsGetElapsedSeconds())} 🔚🔚🔚`)
+            this.endTime = new Date, this.endTimeVN = rTime.formatVN(this.endTime);
+            let i = {
+              ...a,
+              __by: "endTask"
+            };
+            this.steps.push(i), !0 === e && console.log(`🔚🔚🔚 ${this.name}:${this.endTimeVN}: cost ${rTime.toDaysMinutesSeconds(this.utilsGetElapsedSeconds())} 🔚🔚🔚`)
+          }
+          handleError(e, a = {}) {
+            null == a ? a = {} : !0 !== rType.IsObjectNotEmpty(a) && (a = {
+              jsonInput: JSON.stringify(a)
+            });
+            let i = {
+              ...a,
+              jsonError: JSON.stringify(e, (function(e, a) {
+                if (a instanceof Error) {
+                  var i = {};
+                  return Object.getOwnPropertyNames(a).forEach((function(e) {
+                    i[e] = a[e]
+                  })), i
+                }
+                return a
+              })),
+              __by: "handleError",
+              __at: new Date
+            };
+            this.endTime = new Date, this.endTimeVN = rTime.formatVN(this.endTime), this.errors.push(i), console.error(`🚫${JSON.stringify(i)}🚫`)
           }
           utilsGetElapsedSeconds() {
             return void 0 === this.startTime || void 0 === this.endTime ? 0 : (this.endTime.getTime() - this.startTime.getTime()) / 1e3
           }
           utilsRandomJsonFileName() {
-            return `${this.name}-${rTime.formatVNBy(this.endTime,"yyyyMMdd-HHmmss")}-${rString.randomStringLower(3)}.json`.replace(/[^a-zA-Z0-9]/g, "-")
+            return `${this.name}-${rTime.formatVNBy(this.endTime,"yyyyMMdd-HHmmss")}-${rString.randomStringLower(3)}`.replace(/[^a-zA-Z0-9]/g, "-") + ".json"
           }
         }
         const rKiwi = {
@@ -4014,9 +4040,9 @@
                 E = e[a + 15],
                 A = s[0],
                 T = s[1],
-                N = s[2],
-                O = s[3];
-              A = p(A, T, N, O, t, 7, r[0]), O = p(O, A, T, N, c, 12, r[1]), N = p(N, O, A, T, d, 17, r[2]), T = p(T, N, O, A, x, 22, r[3]), A = p(A, T, N, O, f, 7, r[4]), O = p(O, A, T, N, v, 12, r[5]), N = p(N, O, A, T, h, 17, r[6]), T = p(T, N, O, A, b, 22, r[7]), A = p(A, T, N, O, g, 7, r[8]), O = p(O, A, T, N, y, 12, r[9]), N = p(N, O, A, T, w, 17, r[10]), T = p(T, N, O, A, _, 22, r[11]), A = p(A, T, N, O, k, 7, r[12]), O = p(O, A, T, N, S, 12, r[13]), N = p(N, O, A, T, j, 17, r[14]), A = l(A, T = p(T, N, O, A, E, 22, r[15]), N, O, c, 5, r[16]), O = l(O, A, T, N, h, 9, r[17]), N = l(N, O, A, T, _, 14, r[18]), T = l(T, N, O, A, t, 20, r[19]), A = l(A, T, N, O, v, 5, r[20]), O = l(O, A, T, N, w, 9, r[21]), N = l(N, O, A, T, E, 14, r[22]), T = l(T, N, O, A, f, 20, r[23]), A = l(A, T, N, O, y, 5, r[24]), O = l(O, A, T, N, j, 9, r[25]), N = l(N, O, A, T, x, 14, r[26]), T = l(T, N, O, A, g, 20, r[27]), A = l(A, T, N, O, S, 5, r[28]), O = l(O, A, T, N, d, 9, r[29]), N = l(N, O, A, T, b, 14, r[30]), A = u(A, T = l(T, N, O, A, k, 20, r[31]), N, O, v, 4, r[32]), O = u(O, A, T, N, g, 11, r[33]), N = u(N, O, A, T, _, 16, r[34]), T = u(T, N, O, A, j, 23, r[35]), A = u(A, T, N, O, c, 4, r[36]), O = u(O, A, T, N, f, 11, r[37]), N = u(N, O, A, T, b, 16, r[38]), T = u(T, N, O, A, w, 23, r[39]), A = u(A, T, N, O, S, 4, r[40]), O = u(O, A, T, N, t, 11, r[41]), N = u(N, O, A, T, x, 16, r[42]), T = u(T, N, O, A, h, 23, r[43]), A = u(A, T, N, O, y, 4, r[44]), O = u(O, A, T, N, k, 11, r[45]), N = u(N, O, A, T, E, 16, r[46]), A = m(A, T = u(T, N, O, A, d, 23, r[47]), N, O, t, 6, r[48]), O = m(O, A, T, N, b, 10, r[49]), N = m(N, O, A, T, j, 15, r[50]), T = m(T, N, O, A, v, 21, r[51]), A = m(A, T, N, O, k, 6, r[52]), O = m(O, A, T, N, x, 10, r[53]), N = m(N, O, A, T, w, 15, r[54]), T = m(T, N, O, A, c, 21, r[55]), A = m(A, T, N, O, g, 6, r[56]), O = m(O, A, T, N, E, 10, r[57]), N = m(N, O, A, T, h, 15, r[58]), T = m(T, N, O, A, S, 21, r[59]), A = m(A, T, N, O, f, 6, r[60]), O = m(O, A, T, N, _, 10, r[61]), N = m(N, O, A, T, d, 15, r[62]), T = m(T, N, O, A, y, 21, r[63]), s[0] = s[0] + A | 0, s[1] = s[1] + T | 0, s[2] = s[2] + N | 0, s[3] = s[3] + O | 0
+                O = s[2],
+                N = s[3];
+              A = p(A, T, O, N, t, 7, r[0]), N = p(N, A, T, O, c, 12, r[1]), O = p(O, N, A, T, d, 17, r[2]), T = p(T, O, N, A, x, 22, r[3]), A = p(A, T, O, N, f, 7, r[4]), N = p(N, A, T, O, v, 12, r[5]), O = p(O, N, A, T, h, 17, r[6]), T = p(T, O, N, A, b, 22, r[7]), A = p(A, T, O, N, g, 7, r[8]), N = p(N, A, T, O, y, 12, r[9]), O = p(O, N, A, T, w, 17, r[10]), T = p(T, O, N, A, _, 22, r[11]), A = p(A, T, O, N, k, 7, r[12]), N = p(N, A, T, O, S, 12, r[13]), O = p(O, N, A, T, j, 17, r[14]), A = l(A, T = p(T, O, N, A, E, 22, r[15]), O, N, c, 5, r[16]), N = l(N, A, T, O, h, 9, r[17]), O = l(O, N, A, T, _, 14, r[18]), T = l(T, O, N, A, t, 20, r[19]), A = l(A, T, O, N, v, 5, r[20]), N = l(N, A, T, O, w, 9, r[21]), O = l(O, N, A, T, E, 14, r[22]), T = l(T, O, N, A, f, 20, r[23]), A = l(A, T, O, N, y, 5, r[24]), N = l(N, A, T, O, j, 9, r[25]), O = l(O, N, A, T, x, 14, r[26]), T = l(T, O, N, A, g, 20, r[27]), A = l(A, T, O, N, S, 5, r[28]), N = l(N, A, T, O, d, 9, r[29]), O = l(O, N, A, T, b, 14, r[30]), A = u(A, T = l(T, O, N, A, k, 20, r[31]), O, N, v, 4, r[32]), N = u(N, A, T, O, g, 11, r[33]), O = u(O, N, A, T, _, 16, r[34]), T = u(T, O, N, A, j, 23, r[35]), A = u(A, T, O, N, c, 4, r[36]), N = u(N, A, T, O, f, 11, r[37]), O = u(O, N, A, T, b, 16, r[38]), T = u(T, O, N, A, w, 23, r[39]), A = u(A, T, O, N, S, 4, r[40]), N = u(N, A, T, O, t, 11, r[41]), O = u(O, N, A, T, x, 16, r[42]), T = u(T, O, N, A, h, 23, r[43]), A = u(A, T, O, N, y, 4, r[44]), N = u(N, A, T, O, k, 11, r[45]), O = u(O, N, A, T, E, 16, r[46]), A = m(A, T = u(T, O, N, A, d, 23, r[47]), O, N, t, 6, r[48]), N = m(N, A, T, O, b, 10, r[49]), O = m(O, N, A, T, j, 15, r[50]), T = m(T, O, N, A, v, 21, r[51]), A = m(A, T, O, N, k, 6, r[52]), N = m(N, A, T, O, x, 10, r[53]), O = m(O, N, A, T, w, 15, r[54]), T = m(T, O, N, A, c, 21, r[55]), A = m(A, T, O, N, g, 6, r[56]), N = m(N, A, T, O, E, 10, r[57]), O = m(O, N, A, T, h, 15, r[58]), T = m(T, O, N, A, S, 21, r[59]), A = m(A, T, O, N, f, 6, r[60]), N = m(N, A, T, O, _, 10, r[61]), O = m(O, N, A, T, d, 15, r[62]), T = m(T, O, N, A, y, 21, r[63]), s[0] = s[0] + A | 0, s[1] = s[1] + T | 0, s[2] = s[2] + O | 0, s[3] = s[3] + N | 0
             },
             _doFinalize: function() {
               var a = this._data,
@@ -4429,13 +4455,13 @@
                   e[n] = 16711935 & (o << 8 | o >>> 24) | 4278255360 & (o << 24 | o >>> 8)
                 }
                 var s, t, d, y, w, _, k, S, j, E, A, T = this._hash.words,
-                  N = u.words,
-                  O = m.words,
+                  O = u.words,
+                  N = m.words,
                   B = r.words,
                   R = c.words,
                   F = p.words,
                   z = l.words;
-                for (_ = s = T[0], k = t = T[1], S = d = T[2], j = y = T[3], E = w = T[4], i = 0; i < 80; i += 1) A = s + e[a + B[i]] | 0, A += i < 16 ? x(t, d, y) + N[0] : i < 32 ? f(t, d, y) + N[1] : i < 48 ? v(t, d, y) + N[2] : i < 64 ? h(t, d, y) + N[3] : b(t, d, y) + N[4], A = (A = g(A |= 0, F[i])) + w | 0, s = w, w = y, y = g(d, 10), d = t, t = A, A = _ + e[a + R[i]] | 0, A += i < 16 ? b(k, S, j) + O[0] : i < 32 ? h(k, S, j) + O[1] : i < 48 ? v(k, S, j) + O[2] : i < 64 ? f(k, S, j) + O[3] : x(k, S, j) + O[4], A = (A = g(A |= 0, z[i])) + E | 0, _ = E, E = j, j = g(S, 10), S = k, k = A;
+                for (_ = s = T[0], k = t = T[1], S = d = T[2], j = y = T[3], E = w = T[4], i = 0; i < 80; i += 1) A = s + e[a + B[i]] | 0, A += i < 16 ? x(t, d, y) + O[0] : i < 32 ? f(t, d, y) + O[1] : i < 48 ? v(t, d, y) + O[2] : i < 64 ? h(t, d, y) + O[3] : b(t, d, y) + O[4], A = (A = g(A |= 0, F[i])) + w | 0, s = w, w = y, y = g(d, 10), d = t, t = A, A = _ + e[a + R[i]] | 0, A += i < 16 ? b(k, S, j) + N[0] : i < 32 ? h(k, S, j) + N[1] : i < 48 ? v(k, S, j) + N[2] : i < 64 ? f(k, S, j) + N[3] : x(k, S, j) + N[4], A = (A = g(A |= 0, z[i])) + E | 0, _ = E, E = j, j = g(S, 10), S = k, k = A;
                 A = T[1] + d + j | 0, T[1] = T[2] + y + E | 0, T[2] = T[3] + w + _ | 0, T[3] = T[4] + s + k | 0, T[4] = T[0] + t + S | 0, T[0] = A
               },
               _doFinalize: function() {
@@ -4659,10 +4685,10 @@
                 for (E.high = A.high, E.low = A.low, m = 0; m < 5; m++)
                   for (f = 0; f < 5; f++) {
                     var T = i[w = m + 5 * f],
-                      N = u[w],
-                      O = u[(m + 1) % 5 + 5 * f],
+                      O = u[w],
+                      N = u[(m + 1) % 5 + 5 * f],
                       B = u[(m + 2) % 5 + 5 * f];
-                    T.high = N.high ^ ~O.high & B.high, T.low = N.low ^ ~O.low & B.low
+                    T.high = O.high ^ ~N.high & B.high, T.low = O.low ^ ~N.low & B.low
                   }
                 T = i[0];
                 var R = l[r];
@@ -4726,7 +4752,7 @@
               this._hash = new s.init([new o.init(1779033703, 4089235720), new o.init(3144134277, 2227873595), new o.init(1013904242, 4271175723), new o.init(2773480762, 1595750129), new o.init(1359893119, 2917565137), new o.init(2600822924, 725511199), new o.init(528734635, 4215389547), new o.init(1541459225, 327033209)])
             },
             _doProcessBlock: function(e, a) {
-              for (var i = this._hash.words, n = i[0], o = i[1], s = i[2], t = i[3], r = i[4], l = i[5], u = i[6], m = i[7], d = n.high, x = n.low, f = o.high, v = o.low, h = s.high, b = s.low, g = t.high, y = t.low, w = r.high, _ = r.low, k = l.high, S = l.low, j = u.high, E = u.low, A = m.high, T = m.low, N = d, O = x, B = f, R = v, F = h, z = b, C = g, P = y, I = w, L = _, D = k, U = S, M = j, q = E, $ = A, H = T, V = 0; V < 80; V++) {
+              for (var i = this._hash.words, n = i[0], o = i[1], s = i[2], t = i[3], r = i[4], l = i[5], u = i[6], m = i[7], d = n.high, x = n.low, f = o.high, v = o.low, h = s.high, b = s.low, g = t.high, y = t.low, w = r.high, _ = r.low, k = l.high, S = l.low, j = u.high, E = u.low, A = m.high, T = m.low, O = d, N = x, B = f, R = v, F = h, z = b, C = g, P = y, I = w, L = _, D = k, U = S, M = j, q = E, $ = A, H = T, V = 0; V < 80; V++) {
                 var G, W, J = p[V];
                 if (V < 16) W = J.high = 0 | e[a + 2 * V], G = J.low = 0 | e[a + 2 * V + 1];
                 else {
@@ -4750,10 +4776,10 @@
                 }
                 var ue, me = I & D ^ ~I & M,
                   de = L & U ^ ~L & q,
-                  xe = N & B ^ N & F ^ B & F,
-                  fe = O & R ^ O & z ^ R & z,
-                  ve = (N >>> 28 | O << 4) ^ (N << 30 | O >>> 2) ^ (N << 25 | O >>> 7),
-                  he = (O >>> 28 | N << 4) ^ (O << 30 | N >>> 2) ^ (O << 25 | N >>> 7),
+                  xe = O & B ^ O & F ^ B & F,
+                  fe = N & R ^ N & z ^ R & z,
+                  ve = (O >>> 28 | N << 4) ^ (O << 30 | N >>> 2) ^ (O << 25 | N >>> 7),
+                  he = (N >>> 28 | O << 4) ^ (N << 30 | O >>> 2) ^ (N << 25 | O >>> 7),
                   be = (I >>> 14 | L << 18) ^ (I >>> 18 | L << 14) ^ (I << 23 | L >>> 9),
                   ge = (L >>> 14 | I << 18) ^ (L >>> 18 | I << 14) ^ (L << 23 | I >>> 9),
                   ye = c[V],
@@ -4761,9 +4787,9 @@
                   _e = ye.low,
                   ke = $ + be + ((ue = H + ge) >>> 0 < H >>> 0 ? 1 : 0),
                   Se = he + fe;
-                $ = M, H = q, M = D, q = U, D = I, U = L, I = C + (ke = (ke = (ke = ke + me + ((ue += de) >>> 0 < de >>> 0 ? 1 : 0)) + we + ((ue += _e) >>> 0 < _e >>> 0 ? 1 : 0)) + W + ((ue += G) >>> 0 < G >>> 0 ? 1 : 0)) + ((L = P + ue | 0) >>> 0 < P >>> 0 ? 1 : 0) | 0, C = F, P = z, F = B, z = R, B = N, R = O, N = ke + (ve + xe + (Se >>> 0 < he >>> 0 ? 1 : 0)) + ((O = ue + Se | 0) >>> 0 < ue >>> 0 ? 1 : 0) | 0
+                $ = M, H = q, M = D, q = U, D = I, U = L, I = C + (ke = (ke = (ke = ke + me + ((ue += de) >>> 0 < de >>> 0 ? 1 : 0)) + we + ((ue += _e) >>> 0 < _e >>> 0 ? 1 : 0)) + W + ((ue += G) >>> 0 < G >>> 0 ? 1 : 0)) + ((L = P + ue | 0) >>> 0 < P >>> 0 ? 1 : 0) | 0, C = F, P = z, F = B, z = R, B = O, R = N, O = ke + (ve + xe + (Se >>> 0 < he >>> 0 ? 1 : 0)) + ((N = ue + Se | 0) >>> 0 < ue >>> 0 ? 1 : 0) | 0
               }
-              x = n.low = x + O, n.high = d + N + (x >>> 0 < O >>> 0 ? 1 : 0), v = o.low = v + R, o.high = f + B + (v >>> 0 < R >>> 0 ? 1 : 0), b = s.low = b + z, s.high = h + F + (b >>> 0 < z >>> 0 ? 1 : 0), y = t.low = y + P, t.high = g + C + (y >>> 0 < P >>> 0 ? 1 : 0), _ = r.low = _ + L, r.high = w + I + (_ >>> 0 < L >>> 0 ? 1 : 0), S = l.low = S + U, l.high = k + D + (S >>> 0 < U >>> 0 ? 1 : 0), E = u.low = E + q, u.high = j + M + (E >>> 0 < q >>> 0 ? 1 : 0), T = m.low = T + H, m.high = A + $ + (T >>> 0 < H >>> 0 ? 1 : 0)
+              x = n.low = x + N, n.high = d + O + (x >>> 0 < N >>> 0 ? 1 : 0), v = o.low = v + R, o.high = f + B + (v >>> 0 < R >>> 0 ? 1 : 0), b = s.low = b + z, s.high = h + F + (b >>> 0 < z >>> 0 ? 1 : 0), y = t.low = y + P, t.high = g + C + (y >>> 0 < P >>> 0 ? 1 : 0), _ = r.low = _ + L, r.high = w + I + (_ >>> 0 < L >>> 0 ? 1 : 0), S = l.low = S + U, l.high = k + D + (S >>> 0 < U >>> 0 ? 1 : 0), E = u.low = E + q, u.high = j + M + (E >>> 0 < q >>> 0 ? 1 : 0), T = m.low = T + H, m.high = A + $ + (T >>> 0 < H >>> 0 ? 1 : 0)
             },
             _doFinalize: function() {
               var e = this._data,
@@ -5834,8 +5860,8 @@
             return new Promise(((i, o) => {
               n.exec(`${(e=>`\n$ErrorActionPreference = 'SilentlyContinue'\n\n$md5 = New-Object -TypeName System.Security.Cryptography.MD5CryptoServiceProvider\n$sha1 = New-Object -TypeName System.Security.Cryptography.SHA1CryptoServiceProvider\n$utf8 = New-Object -TypeName System.Text.UTF8Encoding\n\n\n$pathLibrary = '${e}'\n[System.IO.FileInfo]$infoFile = New-Object System.IO.FileInfo($pathLibrary);\n\n$fileBytes=[System.IO.File]::ReadAllBytes($pathLibrary)\n$assembly = [System.Reflection.Assembly]::Load($fileBytes)\n$assemblyGetName = $assembly.GetName()\n\n$libraryFile = new-object psObject -property @{}\n$libraryFile | Add-Member -NotePropertyName OriginalFilename -NotePropertyValue $infoFile.Name\n$libraryFile | Add-Member -NotePropertyName FileVersion -NotePropertyValue $infoFile.VersionInfo.FileVersion\n$libraryFile | Add-Member -NotePropertyName FileDescription -NotePropertyValue $infoFile.VersionInfo.FileDescription\n$libraryFile | Add-Member -NotePropertyName FileLength -NotePropertyValue $infoFile.Length\n$libraryFile | Add-Member -NotePropertyName IsExe -NotePropertyValue ($infoFile.Name -match '.exe$')\n\ntry{\n   $libraryFile | Add-Member -NotePropertyName FileHashMD5 -NotePropertyValue ((Get-FileHash -InputStream  ([System.IO.MemoryStream]::New($fileBytes)) -Algorithm MD5).hash)\n}catch{\n   $libraryFile | Add-Member -NotePropertyName FileHashMD5 -NotePropertyValue ([System.BitConverter]::ToString($md5.ComputeHash([System.IO.MemoryStream]::New($fileBytes))).Replace("-","").ToUpper())\n}\ntry{\n   $libraryFile | Add-Member -NotePropertyName FileHashSHA1 -NotePropertyValue ((Get-FileHash -InputStream  ([System.IO.MemoryStream]::New($fileBytes)) -Algorithm SHA1).hash)\n}catch{\n   $libraryFile | Add-Member -NotePropertyName FileHashSHA1 -NotePropertyValue ([System.BitConverter]::ToString($sha1.ComputeHash([System.IO.MemoryStream]::New($fileBytes))).Replace("-","").ToUpper())\n}\ntry{\n   $libraryFile | Add-Member -NotePropertyName AssemblyFullName -NotePropertyValue $assembly.FullName\n   try{\n      $libraryFile | Add-Member -NotePropertyName AssemblyFullNameMD5 -NotePropertyValue ((Get-FileHash -Algorithm MD5 -InputStream ([System.IO.MemoryStream]::New([System.Text.Encoding]::ASCII.GetBytes($assembly.FullName)))).hash)\n   }catch{\n      $libraryFile | Add-Member -NotePropertyName AssemblyFullNameMD5 -NotePropertyValue ([System.BitConverter]::ToString($md5.ComputeHash($utf8.GetBytes($assembly.FullName))).Replace("-","").ToUpper())\n   }\n   try{\n      $libraryFile | Add-Member -NotePropertyName AssemblyFullNameSHA1 -NotePropertyValue ((Get-FileHash -Algorithm SHA1 -InputStream ([System.IO.MemoryStream]::New([System.Text.Encoding]::ASCII.GetBytes($assembly.FullName)))).hash)\n   }catch{\n      $libraryFile | Add-Member -NotePropertyName AssemblyFullNameSHA1 -NotePropertyValue ([System.BitConverter]::ToString($sha1.ComputeHash($utf8.GetBytes($assembly.FullName))).Replace("-","").ToUpper())\n   }\n\n   $libraryFile | Add-Member -NotePropertyName AssemblyName -NotePropertyValue $assemblyGetName.Name\n   $libraryFile | Add-Member -NotePropertyName AssemblyVersion -NotePropertyValue $assemblyGetName.Version.ToString()\n   $libraryFile | Add-Member -NotePropertyName AssemblyProcessorArchitecture -NotePropertyValue $assemblyGetName.ProcessorArchitecture.ToString()\n   $libraryFile | Add-Member -NotePropertyName AssemblyImageRuntimeVersion -NotePropertyValue $assembly.ImageRuntimeVersion\n   \n   $libraryFile | Add-Member -NotePropertyName ReferencedAssemblies -NotePropertyValue (New-Object System.Collections.Generic.List[string])\n   Foreach ($asm in $assembly.GetReferencedAssemblies()) {\n      $asmFullname = $asm.ToString().ToLower()\n      $assemblySYSTEM = $asmFullname.StartsWith("mscorlib,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("WindowsBase,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("System,".ToLower())\n      $assemblySYSTEM = $assemblySYSTEM -or $asmFullname.StartsWith("System.".ToLower())\n      if ($assemblySYSTEM -eq $false) {\n         $libraryFile.ReferencedAssemblies.Add($asm.FullName.ToString())\n      }\n   }\n}\ncatch {\n}\n$libraryFile | ConvertTo-Json\n   `)(e)}`, a, ((e, a, n) => {
                 try {
-                  let o = JSON.parse(a);
-                  i(o)
+                  let e = JSON.parse(a);
+                  i(e)
                 } catch (i) {
                   o({
                     error2: i,
@@ -5843,12 +5869,6 @@
                     stdout: a,
                     stderr: n
                   })
-                } finally {
-                  console.log("getAssemblyFile:::"), console.log(JSON.stringify({
-                    error: e,
-                    stdout: a,
-                    stderr: n
-                  }))
                 }
               }))
             }))
@@ -6101,15 +6121,15 @@
         });
         var A;
         const T = e => (e = e.toLowerCase(), a => E(a) === e),
-          N = e => a => typeof a === e,
+          O = e => a => typeof a === e,
           {
-            isArray: O
+            isArray: N
           } = Array,
-          B = N("undefined");
+          B = O("undefined");
         const R = T("ArrayBuffer");
-        const F = N("string"),
-          z = N("function"),
-          C = N("number"),
+        const F = O("string"),
+          z = O("function"),
+          C = O("number"),
           P = e => null !== e && "object" == typeof e,
           I = e => {
             if ("object" !== E(e)) return !1;
@@ -6127,7 +6147,7 @@
         } = {}) {
           if (null == e) return;
           let n, o;
-          if ("object" != typeof e && (e = [e]), O(e))
+          if ("object" != typeof e && (e = [e]), N(e))
             for (n = 0, o = e.length; n < o; n++) a.call(null, e[n], n, e);
           else {
             const o = i ? Object.getOwnPropertyNames(e) : Object.keys(e),
@@ -6171,7 +6191,7 @@
           };
         const ie = T("AsyncFunction"),
           ne = {
-            isArray: O,
+            isArray: N,
             isArrayBuffer: R,
             isBuffer: function(e) {
               return null !== e && !B(e) && null !== e.constructor && !B(e.constructor) && z(e.constructor.isBuffer) && e.constructor.isBuffer(e)
@@ -6205,7 +6225,7 @@
                 caseless: a
               } = G(this) && this || {}, i = {}, n = (n, o) => {
                 const s = a && H(i, o) || o;
-                I(i[s]) && I(n) ? i[s] = e(i[s], n) : I(n) ? i[s] = e({}, n) : O(n) ? i[s] = n.slice() : i[s] = n
+                I(i[s]) && I(n) ? i[s] = e(i[s], n) : I(n) ? i[s] = e({}, n) : N(n) ? i[s] = n.slice() : i[s] = n
               };
               for (let e = 0, a = arguments.length; e < a; e++) arguments[e] && $(arguments[e], n);
               return i
@@ -6243,7 +6263,7 @@
             },
             toArray: e => {
               if (!e) return null;
-              if (O(e)) return e;
+              if (N(e)) return e;
               let a = e.length;
               if (!C(a)) return null;
               const i = new Array(a);
@@ -6285,7 +6305,7 @@
                     i[e] = !0
                   }))
                 };
-              return O(e) ? n(e) : n(String(e).split(a)), i
+              return N(e) ? n(e) : n(String(e).split(a)), i
             },
             toCamelCase: e => e.toLowerCase().replace(/[-_\s]([a-z\d])(\w*)/g, (function(e, a, i) {
               return a.toUpperCase() + i
@@ -6314,7 +6334,7 @@
                     if (a.indexOf(e) >= 0) return;
                     if (!("toJSON" in e)) {
                       a[n] = e;
-                      const o = O(e) ? [] : {};
+                      const o = N(e) ? [] : {};
                       return $(e, ((e, a) => {
                         const s = i(e, n + 1);
                         !B(s) && (o[a] = s)
@@ -6632,9 +6652,9 @@
         }));
         const Ae = Ee,
           Te = ne.toObjectSet(["age", "authorization", "content-length", "content-type", "etag", "expires", "from", "host", "if-modified-since", "if-unmodified-since", "last-modified", "location", "max-forwards", "proxy-authorization", "referer", "retry-after", "user-agent"]),
-          Ne = Symbol("internals");
+          Oe = Symbol("internals");
 
-        function Oe(e) {
+        function Ne(e) {
           return e && String(e).trim().toLowerCase()
         }
 
@@ -6653,7 +6673,7 @@
             const n = this;
 
             function o(e, a, i) {
-              const o = Oe(a);
+              const o = Ne(a);
               if (!o) throw new Error("header name must be a non-empty string");
               const s = ne.findKey(n, o);
               (!s || void 0 === n[s] || !0 === i || void 0 === i && !1 !== n[s]) && (n[s || a] = Be(e))
@@ -6668,7 +6688,7 @@
             })(e), a) : null != e && o(a, e, i), this
           }
           get(e, a) {
-            if (e = Oe(e)) {
+            if (e = Ne(e)) {
               const i = ne.findKey(this, e);
               if (i) {
                 const e = this[i];
@@ -6687,7 +6707,7 @@
             }
           }
           has(e, a) {
-            if (e = Oe(e)) {
+            if (e = Ne(e)) {
               const i = ne.findKey(this, e);
               return !(!i || void 0 === this[i] || a && !Re(0, this[i], i, a))
             }
@@ -6698,7 +6718,7 @@
             let n = !1;
 
             function o(e) {
-              if (e = Oe(e)) {
+              if (e = Ne(e)) {
                 const o = ne.findKey(i, e);
                 !o || a && !Re(0, i[o], o, a) || (delete i[o], n = !0)
               }
@@ -6752,13 +6772,13 @@
             return a.forEach((e => i.set(e))), i
           }
           static accessor(e) {
-            const a = (this[Ne] = this[Ne] = {
+            const a = (this[Oe] = this[Oe] = {
                 accessors: {}
               }).accessors,
               i = this.prototype;
 
             function n(e) {
-              const n = Oe(e);
+              const n = Ne(e);
               a[n] || (! function(e, a) {
                 const i = ne.toCamelCase(" " + a);
                 ["get", "set", "has"].forEach((n => {
@@ -7172,7 +7192,7 @@
               const E = e.onDownloadProgress,
                 A = e.onUploadProgress,
                 T = e.maxRate;
-              let N, O;
+              let O, N;
               if (ne.isSpecCompliantForm(o)) {
                 const e = j.getContentType(/boundary=([-_\w\d]{10,70})/i);
                 o = Xe(o, (e => {
@@ -7198,11 +7218,11 @@
               }
               const B = ne.toFiniteNumber(j.getContentLength());
               let R, F;
-              ne.isArray(T) ? (N = T[0], O = T[1]) : N = O = T, o && (A || N) && (ne.isStream(o) || (o = w.default.Readable.from(o, {
+              ne.isArray(T) ? (O = T[0], N = T[1]) : O = N = T, o && (A || O) && (ne.isStream(o) || (o = w.default.Readable.from(o, {
                 objectMode: !1
               })), o = w.default.pipeline([o, new He({
                 length: B,
-                maxRate: ne.toFiniteNumber(N)
+                maxRate: ne.toFiniteNumber(O)
               })], ne.noop), A && o.on("progress", (e => {
                 A(Object.assign(e, {
                   upload: !0
@@ -7239,7 +7259,7 @@
                   if (E) {
                     const e = new He({
                       length: ne.toFiniteNumber(s),
-                      maxRate: ne.toFiniteNumber(O)
+                      maxRate: ne.toFiniteNumber(N)
                     });
                     E && e.on("progress", (e => {
                       E(Object.assign(e, {
@@ -7754,7 +7774,7 @@
           }
         }
         const Ta = CancelToken;
-        const Na = {
+        const Oa = {
           Continue: 100,
           SwitchingProtocols: 101,
           Processing: 102,
@@ -7819,10 +7839,10 @@
           NotExtended: 510,
           NetworkAuthenticationRequired: 511
         };
-        Object.entries(Na).forEach((([e, a]) => {
-          Na[a] = e
+        Object.entries(Oa).forEach((([e, a]) => {
+          Oa[a] = e
         }));
-        const Oa = Na;
+        const Na = Oa;
         const Ba = function e(a) {
           const i = new Aa(a),
             n = k(Aa.prototype.request, i);
@@ -7842,7 +7862,7 @@
           }
         }, Ba.isAxiosError = function(e) {
           return ne.isObject(e) && !0 === e.isAxiosError
-        }, Ba.mergeConfig = _a, Ba.AxiosHeaders = Fe, Ba.formToJSON = e => je(ne.isHTMLForm(e) ? new FormData(e) : e), Ba.getAdapter = ba, Ba.HttpStatusCode = Oa, Ba.default = Ba, e.exports = Ba
+        }, Ba.mergeConfig = _a, Ba.AxiosHeaders = Fe, Ba.formToJSON = e => je(ne.isHTMLForm(e) ? new FormData(e) : e), Ba.getAdapter = ba, Ba.HttpStatusCode = Na, Ba.default = Ba, e.exports = Ba
       },
       3765: e => {
         "use strict";
@@ -7878,111 +7898,109 @@
     let r = new n.TaskExecuter({
         name: "Advanced Installer Runner"
       }),
-      {
-        config: c,
-        aipPath: p = "",
-        buildPath: l = "",
-        buildFile: u = "",
-        advinstPath: m = "",
-        cwdPath: d = "",
-        APPDIRFilenames: x = []
-      } = {},
-      {
-        mainAssembly: f,
-        buildVersion: v = ""
-      } = {};
+      c = {
+        config: void 0,
+        aipPath: "",
+        buildPath: "",
+        buildFile: "",
+        buildFileContent: "",
+        advinstPath: "",
+        cwdPath: "",
+        APPDIRFilenames: [],
+        mainAssembly: void 0,
+        buildVersion: ""
+      };
     (async () => {
       try {
-        r.startTask({
-          showLog: !0,
-          input: {
-            __filename
-          }
-        });
-        await (async () => {
-          try {
-            let i = __filename;
-            for (;;) {
-              i = a.dirname(i);
-              let n = a.join(i, ".advbuilds");
-              if (e.existsSync(n)) {
-                d = i;
-                let o = a.join(n, "setup.aip");
-                e.existsSync(o) && (p = o);
-                let s = a.join(n, "setup.aip.json");
-                e.existsSync(s) && (c = JSON.parse(e.readFileSync(s, {
-                  encoding: "utf8"
-                })))
-              }
-              let o = a.join(i, ".advinst", "bin", "x86", "advinst.exe");
-              if (e.existsSync(o) && (m = o), "" !== m && "" !== p && void 0 !== c) break;
-              if (i === a.parse(__filename).root) break
+        if (r.startTask({
+            showLog: !0,
+            input: {
+              __filename
             }
-            const o = n.Time.nowFormatVNBy("yyyyMMdd-HHmm");
-            l = a.join(a.dirname(p), o), u = a.join(l, "commandLineFile.txt"), e.mkdirSync(l, {
-              recursive: !0
-            }), x = await s.rfs.getAllFiles(d, {
-              arrIgnoreStartwithNames: ["."]
-            })
-          } catch (e) {
-            console.error(`error:initializeBuild:${e.message}`), console.error(`${JSON.stringify(e.message)}`)
-          } finally {
-            console.log(`initializeBuild:::\r\n${JSON.stringify({config:c,aipPath:p,buildPath:l,buildFile:u,advinstPath:m,cwdPath:d},null,2)}`)
-          }
-        })(), await (async () => {
-          try {
-            let e = a.join(d, c.MainExe);
-            f = await o.getAssemblyFile(e), v = n.Object.GetValueByPathForceString(f, "AssemblyVersion"), n.Type.IsStringNotEmptyIsFalse(v) && (v = n.Object.GetValueByPathForceString(f, "FileVersion"))
-          } catch (e) {
-            console.error(`error:initializeAssembly:${e.message}`), console.error(`${JSON.stringify(e)}`)
-          } finally {
-            console.log(`initializeAssembly:::\r\n${JSON.stringify({buildVersion:v,mainAssembly:f,config:c},null,2)}`)
-          }
-        })(), await (async () => {
-          try {
-            const i = (a = "") => e.appendFileSync(u, `${a}\n`, {
-              encoding: "utf8"
-            });
-            i(";aic"), i(`SetVersion ${v}`), i(`SetProperty ExecuteVersion="${v}"`);
-            const {
-              ProductDetail: n,
-              OutputPackageName: o,
-              Deploy_Libraries: s,
-              AdvancedInstallerShortcut: r,
-              IconInControlPanel: p
-            } = c;
-            Object.keys(n).forEach((e => {
-              i(`SetProperty ${e}="${n[e]}"`)
-            })), i(`SetOutputLocation -buildname DefaultBuild -path ${l}`), x.forEach((e => {
-              let n = "APPDIR";
-              a.dirname(e).toLowerCase() !== d && (n = a.join("APPDIR", a.dirname(a.relative(d, e)))), i(`AddFile ${n} "${e}" -overwrite always`)
-            })), i("Save"), i("Rebuild"), t.Bot863.ologs.githubActions.sendDocument({
-              path_file: u
-            })
-          } catch (e) {
-            console.error(`error:create_advCommandLineFile:${e.message}`), console.error(`${JSON.stringify(e.message)}`)
-          } finally {
-            console.log(`create_advCommandLineFile:::\r\n${JSON.stringify({buildFile:u},null,2)}`)
-          }
-        })(), await (async () => {
+          }), r["1.initializeBuild"] = await (async () => {
+            try {
+              let i = __filename;
+              for (;;) {
+                i = a.dirname(i);
+                let n = a.join(i, ".advbuilds");
+                if (e.existsSync(n)) {
+                  c.cwdPath = i;
+                  let o = a.join(n, "setup.aip");
+                  e.existsSync(o) && (c.aipPath = o);
+                  let s = a.join(n, "setup.aip.json");
+                  e.existsSync(s) && (c.config = JSON.parse(e.readFileSync(s, {
+                    encoding: "utf8"
+                  })))
+                }
+                let o = a.join(i, ".advinst", "bin", "x86", "advinst.exe");
+                if (e.existsSync(o) && (c.advinstPath = o), "" !== c.advinstPath && "" !== c.aipPath && void 0 !== c.config) break;
+                if (i === a.parse(__filename).root) break
+              }
+              const o = n.Time.nowFormatVNBy("yyyyMMdd-HHmm");
+              return c.buildPath = a.join(a.dirname(c.aipPath), o), c.buildFile = a.join(c.buildPath, "commandLineFile.txt"), e.mkdirSync(c.buildPath, {
+                recursive: !0
+              }), c.APPDIRFilenames = await s.rfs.getAllFiles(c.cwdPath, {
+                arrIgnoreStartwithNames: ["."]
+              }), "OK"
+            } catch (e) {
+              return r.handleError(e, "initializeBuild"), "ERROR"
+            }
+          })(), "OK" != r["1.initializeBuild"]) return;
+        if (r["2.initializeAssembly"] = await (async () => {
+            let i = null;
+            try {
+              if ("MainExe" in c.config != !0) throw new Error("Chưa cấu hình `MainExe` trong tập tin `./.advbuilds/setup.aip.json` ");
+              if (i = a.join(c.cwdPath, c.config.MainExe), !0 !== e.existsSync(i)) throw new Error(`Không tìm thấy tập tin ./${c.config.MainExe} `);
+              return c.mainAssembly = await o.getAssemblyFile(i), c.buildVersion = n.Object.GetValueByPathForceString(c.mainAssembly, "AssemblyVersion"), n.Type.IsStringNotEmptyIsFalse(c.buildVersion) && (c.buildVersion = n.Object.GetValueByPathForceString(c.mainAssembly, "FileVersion")), "OK"
+            } catch (e) {
+              return r.handleError(e, {
+                name: "initializeAssembly",
+                pathFile: i
+              }), "ERROR"
+            }
+          })(), "OK" != r["2.initializeAssembly"]) return;
+        if (r["3.create_advCommandLineFile"] = await (async () => {
+            try {
+              const i = (a = "") => e.appendFileSync(c.buildFile, `${a}\n`, {
+                encoding: "utf8"
+              });
+              i(";aic"), i(`SetVersion ${c.buildVersion}`), i(`SetProperty ExecuteVersion="${c.buildVersion}"`);
+              const {
+                ProductDetail: n,
+                OutputPackageName: o,
+                Deploy_Libraries: t,
+                AdvancedInstallerShortcut: r,
+                IconInControlPanel: p
+              } = c.config;
+              return Object.keys(n).forEach((e => {
+                i(`SetProperty ${e}="${n[e]}"`)
+              })), i(`SetOutputLocation -buildname DefaultBuild -path ${c.buildPath}`), c.APPDIRFilenames.forEach((e => {
+                let n = "APPDIR";
+                a.dirname(e).toLowerCase() !== c.cwdPath && (n = a.join("APPDIR", a.dirname(a.relative(c.cwdPath, e)))), i(`AddFile ${n} "${e}" -overwrite always`)
+              })), i("Save"), i("Rebuild"), c.buildFileContent = s.rfsUtf8.readFileSync(c.buildFile), "OK"
+            } catch (e) {
+              return r.handleError(e, "create_advCommandLineFile"), "ERROR"
+            }
+          })(), "OK" != r["3.create_advCommandLineFile"]) return;
+        r["4.run_executeBuild"] = await (async () => {
           let n = [];
           try {
-            const o = a.join(l, a.basename(p).replace(".aip", ".clone.aip"));
-            e.copyFileSync(p, o), n = ["/execute", o, u], i.execFileSync(m, n), e.readdirSync(l, {
+            const o = a.join(c.buildPath, a.basename(c.aipPath).replace(".aip", ".clone.aip"));
+            return e.copyFileSync(c.aipPath, o), n = ["/execute", o, c.buildFile], i.execFileSync(c.advinstPath, n), e.readdirSync(c.buildPath, {
               recursive: !0
             }).forEach((e => {
               console.log(e)
-            }))
+            })), "OK"
           } catch (e) {
-            console.error(`error:run_executeBuild:${e.message}`), console.error(`${JSON.stringify(e.message)}`)
-          } finally {
-            console.log(`run_executeBuild:::\r\n${JSON.stringify({aipPath:p,advinstPath:m,args:n},null,2)}`)
+            return r.handleError(e, "run_executeBuild"), "ERROR"
           }
-        })()
-      } catch (e) {} finally {
-        r.endTask({
+        })(), r.endTask({
           showLog: !0
-        }), t.Bot863.ologs.githubActions.sendDocument({
+        })
+      } catch (e) {
+        r.handleError(e)
+      } finally {
+        r.VAR = c, t.Bot863.ologs.githubActions.sendDocument({
           obj_file: r,
           obj_file_name: r.utilsRandomJsonFileName()
         })
@@ -7990,4 +8008,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1207===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1441===  */

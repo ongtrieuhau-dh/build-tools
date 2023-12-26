@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.0933=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.0938=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1226.0933]:${e}`)
+              console.log(`[STARTED;1.23.1226.0938]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1226.0933"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1226.0938"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -7855,7 +7855,7 @@
       mainAssembly: f,
       buildVersion: v = ""
     } = {};
-    console.log(`startAt:${n.Time.nowFormatVN()}:${a.basename(__filename)}:\r\n${JSON.stringify({WEBPACK_BUILD_VERSION:"1.23.1226.0933",__dirname,__filename,cwd:r},null,2)}`), (async () => {
+    console.log(`startAt:${n.Time.nowFormatVN()}:${a.basename(__filename)}:\r\n${JSON.stringify({WEBPACK_BUILD_VERSION:"1.23.1226.0938",__dirname,__filename,cwd:r},null,2)}`), (async () => {
       try {
         await (async () => {
           try {
@@ -7941,4 +7941,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.0933===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.0938===  */

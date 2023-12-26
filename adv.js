@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.0938=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1207=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -996,22 +996,22 @@
               },
               E = a + " Iterator",
               A = g == v,
-              O = !1,
+              T = !1,
               N = e.prototype,
-              T = N[m] || N[x] || g && N[g],
-              B = T || j(g),
+              O = N[m] || N[x] || g && N[g],
+              B = O || j(g),
               R = g ? A ? j("entries") : B : void 0,
-              F = "Array" == a && N.entries || T;
-            if (F && (S = u(F.call(new e))) !== Object.prototype && (l(S, E, !0), n || r(S, m) || t(S, m, h)), A && T && T.name !== v && (O = !0, B = function() {
-                return T.call(this)
-              }), n && !w || !d && !O && N[m] || t(N, m, B), c[a] = B, c[E] = h, g)
+              F = "Array" == a && N.entries || O;
+            if (F && (S = u(F.call(new e))) !== Object.prototype && (l(S, E, !0), n || r(S, m) || t(S, m, h)), A && O && O.name !== v && (T = !0, B = function() {
+                return O.call(this)
+              }), n && !w || !d && !T && N[m] || t(N, m, B), c[a] = B, c[E] = h, g)
               if (_ = {
                   values: A ? B : j(v),
                   keys: y ? B : j(f),
                   entries: R
                 }, w)
                 for (k in _) k in N || s(N, k, _[k]);
-              else o(o.P + o.F * (d || O), a, _);
+              else o(o.P + o.F * (d || T), a, _);
             return _
           }
         }, function(e, a) {
@@ -1541,9 +1541,9 @@
               return !(!u(e) || "function" != typeof(a = e.then)) && a
             },
             A = function(e) {
-              return j(w, e) ? new O(e) : new o(e)
+              return j(w, e) ? new T(e) : new o(e)
             },
-            O = o = function(e) {
+            T = o = function(e) {
               var a, i;
               this.promise = new e((function(e, n) {
                 if (void 0 !== a || void 0 !== i) throw g("Bad Promise constructor");
@@ -1559,7 +1559,7 @@
                 }
               }
             },
-            T = function(e, a) {
+            O = function(e, a) {
               if (!e._n) {
                 e._n = !0;
                 var i = e._c;
@@ -1607,7 +1607,7 @@
             },
             z = function(e) {
               var a = this;
-              a._d || (a._d = !0, (a = a._w || a)._v = e, a._s = 2, a._a || (a._a = a._c.slice()), T(a, !0))
+              a._d || (a._d = !0, (a = a._w || a)._v = e, a._s = 2, a._a || (a._a = a._c.slice()), O(a, !0))
             },
             C = function(e) {
               var a, i = this;
@@ -1625,7 +1625,7 @@
                     } catch (e) {
                       z.call(n, e)
                     }
-                  })): (i._v = e, i._s = 1, T(i, !1))
+                  })): (i._v = e, i._s = 1, O(i, !1))
                 } catch (e) {
                   z.call({
                     _w: i,
@@ -1646,12 +1646,12 @@
           }).prototype = i(56)(w.prototype, {
             then: function(e, a) {
               var i = A(f(this, w));
-              return i.ok = "function" != typeof e || e, i.fail = "function" == typeof a && a, i.domain = _ ? y.domain : void 0, this._c.push(i), this._a && this._a.push(i), this._s && T(this, !1), i.promise
+              return i.ok = "function" != typeof e || e, i.fail = "function" == typeof a && a, i.domain = _ ? y.domain : void 0, this._c.push(i), this._a && this._a.push(i), this._s && O(this, !1), i.promise
             },
             catch: function(e) {
               return this.then(void 0, e)
             }
-          }), O = function() {
+          }), T = function() {
             var e = new n;
             this.promise = e, this.resolve = c(C, e, 1), this.reject = c(z, e, 1)
           }), l(l.G + l.W + l.F * !S, {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1226.0938]:${e}`)
+              console.log(`[STARTED;1.23.1226.1207]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1226.0938"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1226.1207"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2757,6 +2757,38 @@
             return this.status = !1, !0 === a && console.error(`🆘[${this.name}]: ${e+""}`), this.errors.push(e), this
           }
         }
+        class TaskExecuter {
+          constructor({
+            name: e = ""
+          } = {}) {
+            this.name = e || "", this.startTimeVN = "", this.endTimeVN = "", this.steps = [], this.processENV = process.env
+          }
+          addStep() {}
+          startTask({
+            showLog: e = !0,
+            input: a = {}
+          } = {}) {
+            this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
+            let i = {
+              ...a,
+              WEBPACK_BUILD_VERSION: "1.23.1226.1207",
+              cwd: process.cwd()
+            };
+            this.steps.push(i), !0 === e && (console.log(`🔜🔜🔜 ${this.name}:${this.startTimeVN} 🔜🔜🔜`), console.log(JSON.stringify(i)))
+          }
+          endTask({
+            showLog: e = !0,
+            input: a = {}
+          } = {}) {
+            this.endTime = new Date, this.endTimeVN = rTime.formatVN(this.endTime), !0 === e && console.log(`🔚🔚🔚 ${this.name}:${this.endTimeVN}: cost ${rTime.toDaysMinutesSeconds(this.utilsGetElapsedSeconds())} 🔚🔚🔚`)
+          }
+          utilsGetElapsedSeconds() {
+            return void 0 === this.startTime || void 0 === this.endTime ? 0 : (this.endTime.getTime() - this.startTime.getTime()) / 1e3
+          }
+          utilsRandomJsonFileName() {
+            return `${this.name}-${rTime.formatVNBy(this.endTime,"yyyyMMdd-HHmmss")}-${rString.randomStringLower(3)}.json`.replace(/[^a-zA-Z0-9]/g, "-")
+          }
+        }
         const rKiwi = {
             IsCURByBrowserStack: (e = {}) => {
               let a = rObject.GetValueByPathForceString(e, "email");
@@ -2787,7 +2819,8 @@
           TaskResult,
           KiwiEnum: rKiwiEnum,
           Kiwi: rKiwi,
-          ONNODE: rONNODE
+          ONNODE: rONNODE,
+          TaskExecuter
         };
         module.exports = rJS
       },
@@ -3980,10 +4013,10 @@
                 j = e[a + 14],
                 E = e[a + 15],
                 A = s[0],
-                O = s[1],
+                T = s[1],
                 N = s[2],
-                T = s[3];
-              A = p(A, O, N, T, t, 7, r[0]), T = p(T, A, O, N, c, 12, r[1]), N = p(N, T, A, O, d, 17, r[2]), O = p(O, N, T, A, x, 22, r[3]), A = p(A, O, N, T, f, 7, r[4]), T = p(T, A, O, N, v, 12, r[5]), N = p(N, T, A, O, h, 17, r[6]), O = p(O, N, T, A, b, 22, r[7]), A = p(A, O, N, T, g, 7, r[8]), T = p(T, A, O, N, y, 12, r[9]), N = p(N, T, A, O, w, 17, r[10]), O = p(O, N, T, A, _, 22, r[11]), A = p(A, O, N, T, k, 7, r[12]), T = p(T, A, O, N, S, 12, r[13]), N = p(N, T, A, O, j, 17, r[14]), A = l(A, O = p(O, N, T, A, E, 22, r[15]), N, T, c, 5, r[16]), T = l(T, A, O, N, h, 9, r[17]), N = l(N, T, A, O, _, 14, r[18]), O = l(O, N, T, A, t, 20, r[19]), A = l(A, O, N, T, v, 5, r[20]), T = l(T, A, O, N, w, 9, r[21]), N = l(N, T, A, O, E, 14, r[22]), O = l(O, N, T, A, f, 20, r[23]), A = l(A, O, N, T, y, 5, r[24]), T = l(T, A, O, N, j, 9, r[25]), N = l(N, T, A, O, x, 14, r[26]), O = l(O, N, T, A, g, 20, r[27]), A = l(A, O, N, T, S, 5, r[28]), T = l(T, A, O, N, d, 9, r[29]), N = l(N, T, A, O, b, 14, r[30]), A = u(A, O = l(O, N, T, A, k, 20, r[31]), N, T, v, 4, r[32]), T = u(T, A, O, N, g, 11, r[33]), N = u(N, T, A, O, _, 16, r[34]), O = u(O, N, T, A, j, 23, r[35]), A = u(A, O, N, T, c, 4, r[36]), T = u(T, A, O, N, f, 11, r[37]), N = u(N, T, A, O, b, 16, r[38]), O = u(O, N, T, A, w, 23, r[39]), A = u(A, O, N, T, S, 4, r[40]), T = u(T, A, O, N, t, 11, r[41]), N = u(N, T, A, O, x, 16, r[42]), O = u(O, N, T, A, h, 23, r[43]), A = u(A, O, N, T, y, 4, r[44]), T = u(T, A, O, N, k, 11, r[45]), N = u(N, T, A, O, E, 16, r[46]), A = m(A, O = u(O, N, T, A, d, 23, r[47]), N, T, t, 6, r[48]), T = m(T, A, O, N, b, 10, r[49]), N = m(N, T, A, O, j, 15, r[50]), O = m(O, N, T, A, v, 21, r[51]), A = m(A, O, N, T, k, 6, r[52]), T = m(T, A, O, N, x, 10, r[53]), N = m(N, T, A, O, w, 15, r[54]), O = m(O, N, T, A, c, 21, r[55]), A = m(A, O, N, T, g, 6, r[56]), T = m(T, A, O, N, E, 10, r[57]), N = m(N, T, A, O, h, 15, r[58]), O = m(O, N, T, A, S, 21, r[59]), A = m(A, O, N, T, f, 6, r[60]), T = m(T, A, O, N, _, 10, r[61]), N = m(N, T, A, O, d, 15, r[62]), O = m(O, N, T, A, y, 21, r[63]), s[0] = s[0] + A | 0, s[1] = s[1] + O | 0, s[2] = s[2] + N | 0, s[3] = s[3] + T | 0
+                O = s[3];
+              A = p(A, T, N, O, t, 7, r[0]), O = p(O, A, T, N, c, 12, r[1]), N = p(N, O, A, T, d, 17, r[2]), T = p(T, N, O, A, x, 22, r[3]), A = p(A, T, N, O, f, 7, r[4]), O = p(O, A, T, N, v, 12, r[5]), N = p(N, O, A, T, h, 17, r[6]), T = p(T, N, O, A, b, 22, r[7]), A = p(A, T, N, O, g, 7, r[8]), O = p(O, A, T, N, y, 12, r[9]), N = p(N, O, A, T, w, 17, r[10]), T = p(T, N, O, A, _, 22, r[11]), A = p(A, T, N, O, k, 7, r[12]), O = p(O, A, T, N, S, 12, r[13]), N = p(N, O, A, T, j, 17, r[14]), A = l(A, T = p(T, N, O, A, E, 22, r[15]), N, O, c, 5, r[16]), O = l(O, A, T, N, h, 9, r[17]), N = l(N, O, A, T, _, 14, r[18]), T = l(T, N, O, A, t, 20, r[19]), A = l(A, T, N, O, v, 5, r[20]), O = l(O, A, T, N, w, 9, r[21]), N = l(N, O, A, T, E, 14, r[22]), T = l(T, N, O, A, f, 20, r[23]), A = l(A, T, N, O, y, 5, r[24]), O = l(O, A, T, N, j, 9, r[25]), N = l(N, O, A, T, x, 14, r[26]), T = l(T, N, O, A, g, 20, r[27]), A = l(A, T, N, O, S, 5, r[28]), O = l(O, A, T, N, d, 9, r[29]), N = l(N, O, A, T, b, 14, r[30]), A = u(A, T = l(T, N, O, A, k, 20, r[31]), N, O, v, 4, r[32]), O = u(O, A, T, N, g, 11, r[33]), N = u(N, O, A, T, _, 16, r[34]), T = u(T, N, O, A, j, 23, r[35]), A = u(A, T, N, O, c, 4, r[36]), O = u(O, A, T, N, f, 11, r[37]), N = u(N, O, A, T, b, 16, r[38]), T = u(T, N, O, A, w, 23, r[39]), A = u(A, T, N, O, S, 4, r[40]), O = u(O, A, T, N, t, 11, r[41]), N = u(N, O, A, T, x, 16, r[42]), T = u(T, N, O, A, h, 23, r[43]), A = u(A, T, N, O, y, 4, r[44]), O = u(O, A, T, N, k, 11, r[45]), N = u(N, O, A, T, E, 16, r[46]), A = m(A, T = u(T, N, O, A, d, 23, r[47]), N, O, t, 6, r[48]), O = m(O, A, T, N, b, 10, r[49]), N = m(N, O, A, T, j, 15, r[50]), T = m(T, N, O, A, v, 21, r[51]), A = m(A, T, N, O, k, 6, r[52]), O = m(O, A, T, N, x, 10, r[53]), N = m(N, O, A, T, w, 15, r[54]), T = m(T, N, O, A, c, 21, r[55]), A = m(A, T, N, O, g, 6, r[56]), O = m(O, A, T, N, E, 10, r[57]), N = m(N, O, A, T, h, 15, r[58]), T = m(T, N, O, A, S, 21, r[59]), A = m(A, T, N, O, f, 6, r[60]), O = m(O, A, T, N, _, 10, r[61]), N = m(N, O, A, T, d, 15, r[62]), T = m(T, N, O, A, y, 21, r[63]), s[0] = s[0] + A | 0, s[1] = s[1] + T | 0, s[2] = s[2] + N | 0, s[3] = s[3] + O | 0
             },
             _doFinalize: function() {
               var a = this._data,
@@ -4395,15 +4428,15 @@
                     o = e[n];
                   e[n] = 16711935 & (o << 8 | o >>> 24) | 4278255360 & (o << 24 | o >>> 8)
                 }
-                var s, t, d, y, w, _, k, S, j, E, A, O = this._hash.words,
+                var s, t, d, y, w, _, k, S, j, E, A, T = this._hash.words,
                   N = u.words,
-                  T = m.words,
+                  O = m.words,
                   B = r.words,
                   R = c.words,
                   F = p.words,
                   z = l.words;
-                for (_ = s = O[0], k = t = O[1], S = d = O[2], j = y = O[3], E = w = O[4], i = 0; i < 80; i += 1) A = s + e[a + B[i]] | 0, A += i < 16 ? x(t, d, y) + N[0] : i < 32 ? f(t, d, y) + N[1] : i < 48 ? v(t, d, y) + N[2] : i < 64 ? h(t, d, y) + N[3] : b(t, d, y) + N[4], A = (A = g(A |= 0, F[i])) + w | 0, s = w, w = y, y = g(d, 10), d = t, t = A, A = _ + e[a + R[i]] | 0, A += i < 16 ? b(k, S, j) + T[0] : i < 32 ? h(k, S, j) + T[1] : i < 48 ? v(k, S, j) + T[2] : i < 64 ? f(k, S, j) + T[3] : x(k, S, j) + T[4], A = (A = g(A |= 0, z[i])) + E | 0, _ = E, E = j, j = g(S, 10), S = k, k = A;
-                A = O[1] + d + j | 0, O[1] = O[2] + y + E | 0, O[2] = O[3] + w + _ | 0, O[3] = O[4] + s + k | 0, O[4] = O[0] + t + S | 0, O[0] = A
+                for (_ = s = T[0], k = t = T[1], S = d = T[2], j = y = T[3], E = w = T[4], i = 0; i < 80; i += 1) A = s + e[a + B[i]] | 0, A += i < 16 ? x(t, d, y) + N[0] : i < 32 ? f(t, d, y) + N[1] : i < 48 ? v(t, d, y) + N[2] : i < 64 ? h(t, d, y) + N[3] : b(t, d, y) + N[4], A = (A = g(A |= 0, F[i])) + w | 0, s = w, w = y, y = g(d, 10), d = t, t = A, A = _ + e[a + R[i]] | 0, A += i < 16 ? b(k, S, j) + O[0] : i < 32 ? h(k, S, j) + O[1] : i < 48 ? v(k, S, j) + O[2] : i < 64 ? f(k, S, j) + O[3] : x(k, S, j) + O[4], A = (A = g(A |= 0, z[i])) + E | 0, _ = E, E = j, j = g(S, 10), S = k, k = A;
+                A = T[1] + d + j | 0, T[1] = T[2] + y + E | 0, T[2] = T[3] + w + _ | 0, T[3] = T[4] + s + k | 0, T[4] = T[0] + t + S | 0, T[0] = A
               },
               _doFinalize: function() {
                 var e = this._data,
@@ -4598,11 +4631,11 @@
               for (var i = this._state, n = this.blockSize / 2, o = 0; o < n; o++) {
                 var s = e[a + 2 * o],
                   t = e[a + 2 * o + 1];
-                s = 16711935 & (s << 8 | s >>> 24) | 4278255360 & (s << 24 | s >>> 8), t = 16711935 & (t << 8 | t >>> 24) | 4278255360 & (t << 24 | t >>> 8), (O = i[o]).high ^= t, O.low ^= s
+                s = 16711935 & (s << 8 | s >>> 24) | 4278255360 & (s << 24 | s >>> 8), t = 16711935 & (t << 8 | t >>> 24) | 4278255360 & (t << 24 | t >>> 8), (T = i[o]).high ^= t, T.low ^= s
               }
               for (var r = 0; r < 24; r++) {
                 for (var m = 0; m < 5; m++) {
-                  for (var d = 0, x = 0, f = 0; f < 5; f++) d ^= (O = i[m + 5 * f]).high, x ^= O.low;
+                  for (var d = 0, x = 0, f = 0; f < 5; f++) d ^= (T = i[m + 5 * f]).high, x ^= T.low;
                   var v = u[m];
                   v.high = d, v.low = x
                 }
@@ -4611,11 +4644,11 @@
                     b = u[(m + 1) % 5],
                     g = b.high,
                     y = b.low;
-                  for (d = h.high ^ (g << 1 | y >>> 31), x = h.low ^ (y << 1 | g >>> 31), f = 0; f < 5; f++)(O = i[m + 5 * f]).high ^= d, O.low ^= x
+                  for (d = h.high ^ (g << 1 | y >>> 31), x = h.low ^ (y << 1 | g >>> 31), f = 0; f < 5; f++)(T = i[m + 5 * f]).high ^= d, T.low ^= x
                 }
                 for (var w = 1; w < 25; w++) {
-                  var _ = (O = i[w]).high,
-                    k = O.low,
+                  var _ = (T = i[w]).high,
+                    k = T.low,
                     S = c[w];
                   S < 32 ? (d = _ << S | k >>> 32 - S, x = k << S | _ >>> 32 - S) : (d = k << S - 32 | _ >>> 64 - S, x = _ << S - 32 | k >>> 64 - S);
                   var j = u[p[w]];
@@ -4625,15 +4658,15 @@
                   A = i[0];
                 for (E.high = A.high, E.low = A.low, m = 0; m < 5; m++)
                   for (f = 0; f < 5; f++) {
-                    var O = i[w = m + 5 * f],
+                    var T = i[w = m + 5 * f],
                       N = u[w],
-                      T = u[(m + 1) % 5 + 5 * f],
+                      O = u[(m + 1) % 5 + 5 * f],
                       B = u[(m + 2) % 5 + 5 * f];
-                    O.high = N.high ^ ~T.high & B.high, O.low = N.low ^ ~T.low & B.low
+                    T.high = N.high ^ ~O.high & B.high, T.low = N.low ^ ~O.low & B.low
                   }
-                O = i[0];
+                T = i[0];
                 var R = l[r];
-                O.high ^= R.high, O.low ^= R.low
+                T.high ^= R.high, T.low ^= R.low
               }
             },
             _doFinalize: function() {
@@ -4693,7 +4726,7 @@
               this._hash = new s.init([new o.init(1779033703, 4089235720), new o.init(3144134277, 2227873595), new o.init(1013904242, 4271175723), new o.init(2773480762, 1595750129), new o.init(1359893119, 2917565137), new o.init(2600822924, 725511199), new o.init(528734635, 4215389547), new o.init(1541459225, 327033209)])
             },
             _doProcessBlock: function(e, a) {
-              for (var i = this._hash.words, n = i[0], o = i[1], s = i[2], t = i[3], r = i[4], l = i[5], u = i[6], m = i[7], d = n.high, x = n.low, f = o.high, v = o.low, h = s.high, b = s.low, g = t.high, y = t.low, w = r.high, _ = r.low, k = l.high, S = l.low, j = u.high, E = u.low, A = m.high, O = m.low, N = d, T = x, B = f, R = v, F = h, z = b, C = g, P = y, I = w, L = _, D = k, U = S, M = j, q = E, $ = A, H = O, V = 0; V < 80; V++) {
+              for (var i = this._hash.words, n = i[0], o = i[1], s = i[2], t = i[3], r = i[4], l = i[5], u = i[6], m = i[7], d = n.high, x = n.low, f = o.high, v = o.low, h = s.high, b = s.low, g = t.high, y = t.low, w = r.high, _ = r.low, k = l.high, S = l.low, j = u.high, E = u.low, A = m.high, T = m.low, N = d, O = x, B = f, R = v, F = h, z = b, C = g, P = y, I = w, L = _, D = k, U = S, M = j, q = E, $ = A, H = T, V = 0; V < 80; V++) {
                 var G, W, J = p[V];
                 if (V < 16) W = J.high = 0 | e[a + 2 * V], G = J.low = 0 | e[a + 2 * V + 1];
                 else {
@@ -4718,9 +4751,9 @@
                 var ue, me = I & D ^ ~I & M,
                   de = L & U ^ ~L & q,
                   xe = N & B ^ N & F ^ B & F,
-                  fe = T & R ^ T & z ^ R & z,
-                  ve = (N >>> 28 | T << 4) ^ (N << 30 | T >>> 2) ^ (N << 25 | T >>> 7),
-                  he = (T >>> 28 | N << 4) ^ (T << 30 | N >>> 2) ^ (T << 25 | N >>> 7),
+                  fe = O & R ^ O & z ^ R & z,
+                  ve = (N >>> 28 | O << 4) ^ (N << 30 | O >>> 2) ^ (N << 25 | O >>> 7),
+                  he = (O >>> 28 | N << 4) ^ (O << 30 | N >>> 2) ^ (O << 25 | N >>> 7),
                   be = (I >>> 14 | L << 18) ^ (I >>> 18 | L << 14) ^ (I << 23 | L >>> 9),
                   ge = (L >>> 14 | I << 18) ^ (L >>> 18 | I << 14) ^ (L << 23 | I >>> 9),
                   ye = c[V],
@@ -4728,9 +4761,9 @@
                   _e = ye.low,
                   ke = $ + be + ((ue = H + ge) >>> 0 < H >>> 0 ? 1 : 0),
                   Se = he + fe;
-                $ = M, H = q, M = D, q = U, D = I, U = L, I = C + (ke = (ke = (ke = ke + me + ((ue += de) >>> 0 < de >>> 0 ? 1 : 0)) + we + ((ue += _e) >>> 0 < _e >>> 0 ? 1 : 0)) + W + ((ue += G) >>> 0 < G >>> 0 ? 1 : 0)) + ((L = P + ue | 0) >>> 0 < P >>> 0 ? 1 : 0) | 0, C = F, P = z, F = B, z = R, B = N, R = T, N = ke + (ve + xe + (Se >>> 0 < he >>> 0 ? 1 : 0)) + ((T = ue + Se | 0) >>> 0 < ue >>> 0 ? 1 : 0) | 0
+                $ = M, H = q, M = D, q = U, D = I, U = L, I = C + (ke = (ke = (ke = ke + me + ((ue += de) >>> 0 < de >>> 0 ? 1 : 0)) + we + ((ue += _e) >>> 0 < _e >>> 0 ? 1 : 0)) + W + ((ue += G) >>> 0 < G >>> 0 ? 1 : 0)) + ((L = P + ue | 0) >>> 0 < P >>> 0 ? 1 : 0) | 0, C = F, P = z, F = B, z = R, B = N, R = O, N = ke + (ve + xe + (Se >>> 0 < he >>> 0 ? 1 : 0)) + ((O = ue + Se | 0) >>> 0 < ue >>> 0 ? 1 : 0) | 0
               }
-              x = n.low = x + T, n.high = d + N + (x >>> 0 < T >>> 0 ? 1 : 0), v = o.low = v + R, o.high = f + B + (v >>> 0 < R >>> 0 ? 1 : 0), b = s.low = b + z, s.high = h + F + (b >>> 0 < z >>> 0 ? 1 : 0), y = t.low = y + P, t.high = g + C + (y >>> 0 < P >>> 0 ? 1 : 0), _ = r.low = _ + L, r.high = w + I + (_ >>> 0 < L >>> 0 ? 1 : 0), S = l.low = S + U, l.high = k + D + (S >>> 0 < U >>> 0 ? 1 : 0), E = u.low = E + q, u.high = j + M + (E >>> 0 < q >>> 0 ? 1 : 0), O = m.low = O + H, m.high = A + $ + (O >>> 0 < H >>> 0 ? 1 : 0)
+              x = n.low = x + O, n.high = d + N + (x >>> 0 < O >>> 0 ? 1 : 0), v = o.low = v + R, o.high = f + B + (v >>> 0 < R >>> 0 ? 1 : 0), b = s.low = b + z, s.high = h + F + (b >>> 0 < z >>> 0 ? 1 : 0), y = t.low = y + P, t.high = g + C + (y >>> 0 < P >>> 0 ? 1 : 0), _ = r.low = _ + L, r.high = w + I + (_ >>> 0 < L >>> 0 ? 1 : 0), S = l.low = S + U, l.high = k + D + (S >>> 0 < U >>> 0 ? 1 : 0), E = u.low = E + q, u.high = j + M + (E >>> 0 < q >>> 0 ? 1 : 0), T = m.low = T + H, m.high = A + $ + (T >>> 0 < H >>> 0 ? 1 : 0)
             },
             _doFinalize: function() {
               var e = this._data,
@@ -6067,13 +6100,13 @@
           return A[a] || (A[a] = a.slice(8, -1).toLowerCase())
         });
         var A;
-        const O = e => (e = e.toLowerCase(), a => E(a) === e),
+        const T = e => (e = e.toLowerCase(), a => E(a) === e),
           N = e => a => typeof a === e,
           {
-            isArray: T
+            isArray: O
           } = Array,
           B = N("undefined");
-        const R = O("ArrayBuffer");
+        const R = T("ArrayBuffer");
         const F = N("string"),
           z = N("function"),
           C = N("number"),
@@ -6083,18 +6116,18 @@
             const a = j(e);
             return !(null !== a && a !== Object.prototype && null !== Object.getPrototypeOf(a) || Symbol.toStringTag in e || Symbol.iterator in e)
           },
-          L = O("Date"),
-          D = O("File"),
-          U = O("Blob"),
-          M = O("FileList"),
-          q = O("URLSearchParams");
+          L = T("Date"),
+          D = T("File"),
+          U = T("Blob"),
+          M = T("FileList"),
+          q = T("URLSearchParams");
 
         function $(e, a, {
           allOwnKeys: i = !1
         } = {}) {
           if (null == e) return;
           let n, o;
-          if ("object" != typeof e && (e = [e]), T(e))
+          if ("object" != typeof e && (e = [e]), O(e))
             for (n = 0, o = e.length; n < o; n++) a.call(null, e[n], n, e);
           else {
             const o = i ? Object.getOwnPropertyNames(e) : Object.keys(e),
@@ -6116,11 +6149,11 @@
           G = e => !B(e) && e !== V;
         const W = (J = "undefined" != typeof Uint8Array && j(Uint8Array), e => J && e instanceof J);
         var J;
-        const K = O("HTMLFormElement"),
+        const K = T("HTMLFormElement"),
           Y = (({
             hasOwnProperty: e
           }) => (a, i) => e.call(a, i))(Object.prototype),
-          X = O("RegExp"),
+          X = T("RegExp"),
           Z = (e, a) => {
             const i = Object.getOwnPropertyDescriptors(e),
               n = {};
@@ -6136,9 +6169,9 @@
             ALPHA: Q,
             ALPHA_DIGIT: Q + Q.toUpperCase() + ee
           };
-        const ie = O("AsyncFunction"),
+        const ie = T("AsyncFunction"),
           ne = {
-            isArray: T,
+            isArray: O,
             isArrayBuffer: R,
             isBuffer: function(e) {
               return null !== e && !B(e) && null !== e.constructor && !B(e.constructor) && z(e.constructor.isBuffer) && e.constructor.isBuffer(e)
@@ -6172,7 +6205,7 @@
                 caseless: a
               } = G(this) && this || {}, i = {}, n = (n, o) => {
                 const s = a && H(i, o) || o;
-                I(i[s]) && I(n) ? i[s] = e(i[s], n) : I(n) ? i[s] = e({}, n) : T(n) ? i[s] = n.slice() : i[s] = n
+                I(i[s]) && I(n) ? i[s] = e(i[s], n) : I(n) ? i[s] = e({}, n) : O(n) ? i[s] = n.slice() : i[s] = n
               };
               for (let e = 0, a = arguments.length; e < a; e++) arguments[e] && $(arguments[e], n);
               return i
@@ -6202,7 +6235,7 @@
               return a
             },
             kindOf: E,
-            kindOfTest: O,
+            kindOfTest: T,
             endsWith: (e, a, i) => {
               e = String(e), (void 0 === i || i > e.length) && (i = e.length), i -= a.length;
               const n = e.indexOf(a, i);
@@ -6210,7 +6243,7 @@
             },
             toArray: e => {
               if (!e) return null;
-              if (T(e)) return e;
+              if (O(e)) return e;
               let a = e.length;
               if (!C(a)) return null;
               const i = new Array(a);
@@ -6252,7 +6285,7 @@
                     i[e] = !0
                   }))
                 };
-              return T(e) ? n(e) : n(String(e).split(a)), i
+              return O(e) ? n(e) : n(String(e).split(a)), i
             },
             toCamelCase: e => e.toLowerCase().replace(/[-_\s]([a-z\d])(\w*)/g, (function(e, a, i) {
               return a.toUpperCase() + i
@@ -6281,7 +6314,7 @@
                     if (a.indexOf(e) >= 0) return;
                     if (!("toJSON" in e)) {
                       a[n] = e;
-                      const o = T(e) ? [] : {};
+                      const o = O(e) ? [] : {};
                       return $(e, ((e, a) => {
                         const s = i(e, n + 1);
                         !B(s) && (o[a] = s)
@@ -6598,10 +6631,10 @@
           Ee.headers[e] = {}
         }));
         const Ae = Ee,
-          Oe = ne.toObjectSet(["age", "authorization", "content-length", "content-type", "etag", "expires", "from", "host", "if-modified-since", "if-unmodified-since", "last-modified", "location", "max-forwards", "proxy-authorization", "referer", "retry-after", "user-agent"]),
+          Te = ne.toObjectSet(["age", "authorization", "content-length", "content-type", "etag", "expires", "from", "host", "if-modified-since", "if-unmodified-since", "last-modified", "location", "max-forwards", "proxy-authorization", "referer", "retry-after", "user-agent"]),
           Ne = Symbol("internals");
 
-        function Te(e) {
+        function Oe(e) {
           return e && String(e).trim().toLowerCase()
         }
 
@@ -6620,7 +6653,7 @@
             const n = this;
 
             function o(e, a, i) {
-              const o = Te(a);
+              const o = Oe(a);
               if (!o) throw new Error("header name must be a non-empty string");
               const s = ne.findKey(n, o);
               (!s || void 0 === n[s] || !0 === i || void 0 === i && !1 !== n[s]) && (n[s || a] = Be(e))
@@ -6630,12 +6663,12 @@
               const a = {};
               let i, n, o;
               return e && e.split("\n").forEach((function(e) {
-                o = e.indexOf(":"), i = e.substring(0, o).trim().toLowerCase(), n = e.substring(o + 1).trim(), !i || a[i] && Oe[i] || ("set-cookie" === i ? a[i] ? a[i].push(n) : a[i] = [n] : a[i] = a[i] ? a[i] + ", " + n : n)
+                o = e.indexOf(":"), i = e.substring(0, o).trim().toLowerCase(), n = e.substring(o + 1).trim(), !i || a[i] && Te[i] || ("set-cookie" === i ? a[i] ? a[i].push(n) : a[i] = [n] : a[i] = a[i] ? a[i] + ", " + n : n)
               })), a
             })(e), a) : null != e && o(a, e, i), this
           }
           get(e, a) {
-            if (e = Te(e)) {
+            if (e = Oe(e)) {
               const i = ne.findKey(this, e);
               if (i) {
                 const e = this[i];
@@ -6654,7 +6687,7 @@
             }
           }
           has(e, a) {
-            if (e = Te(e)) {
+            if (e = Oe(e)) {
               const i = ne.findKey(this, e);
               return !(!i || void 0 === this[i] || a && !Re(0, this[i], i, a))
             }
@@ -6665,7 +6698,7 @@
             let n = !1;
 
             function o(e) {
-              if (e = Te(e)) {
+              if (e = Oe(e)) {
                 const o = ne.findKey(i, e);
                 !o || a && !Re(0, i[o], o, a) || (delete i[o], n = !0)
               }
@@ -6725,7 +6758,7 @@
               i = this.prototype;
 
             function n(e) {
-              const n = Te(e);
+              const n = Oe(e);
               a[n] || (! function(e, a) {
                 const i = ne.toCamelCase(" " + a);
                 ["get", "set", "has"].forEach((n => {
@@ -7138,8 +7171,8 @@
               j.set("User-Agent", "axios/" + De, !1);
               const E = e.onDownloadProgress,
                 A = e.onUploadProgress,
-                O = e.maxRate;
-              let N, T;
+                T = e.maxRate;
+              let N, O;
               if (ne.isSpecCompliantForm(o)) {
                 const e = j.getContentType(/boundary=([-_\w\d]{10,70})/i);
                 o = Xe(o, (e => {
@@ -7165,7 +7198,7 @@
               }
               const B = ne.toFiniteNumber(j.getContentLength());
               let R, F;
-              ne.isArray(O) ? (N = O[0], T = O[1]) : N = T = O, o && (A || N) && (ne.isStream(o) || (o = w.default.Readable.from(o, {
+              ne.isArray(T) ? (N = T[0], O = T[1]) : N = O = T, o && (A || N) && (ne.isStream(o) || (o = w.default.Readable.from(o, {
                 objectMode: !1
               })), o = w.default.pipeline([o, new He({
                 length: B,
@@ -7206,7 +7239,7 @@
                   if (E) {
                     const e = new He({
                       length: ne.toFiniteNumber(s),
-                      maxRate: ne.toFiniteNumber(T)
+                      maxRate: ne.toFiniteNumber(O)
                     });
                     E && e.on("progress", (e => {
                       E(Object.assign(e, {
@@ -7720,7 +7753,7 @@
             }
           }
         }
-        const Oa = CancelToken;
+        const Ta = CancelToken;
         const Na = {
           Continue: 100,
           SwitchingProtocols: 101,
@@ -7789,7 +7822,7 @@
         Object.entries(Na).forEach((([e, a]) => {
           Na[a] = e
         }));
-        const Ta = Na;
+        const Oa = Na;
         const Ba = function e(a) {
           const i = new Aa(a),
             n = k(Aa.prototype.request, i);
@@ -7801,7 +7834,7 @@
             return e(_a(a, i))
           }, n
         }(Ae);
-        Ba.Axios = Aa, Ba.CanceledError = Pe, Ba.CancelToken = Oa, Ba.isCancel = Ce, Ba.VERSION = De, Ba.toFormData = ue, Ba.AxiosError = oe, Ba.Cancel = Ba.CanceledError, Ba.all = function(e) {
+        Ba.Axios = Aa, Ba.CanceledError = Pe, Ba.CancelToken = Ta, Ba.isCancel = Ce, Ba.VERSION = De, Ba.toFormData = ue, Ba.AxiosError = oe, Ba.Cancel = Ba.CanceledError, Ba.all = function(e) {
           return Promise.all(e)
         }, Ba.spread = function(e) {
           return function(a) {
@@ -7809,7 +7842,7 @@
           }
         }, Ba.isAxiosError = function(e) {
           return ne.isObject(e) && !0 === e.isAxiosError
-        }, Ba.mergeConfig = _a, Ba.AxiosHeaders = Fe, Ba.formToJSON = e => je(ne.isHTMLForm(e) ? new FormData(e) : e), Ba.getAdapter = ba, Ba.HttpStatusCode = Ta, Ba.default = Ba, e.exports = Ba
+        }, Ba.mergeConfig = _a, Ba.AxiosHeaders = Fe, Ba.formToJSON = e => je(ne.isHTMLForm(e) ? new FormData(e) : e), Ba.getAdapter = ba, Ba.HttpStatusCode = Oa, Ba.default = Ba, e.exports = Ba
       },
       3765: e => {
         "use strict";
@@ -7842,21 +7875,30 @@
     try {
       n.Fetch.setAxios(__webpack_require__(3306))
     } catch (e) {}
-    const r = process.cwd();
-    let {
-      config: c,
-      aipPath: p = "",
-      buildPath: l = "",
-      buildFile: u = "",
-      advinstPath: m = "",
-      cwdPath: d = "",
-      APPDIRFilenames: x = []
-    } = {}, {
-      mainAssembly: f,
-      buildVersion: v = ""
-    } = {};
-    console.log(`startAt:${n.Time.nowFormatVN()}:${a.basename(__filename)}:\r\n${JSON.stringify({WEBPACK_BUILD_VERSION:"1.23.1226.0938",__dirname,__filename,cwd:r},null,2)}`), (async () => {
+    let r = new n.TaskExecuter({
+        name: "Advanced Installer Runner"
+      }),
+      {
+        config: c,
+        aipPath: p = "",
+        buildPath: l = "",
+        buildFile: u = "",
+        advinstPath: m = "",
+        cwdPath: d = "",
+        APPDIRFilenames: x = []
+      } = {},
+      {
+        mainAssembly: f,
+        buildVersion: v = ""
+      } = {};
+    (async () => {
       try {
+        r.startTask({
+          showLog: !0,
+          input: {
+            __filename
+          }
+        });
         await (async () => {
           try {
             let i = __filename;
@@ -7937,8 +7979,15 @@
             console.log(`run_executeBuild:::\r\n${JSON.stringify({aipPath:p,advinstPath:m,args:n},null,2)}`)
           }
         })()
-      } catch (e) {}
+      } catch (e) {} finally {
+        r.endTask({
+          showLog: !0
+        }), t.Bot863.ologs.githubActions.sendDocument({
+          obj_file: r,
+          obj_file_name: r.utilsRandomJsonFileName()
+        })
+      }
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.0938===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1207===  */

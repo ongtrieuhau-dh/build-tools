@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.1932=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.1957=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1227.1932]:${e}`)
+              console.log(`[STARTED;1.23.1227.1957]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1227.1932"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1227.1957"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2771,7 +2771,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1227.1932",
+              WEBPACK_BUILD_VERSION: "1.23.1227.1957",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -7917,7 +7917,8 @@
         cwdPath: "",
         APPDIRFilenames: [],
         mainAssembly: void 0,
-        buildVersion: ""
+        buildVersion: "",
+        outputPath: ""
       };
     (async () => {
       const p = async () => {
@@ -8000,14 +8001,21 @@
             }
           })(), !0 !== r.checkStepOK("3.create_advCommandLineFile")) throw new Error("3.create_advCommandLineFile: Failed");
         r["4.run_executeBuild"] = await (async () => {
-          let n = [];
+          let o = [];
           try {
-            const o = a.join(c.buildPath, a.basename(c.aipPath).replace(".aip", ".clone.aip"));
-            e.copyFileSync(c.aipPath, o), n = ["/execute", o, c.buildFile], i.execFileSync(c.advinstPath, n);
-            let s = e.readdirSync(c.buildPath, {
+            const s = a.join(c.buildPath, a.basename(c.aipPath).replace(".aip", ".clone.aip"));
+            e.copyFileSync(c.aipPath, s), o = ["/execute", s, c.buildFile], i.execFileSync(c.advinstPath, o);
+            let t = e.readdirSync(c.buildPath, {
               recursive: !0
             });
-            return `OK:${JSON.stringify(s)}`
+            for (let i = 0; i < t.length; i++)
+              if (t[i].includes(".msi")) {
+                c.outputPath = a.join(c.buildPath, t[i]);
+                let {
+                  SetupFileName: o = ""
+                } = c.config;
+                n.Type.IsStringNotEmpty(o) && (!0 !== o.includes(".msi") && (o += ".msi"), e.renameSync(c.outputPath, a.join(c.buildPath, o)), c.outputPath = a.join(c.buildPath, o))
+              } return `OK:${JSON.stringify(t)}`
           } catch (e) {
             return r.handleError(e, "run_executeBuild"), "ERROR"
           }
@@ -8022,4 +8030,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.1932===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.1957===  */

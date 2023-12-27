@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2015=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2052=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1227.2015]:${e}`)
+              console.log(`[STARTED;1.23.1227.2052]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1227.2015"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1227.2052"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2771,7 +2771,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1227.2015",
+              WEBPACK_BUILD_VERSION: "1.23.1227.2052",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -7920,7 +7920,9 @@
         mainAssembly: void 0,
         buildVersion: "",
         outputPath: "",
-        outputPathZip: ""
+        outputPathZip: "",
+        rclonePath: "",
+        rcloneConfigFiles: []
       };
     (async () => {
       const l = async () => {
@@ -8040,6 +8042,11 @@
           } catch (e) {
             return c.handleError(e, "5.compressZip"), "ERROR"
           }
+        })(), c["6.uploadZip"] = await (async () => {
+          if (p.rclonePath = a.join(p.cwdPath, ".rclone", "rclone.exe"), !0 !== e.existsSync(p.rclonePath)) throw new Error(`Không tìm thấy tập tin rclone.exe (${p.rclonePath})`);
+          p.rcloneConfigFiles = await s.rfs.getAllFiles(a.join(p.cwdPath, ".build-tools"), {
+            arrExtensions: [".rclone.config"]
+          })
         })(), c.endTask({
           showLog: !0
         })
@@ -8051,4 +8058,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2015===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2052===  */

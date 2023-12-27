@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.1957=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2015=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1227.1957]:${e}`)
+              console.log(`[STARTED;1.23.1227.2015]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1227.1957"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1227.2015"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2771,7 +2771,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1227.1957",
+              WEBPACK_BUILD_VERSION: "1.23.1227.2015",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -4767,9 +4767,9 @@
                 else {
                   var K = p[V - 15],
                     Y = K.high,
-                    X = K.low,
-                    Z = (Y >>> 1 | X << 31) ^ (Y >>> 8 | X << 24) ^ Y >>> 7,
-                    Q = (X >>> 1 | Y << 31) ^ (X >>> 8 | Y << 24) ^ (X >>> 7 | Y << 25),
+                    Z = K.low,
+                    X = (Y >>> 1 | Z << 31) ^ (Y >>> 8 | Z << 24) ^ Y >>> 7,
+                    Q = (Z >>> 1 | Y << 31) ^ (Z >>> 8 | Y << 24) ^ (Z >>> 7 | Y << 25),
                     ee = p[V - 2],
                     ae = ee.high,
                     ie = ee.low,
@@ -4781,7 +4781,7 @@
                     ce = p[V - 16],
                     pe = ce.high,
                     le = ce.low;
-                  W = (W = (W = Z + te + ((G = Q + re) >>> 0 < Q >>> 0 ? 1 : 0)) + ne + ((G += oe) >>> 0 < oe >>> 0 ? 1 : 0)) + pe + ((G += le) >>> 0 < le >>> 0 ? 1 : 0), J.high = W, J.low = G
+                  W = (W = (W = X + te + ((G = Q + re) >>> 0 < Q >>> 0 ? 1 : 0)) + ne + ((G += oe) >>> 0 < oe >>> 0 ? 1 : 0)) + pe + ((G += le) >>> 0 < le >>> 0 ? 1 : 0), J.high = W, J.low = G
                 }
                 var ue, me = I & D ^ ~I & M,
                   de = L & U ^ ~L & q,
@@ -6182,8 +6182,8 @@
           Y = (({
             hasOwnProperty: e
           }) => (a, i) => e.call(a, i))(Object.prototype),
-          X = T("RegExp"),
-          Z = (e, a) => {
+          Z = T("RegExp"),
+          X = (e, a) => {
             const i = Object.getOwnPropertyDescriptors(e),
               n = {};
             $(i, ((i, o) => {
@@ -6222,7 +6222,7 @@
             isDate: L,
             isFile: D,
             isBlob: U,
-            isRegExp: X,
+            isRegExp: Z,
             isFunction: z,
             isStream: e => P(e) && z(e.pipe),
             isURLSearchParams: q,
@@ -6297,9 +6297,9 @@
             isHTMLForm: K,
             hasOwnProperty: Y,
             hasOwnProp: Y,
-            reduceDescriptors: Z,
+            reduceDescriptors: X,
             freezeMethods: e => {
-              Z(e, ((a, i) => {
+              X(e, ((a, i) => {
                 if (z(e) && -1 !== ["arguments", "caller", "callee"].indexOf(i)) return !1;
                 const n = e[i];
                 z(n) && (a.enumerable = !1, "writable" in a ? a.writable = !1 : a.set || (a.set = () => {
@@ -7016,7 +7016,7 @@
             } [e])))
           }
         }
-        const Xe = (e, a, i) => {
+        const Ze = (e, a, i) => {
           const {
             tag: n = "form-data-boundary",
             size: o = 25,
@@ -7052,7 +7052,7 @@
             this.__transform(e, a, i)
           }
         }
-        const Ze = ZlibHeaderTransformStream,
+        const Xe = ZlibHeaderTransformStream,
           Qe = (e, a) => ne.isAsyncFn(e) ? function(...i) {
             const n = i.pop();
             e.apply(this, i).then((e => {
@@ -7204,7 +7204,7 @@
               let O, N;
               if (ne.isSpecCompliantForm(o)) {
                 const e = j.getContentType(/boundary=([-_\w\d]{10,70})/i);
-                o = Xe(o, (e => {
+                o = Ze(o, (e => {
                   j.set(e)
                 }), {
                   tag: `axios-${De}-boundary`,
@@ -7286,7 +7286,7 @@
                       o.push(y.default.createUnzip(ea)), delete n.headers["content-encoding"];
                       break;
                     case "deflate":
-                      o.push(new Ze), o.push(y.default.createUnzip(ea)), delete n.headers["content-encoding"];
+                      o.push(new Xe), o.push(y.default.createUnzip(ea)), delete n.headers["content-encoding"];
                       break;
                     case "br":
                       ia && (o.push(y.default.createBrotliDecompress(aa)), delete n.headers["content-encoding"])
@@ -7900,14 +7900,15 @@
     const n = __webpack_require__(878),
       o = __webpack_require__(9315),
       s = __webpack_require__(6096),
-      t = __webpack_require__(6737);
+      t = __webpack_require__(6737),
+      r = __webpack_require__(9796);
     try {
       n.Fetch.setAxios(__webpack_require__(3306))
     } catch (e) {}
-    let r = new n.TaskExecuter({
+    let c = new n.TaskExecuter({
         name: "Advanced Installer Runner"
       }),
-      c = {
+      p = {
         config: void 0,
         aipPath: "",
         buildPath: "",
@@ -7918,116 +7919,136 @@
         APPDIRFilenames: [],
         mainAssembly: void 0,
         buildVersion: "",
-        outputPath: ""
+        outputPath: "",
+        outputPathZip: ""
       };
     (async () => {
-      const p = async () => {
-        r.VAR = c, await t.Bot863.ologs.githubActions.sendDocument({
-          obj_file: r,
-          obj_file_name: r.utilsRandomJsonFileName()
+      const l = async () => {
+        c.VAR = p, await t.Bot863.ologs.githubActions.sendDocument({
+          obj_file: c,
+          obj_file_name: c.utilsRandomJsonFileName()
         }), process.exit(0)
       };
       try {
-        if (r.startTask({
+        if (c.startTask({
             showLog: !0,
             input: {
               __filename
             }
           }), setTimeout((async () => {
-            r.handleError(new Error("Vượt quá thời gian thực hiện 5 phút!")), await p()
-          }), 3e5), r["1.initializeBuild"] = await (async () => {
+            c.handleError(new Error("Vượt quá thời gian thực hiện 5 phút!")), await l()
+          }), 3e5), c["1.initializeBuild"] = await (async () => {
             try {
               let i = __filename;
               for (;;) {
                 i = a.dirname(i);
                 let n = a.join(i, ".advbuilds");
                 if (e.existsSync(n)) {
-                  c.cwdPath = i;
+                  p.cwdPath = i;
                   let o = a.join(n, "setup.aip");
-                  e.existsSync(o) && (c.aipPath = o);
+                  e.existsSync(o) && (p.aipPath = o);
                   let s = a.join(n, "setup.aip.json");
-                  e.existsSync(s) && (c.config = JSON.parse(e.readFileSync(s, {
+                  e.existsSync(s) && (p.config = JSON.parse(e.readFileSync(s, {
                     encoding: "utf8"
                   })))
                 }
                 let o = a.join(i, ".advinst", "bin", "x86", "advinst.exe");
-                if (e.existsSync(o) && (c.advinstPath = o), "" !== c.advinstPath && "" !== c.aipPath && void 0 !== c.config) break;
+                if (e.existsSync(o) && (p.advinstPath = o), "" !== p.advinstPath && "" !== p.aipPath && void 0 !== p.config) break;
                 if (i === a.parse(__filename).root) break
               }
               const o = n.Time.nowFormatVNBy("yyyyMMdd-HHmm");
-              return c.buildPath = a.join(a.dirname(c.aipPath), o), c.buildFile = a.join(c.buildPath, "commandLineFile.txt"), e.mkdirSync(c.buildPath, {
+              return p.buildPath = a.join(a.dirname(p.aipPath), o), p.buildFile = a.join(p.buildPath, "commandLineFile.txt"), e.mkdirSync(p.buildPath, {
                 recursive: !0
-              }), c.APPDIRFilenames = await s.rfs.getAllFiles(c.cwdPath, {
+              }), p.APPDIRFilenames = await s.rfs.getAllFiles(p.cwdPath, {
                 arrIgnoreStartwithNames: ["."]
               }), "OK"
             } catch (e) {
-              return r.handleError(e, "initializeBuild"), "ERROR"
+              return c.handleError(e, "initializeBuild"), "ERROR"
             }
-          })(), !0 !== r.checkStepOK("1.initializeBuild")) throw new Error("1.initializeBuild: Failed");
-        if (r["2.initializeAssembly"] = await (async () => {
+          })(), !0 !== c.checkStepOK("1.initializeBuild")) throw new Error("1.initializeBuild: Failed");
+        if (c["2.initializeAssembly"] = await (async () => {
             let i = null;
             try {
-              if ("MainExe" in c.config != !0) throw new Error("Chưa cấu hình `MainExe` trong tập tin `./.advbuilds/setup.aip.json` ");
-              if (i = a.join(c.cwdPath, c.config.MainExe), !0 !== e.existsSync(i)) throw new Error(`Không tìm thấy tập tin ./${c.config.MainExe} `);
-              return c.mainAssembly = await o.getAssemblyFile(i), c.buildVersion = n.Object.GetValueByPathForceString(c.mainAssembly, "AssemblyVersion"), n.Type.IsStringNotEmptyIsFalse(c.buildVersion) && (c.buildVersion = n.Object.GetValueByPathForceString(c.mainAssembly, "FileVersion")), "OK"
+              if ("MainExe" in p.config != !0) throw new Error("Chưa cấu hình `MainExe` trong tập tin `./.advbuilds/setup.aip.json` ");
+              if (i = a.join(p.cwdPath, p.config.MainExe), !0 !== e.existsSync(i)) throw new Error(`Không tìm thấy tập tin ./${p.config.MainExe} `);
+              return p.mainAssembly = await o.getAssemblyFile(i), p.buildVersion = n.Object.GetValueByPathForceString(p.mainAssembly, "AssemblyVersion"), n.Type.IsStringNotEmptyIsFalse(p.buildVersion) && (p.buildVersion = n.Object.GetValueByPathForceString(p.mainAssembly, "FileVersion")), "OK"
             } catch (e) {
-              return r.handleError(e, {
+              return c.handleError(e, {
                 name: "initializeAssembly",
                 pathFile: i
               }), "ERROR"
             }
-          })(), !0 !== r.checkStepOK("2.initializeAssembly")) throw new Error("2.initializeAssembly: Failed");
-        if (r["3.create_advCommandLineFile"] = await (async () => {
+          })(), !0 !== c.checkStepOK("2.initializeAssembly")) throw new Error("2.initializeAssembly: Failed");
+        if (c["3.create_advCommandLineFile"] = await (async () => {
             try {
-              const i = (a = "") => e.appendFileSync(c.buildFile, `${a}\n`, {
+              const i = (a = "") => e.appendFileSync(p.buildFile, `${a}\n`, {
                 encoding: "utf8"
               });
-              i(";aic"), i(`SetVersion ${c.buildVersion}`), i(`SetProperty ExecuteVersion="${c.buildVersion}"`);
+              i(";aic"), i(`SetVersion ${p.buildVersion}`), i(`SetProperty ExecuteVersion="${p.buildVersion}"`);
               const {
                 ProductDetail: n,
                 OutputPackageName: o,
                 Deploy_Libraries: t,
                 AdvancedInstallerShortcut: r,
-                IconInControlPanel: p
-              } = c.config;
+                IconInControlPanel: c
+              } = p.config;
               return Object.keys(n).forEach((e => {
                 i(`SetProperty ${e}="${n[e]}"`)
-              })), i(`SetOutputLocation -buildname DefaultBuild -path ${c.buildPath}`), c.APPDIRFilenames.forEach((e => {
+              })), i(`SetOutputLocation -buildname DefaultBuild -path ${p.buildPath}`), p.APPDIRFilenames.forEach((e => {
                 let n = "APPDIR";
-                a.dirname(e).toLowerCase() !== c.cwdPath && (n = a.join("APPDIR", a.dirname(a.relative(c.cwdPath, e)))), i(`AddFile ${n} "${e}" -overwrite always`)
-              })), i("Save"), i("Rebuild"), c.buildFileContent = s.rfsUtf8.readFileSync(c.buildFile), "OK"
+                a.dirname(e).toLowerCase() !== p.cwdPath && (n = a.join("APPDIR", a.dirname(a.relative(p.cwdPath, e)))), i(`AddFile ${n} "${e}" -overwrite always`)
+              })), i("Save"), i("Rebuild"), p.buildFileContent = s.rfsUtf8.readFileSync(p.buildFile), "OK"
             } catch (e) {
-              return r.handleError(e, "create_advCommandLineFile"), "ERROR"
+              return c.handleError(e, "create_advCommandLineFile"), "ERROR"
             }
-          })(), !0 !== r.checkStepOK("3.create_advCommandLineFile")) throw new Error("3.create_advCommandLineFile: Failed");
-        r["4.run_executeBuild"] = await (async () => {
-          let o = [];
+          })(), !0 !== c.checkStepOK("3.create_advCommandLineFile")) throw new Error("3.create_advCommandLineFile: Failed");
+        if (c["4.run_executeBuild"] = await (async () => {
+            let o = [];
+            try {
+              const s = a.join(p.buildPath, a.basename(p.aipPath).replace(".aip", ".clone.aip"));
+              e.copyFileSync(p.aipPath, s), o = ["/execute", s, p.buildFile], i.execFileSync(p.advinstPath, o);
+              let t = e.readdirSync(p.buildPath, {
+                recursive: !0
+              });
+              for (let i = 0; i < t.length; i++)
+                if (t[i].includes(".msi")) {
+                  p.outputPath = a.join(p.buildPath, t[i]);
+                  let {
+                    SetupFileName: o = ""
+                  } = p.config;
+                  if (n.Type.IsStringNotEmpty(o)) return !0 !== o.includes(".msi") && (o += ".msi"), e.renameSync(p.outputPath, a.join(p.buildPath, o)), p.outputPath = a.join(p.buildPath, o), `OK:${p.outputPath}`
+                } throw new Error("Không tìm thấy tập tin cài đặt `.msi`")
+            } catch (e) {
+              return c.handleError(e, "run_executeBuild"), "ERROR"
+            }
+          })(), !0 !== c.checkStepOK("4.run_executeBuild")) throw new Error("4.run_executeBuild: Failed");
+        c["5.compressZip"] = await (async () => {
           try {
-            const s = a.join(c.buildPath, a.basename(c.aipPath).replace(".aip", ".clone.aip"));
-            e.copyFileSync(c.aipPath, s), o = ["/execute", s, c.buildFile], i.execFileSync(c.advinstPath, o);
-            let t = e.readdirSync(c.buildPath, {
-              recursive: !0
-            });
-            for (let i = 0; i < t.length; i++)
-              if (t[i].includes(".msi")) {
-                c.outputPath = a.join(c.buildPath, t[i]);
-                let {
-                  SetupFileName: o = ""
-                } = c.config;
-                n.Type.IsStringNotEmpty(o) && (!0 !== o.includes(".msi") && (o += ".msi"), e.renameSync(c.outputPath, a.join(c.buildPath, o)), c.outputPath = a.join(c.buildPath, o))
-              } return `OK:${JSON.stringify(t)}`
+            return new Promise(((a, i) => {
+              const n = e.createReadStream(p.outputPath),
+                o = e.createWriteStream(p.outputPath + ".zip"),
+                s = r.createGzip();
+              n.pipe(s).pipe(o), o.on("close", (() => {
+                p.outputPathZip = p.outputPath + ".zip", a(`OK:${p.outputPathZip}`)
+              })), o.on("error", (e => {
+                i({
+                  err: e,
+                  note: "5.compressZip"
+                })
+              }))
+            }))
           } catch (e) {
-            return r.handleError(e, "run_executeBuild"), "ERROR"
+            return c.handleError(e, "5.compressZip"), "ERROR"
           }
-        })(), r.endTask({
+        })(), c.endTask({
           showLog: !0
         })
       } catch (e) {
-        r.handleError(e)
+        c.handleError(e)
       } finally {
-        await p()
+        await l()
       }
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.1957===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2015===  */

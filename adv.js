@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1552=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.1932=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1226.1552]:${e}`)
+              console.log(`[STARTED;1.23.1227.1932]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1226.1552"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1227.1932"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2771,7 +2771,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1226.1552",
+              WEBPACK_BUILD_VERSION: "1.23.1227.1932",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -8022,4 +8022,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1226.1552===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.1932===  */

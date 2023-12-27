@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2100=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2112=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1227.2100]:${e}`)
+              console.log(`[STARTED;1.23.1227.2112]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1227.2100"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1227.2112"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2771,7 +2771,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1227.2100",
+              WEBPACK_BUILD_VERSION: "1.23.1227.2112",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -2925,7 +2925,7 @@
                   else {
                     let e = s.String.getFileExtension(n.name),
                       a = !0;
-                    a && s.Type.IsArrayNotEmpty(t) && !1 === t.includes(e) && (a = !1), a && s.Type.IsArrayNotEmpty(r) && !0 === r.includes(e) && (a = !1), a && s.Type.IsArrayNotEmpty(c) && !1 === c.includes(n.name) && (a = !1), a && l.push(`${u}`)
+                    a && s.Type.IsArrayNotEmpty(t) && !1 === t.includes(e) && (a = !1), a && s.Type.IsArrayNotEmpty(r) && !0 === r.includes(e) && (a = !1), a && s.Type.IsArrayNotEmpty(c) && !1 === c.includes(n.name) && (a = !1), a && s.Type.IsArrayNotEmpty(c) && !1 === c.includes(n.name) && (a = !1), a && l.push(`${u}`)
                   }
                 }
               }
@@ -8044,7 +8044,9 @@
           }
         })(), c["6.uploadZip"] = await (async () => {
           if (p.rclonePath = a.join(p.cwdPath, ".rclone", "rclone.exe"), !0 !== e.existsSync(p.rclonePath)) throw new Error(`Không tìm thấy tập tin rclone.exe (${p.rclonePath})`);
-          p.rcloneConfigFiles = await s.rfs.getAllFiles(a.join(p.cwdPath, ".build-tools"), {})
+          p.rcloneConfigFiles = await s.rfs.getAllFiles(a.join(p.cwdPath, ".build-tools"), {
+            arrIgnoreNames: [".git"]
+          }), n.Type.IsArrayNotEmpty(p.rcloneConfigFiles) && (p.rcloneConfigFiles = p.rcloneConfigFiles.filter((e => (e + "").endsWith(".rclone.config")))), n.Type.IsArrayNotEmpty(p.rcloneConfigFiles)
         })(), c.endTask({
           showLog: !0
         })
@@ -8056,4 +8058,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2100===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2112===  */

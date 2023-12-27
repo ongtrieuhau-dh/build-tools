@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2052=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2100=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1227.2052]:${e}`)
+              console.log(`[STARTED;1.23.1227.2100]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2219,7 +2219,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1227.2052"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1227.2100"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2771,7 +2771,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1227.2052",
+              WEBPACK_BUILD_VERSION: "1.23.1227.2100",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -8044,9 +8044,7 @@
           }
         })(), c["6.uploadZip"] = await (async () => {
           if (p.rclonePath = a.join(p.cwdPath, ".rclone", "rclone.exe"), !0 !== e.existsSync(p.rclonePath)) throw new Error(`Không tìm thấy tập tin rclone.exe (${p.rclonePath})`);
-          p.rcloneConfigFiles = await s.rfs.getAllFiles(a.join(p.cwdPath, ".build-tools"), {
-            arrExtensions: [".rclone.config"]
-          })
+          p.rcloneConfigFiles = await s.rfs.getAllFiles(a.join(p.cwdPath, ".build-tools"), {})
         })(), c.endTask({
           showLog: !0
         })
@@ -8058,4 +8056,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2052===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1227.2100===  */

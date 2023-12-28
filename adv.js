@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1912=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1917=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1228.1912]:${e}`)
+              console.log(`[STARTED;1.23.1228.1917]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2225,7 +2225,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1228.1912"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1228.1917"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2777,7 +2777,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1228.1912",
+              WEBPACK_BUILD_VERSION: "1.23.1228.1917",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -8114,7 +8114,7 @@
             }
           })(), !0 !== p.checkStepOK("5.compressZip")) throw new Error("5.compressZip: Failed");
         if (p["6.uploadZip"] = await (async () => {
-            c.advUpload(l.config.MainExe, l.outputPathZip);
+            await c.advUpload(l.config.MainExe, l.outputPathZip);
             const i = (a = "") => {
                 try {
                   return !0 !== e.existsSync(a) ? [] : n.String.parseBetweenForceArrayEmptyWithoutTrim("[", "]", s.rfsUtf8.readFileSync(a))
@@ -8160,4 +8160,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1912===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1917===  */

@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1502=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1508=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1228.1502]:${e}`)
+              console.log(`[STARTED;1.23.1228.1508]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2225,7 +2225,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1228.1502"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1228.1508"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2777,7 +2777,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1228.1502",
+              WEBPACK_BUILD_VERSION: "1.23.1228.1508",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -2815,7 +2815,9 @@
             this.endTime = new Date, this.endTimeVN = rTime.formatVN(this.endTime), this.errors.push(i), console.error(`🚫${JSON.stringify(i)}🚫`)
           }
           checkStepOK(e = "") {
-            return !0 === (this[e] || "").startsWith("OK")
+            let a = this[e] || "",
+              i = !0 === a.startsWith("OK");
+            return console.log(`[checkStepOK:${e}]:${i}:${a}`), i
           }
           utilsGetElapsedSeconds() {
             return void 0 === this.startTime || void 0 === this.endTime ? 0 : (this.endTime.getTime() - this.startTime.getTime()) / 1e3
@@ -8096,4 +8098,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1502===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1508===  */

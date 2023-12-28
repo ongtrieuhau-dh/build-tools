@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1345=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1457=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1228.1345]:${e}`)
+              console.log(`[STARTED;1.23.1228.1457]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2225,7 +2225,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1228.1345"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1228.1457"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2777,7 +2777,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1228.1345",
+              WEBPACK_BUILD_VERSION: "1.23.1228.1457",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -4774,12 +4774,12 @@
             },
             _doProcessBlock: function(e, a) {
               for (var i = this._hash.words, n = i[0], o = i[1], s = i[2], t = i[3], r = i[4], l = i[5], u = i[6], m = i[7], d = n.high, x = n.low, f = o.high, v = o.low, h = s.high, b = s.low, g = t.high, y = t.low, w = r.high, _ = r.low, k = l.high, S = l.low, j = u.high, E = u.low, A = m.high, T = m.low, N = d, O = x, B = f, R = v, F = h, z = b, C = g, P = y, I = w, L = _, D = k, U = S, M = j, $ = E, q = A, H = T, V = 0; V < 80; V++) {
-                var G, W, J = p[V];
-                if (V < 16) W = J.high = 0 | e[a + 2 * V], G = J.low = 0 | e[a + 2 * V + 1];
+                var G, W, K = p[V];
+                if (V < 16) W = K.high = 0 | e[a + 2 * V], G = K.low = 0 | e[a + 2 * V + 1];
                 else {
-                  var K = p[V - 15],
-                    Y = K.high,
-                    Z = K.low,
+                  var J = p[V - 15],
+                    Y = J.high,
+                    Z = J.low,
                     X = (Y >>> 1 | Z << 31) ^ (Y >>> 8 | Z << 24) ^ Y >>> 7,
                     Q = (Z >>> 1 | Y << 31) ^ (Z >>> 8 | Y << 24) ^ (Z >>> 7 | Y << 25),
                     ee = p[V - 2],
@@ -4793,7 +4793,7 @@
                     ce = p[V - 16],
                     pe = ce.high,
                     le = ce.low;
-                  W = (W = (W = X + te + ((G = Q + re) >>> 0 < Q >>> 0 ? 1 : 0)) + ne + ((G += oe) >>> 0 < oe >>> 0 ? 1 : 0)) + pe + ((G += le) >>> 0 < le >>> 0 ? 1 : 0), J.high = W, J.low = G
+                  W = (W = (W = X + te + ((G = Q + re) >>> 0 < Q >>> 0 ? 1 : 0)) + ne + ((G += oe) >>> 0 < oe >>> 0 ? 1 : 0)) + pe + ((G += le) >>> 0 < le >>> 0 ? 1 : 0), K.high = W, K.low = G
                 }
                 var ue, me = I & D ^ ~I & M,
                   de = L & U ^ ~L & $,
@@ -6188,9 +6188,9 @@
         }
         const V = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof self ? self : "undefined" != typeof window ? window : global,
           G = e => !B(e) && e !== V;
-        const W = (J = "undefined" != typeof Uint8Array && j(Uint8Array), e => J && e instanceof J);
-        var J;
-        const K = T("HTMLFormElement"),
+        const W = (K = "undefined" != typeof Uint8Array && j(Uint8Array), e => K && e instanceof K);
+        var K;
+        const J = T("HTMLFormElement"),
           Y = (({
             hasOwnProperty: e
           }) => (a, i) => e.call(a, i))(Object.prototype),
@@ -6306,7 +6306,7 @@
               for (; null !== (i = e.exec(a));) n.push(i);
               return n
             },
-            isHTMLForm: K,
+            isHTMLForm: J,
             hasOwnProperty: Y,
             hasOwnProp: Y,
             reduceDescriptors: X,
@@ -7004,14 +7004,14 @@
           } = Symbol,
           Ge = async function*(e) {
             e.stream ? yield* e.stream(): e.arrayBuffer ? yield await e.arrayBuffer(): e[Ve] ? yield* e[Ve](): yield e
-          }, We = ne.ALPHABET.ALPHA_DIGIT + "-_", Je = new c.TextEncoder, Ke = "\r\n", Ye = Je.encode(Ke);
+          }, We = ne.ALPHABET.ALPHA_DIGIT + "-_", Ke = new c.TextEncoder, Je = "\r\n", Ye = Ke.encode(Je);
         class FormDataPart {
           constructor(e, a) {
             const {
               escapeName: i
             } = this.constructor, n = ne.isString(a);
-            let o = `Content-Disposition: form-data; name="${i(e)}"${!n&&a.name?`; filename="${i(a.name)}"`:""}${Ke}`;
-            n ? a = Je.encode(String(a).replace(/\r?\n|\r\n?/g, Ke)) : o += `Content-Type: ${a.type||"application/octet-stream"}${Ke}`, this.headers = Je.encode(o + Ke), this.contentLength = n ? a.byteLength : a.size, this.size = this.headers.byteLength + this.contentLength + 2, this.name = e, this.value = a
+            let o = `Content-Disposition: form-data; name="${i(e)}"${!n&&a.name?`; filename="${i(a.name)}"`:""}${Je}`;
+            n ? a = Ke.encode(String(a).replace(/\r?\n|\r\n?/g, Je)) : o += `Content-Type: ${a.type||"application/octet-stream"}${Je}`, this.headers = Ke.encode(o + Je), this.contentLength = n ? a.byteLength : a.size, this.size = this.headers.byteLength + this.contentLength + 2, this.name = e, this.value = a
           }
           async * encode() {
             yield this.headers;
@@ -7036,8 +7036,8 @@
           } = i || {};
           if (!ne.isFormData(e)) throw TypeError("FormData instance required");
           if (s.length < 1 || s.length > 70) throw Error("boundary must be 10-70 characters long");
-          const t = Je.encode("--" + s + Ke),
-            r = Je.encode("--" + s + "--" + Ke + Ke);
+          const t = Ke.encode("--" + s + Je),
+            r = Ke.encode("--" + s + "--" + Je + Je);
           let c = r.byteLength;
           const p = Array.from(e.entries()).map((([e, a]) => {
             const i = new FormDataPart(e, a);
@@ -8032,25 +8032,26 @@
               return c.handleError(e, "run_executeBuild"), "ERROR"
             }
           })(), !0 !== c.checkStepOK("4.run_executeBuild")) throw new Error("4.run_executeBuild: Failed");
-        c["5.compressZip"] = await (async () => {
-          try {
-            return new Promise(((a, i) => {
-              const n = e.createReadStream(p.outputPath),
-                o = e.createWriteStream(p.outputPath + ".zip"),
-                s = r.createGzip();
-              n.pipe(s).pipe(o), o.on("close", (() => {
-                p.outputPathZip = p.outputPath + ".zip", a(`OK:${p.outputPathZip}`)
-              })), o.on("error", (e => {
-                i({
-                  err: e,
-                  note: "5.compressZip"
-                })
+        if (c["5.compressZip"] = await (async () => {
+            try {
+              return new Promise(((a, i) => {
+                const n = e.createReadStream(p.outputPath),
+                  o = e.createWriteStream(p.outputPath + ".zip"),
+                  s = r.createGzip();
+                n.pipe(s).pipe(o), o.on("close", (() => {
+                  p.outputPathZip = p.outputPath + ".zip", a(`OK:${p.outputPathZip}`)
+                })), o.on("error", (e => {
+                  i({
+                    err: e,
+                    note: "5.compressZip"
+                  })
+                }))
               }))
-            }))
-          } catch (e) {
-            return c.handleError(e, "5.compressZip"), "ERROR"
-          }
-        })(), c["6.uploadZip"] = await (async () => {
+            } catch (e) {
+              return c.handleError(e, "5.compressZip"), "ERROR"
+            }
+          })(), !0 !== c.checkStepOK("5.compressZip")) throw new Error("5.compressZip: Failed");
+        c["6.uploadZip"] = await (async () => {
           const i = (a = "") => {
               try {
                 return !0 !== e.existsSync(a) ? [] : n.String.parseBetweenForceArrayEmptyWithoutTrim("[", "]", s.rfsUtf8.readFileSync(a))
@@ -8073,15 +8074,17 @@
           if (p.rclonePath = a.join(p.cwdPath, ".rclone", "rclone.exe"), !0 !== e.existsSync(p.rclonePath)) throw new Error(`Không tìm thấy tập tin rclone.exe (${p.rclonePath})`);
           if (p.rcloneConfigFiles = await s.rfs.getAllFiles(a.join(p.cwdPath, ".build-tools"), {
               arrIgnoreNames: [".git"]
-            }), n.Type.IsArrayNotEmpty(p.rcloneConfigFiles) && (p.rcloneConfigFiles = p.rcloneConfigFiles.filter((e => (e + "").endsWith(".rclone.config")))), n.Type.IsArrayNotEmpty(p.rcloneConfigFiles)) {
-            let e = [];
-            for (let n = 0; n < p.rcloneConfigFiles.length; n++) {
-              let s = p.rcloneConfigFiles[n],
-                t = i(s);
-              for (let i = 0; i < t.length; i++) e.push(o(s, `${t[i]}:${a.basename(p.outputPathZip)}`))
-            }
-            p.downloadLinks = await Promise.allSettled(e)
+            }), n.Type.IsArrayNotEmpty(p.rcloneConfigFiles) && (p.rcloneConfigFiles = p.rcloneConfigFiles.filter((e => (e + "").endsWith(".rclone.config")))), !0 !== n.Type.IsArrayNotEmpty(p.rcloneConfigFiles)) throw new Error(`Không tìm thấy tập tin .rclone.config (${a.join(p.cwdPath,".build-tools")})`);
+          let t = [];
+          for (let e = 0; e < p.rcloneConfigFiles.length; e++) {
+            let n = p.rcloneConfigFiles[e],
+              s = i(n);
+            for (let e = 0; e < s.length; e++) t.push(o(n, `${s[e]}:${a.basename(p.outputPathZip)}`))
           }
+          if (p.downloadLinks = await Promise.allSettled(t).then((e => {
+              var a = e.filter((e => "fulfilled" === e.value));
+              return n.Type.IsArrayNotEmpty(a) ? a.map((e => e.value)) : []
+            })), n.Type.IsArrayNotEmpty(p.downloadLinks)) return `OK:${p.downloadLinks.reduce(((e,a)=>e=e+";"+a),"")}`
         })(), c.endTask({
           showLog: !0
         })
@@ -8093,4 +8096,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1345===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1457===  */

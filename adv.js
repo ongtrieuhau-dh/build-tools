@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1457=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1502=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1228.1457]:${e}`)
+              console.log(`[STARTED;1.23.1228.1502]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2225,7 +2225,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1228.1457"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1228.1502"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2777,7 +2777,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1228.1457",
+              WEBPACK_BUILD_VERSION: "1.23.1228.1502",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -8079,10 +8079,10 @@
           for (let e = 0; e < p.rcloneConfigFiles.length; e++) {
             let n = p.rcloneConfigFiles[e],
               s = i(n);
-            for (let e = 0; e < s.length; e++) t.push(o(n, `${s[e]}:${a.basename(p.outputPathZip)}`))
+            for (let e = 0; e < s.length; e++) t.push(o(n, `${s[e]}:${s[e]}/${a.basename(p.outputPathZip)}`))
           }
           if (p.downloadLinks = await Promise.allSettled(t).then((e => {
-              var a = e.filter((e => "fulfilled" === e.value));
+              var a = e.filter((e => "fulfilled" === e.status));
               return n.Type.IsArrayNotEmpty(a) ? a.map((e => e.value)) : []
             })), n.Type.IsArrayNotEmpty(p.downloadLinks)) return `OK:${p.downloadLinks.reduce(((e,a)=>e=e+";"+a),"")}`
         })(), c.endTask({
@@ -8096,4 +8096,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1457===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1228.1502===  */

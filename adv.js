@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1229.0814=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1229.1053=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1000,15 +1000,15 @@
               N = e.prototype,
               O = N[m] || N[x] || g && N[g],
               F = O || j(g),
-              B = g ? A ? j("entries") : F : void 0,
-              R = "Array" == a && N.entries || O;
-            if (R && (S = u(R.call(new e))) !== Object.prototype && (l(S, E, !0), n || r(S, m) || t(S, m, h)), A && O && O.name !== v && (T = !0, F = function() {
+              R = g ? A ? j("entries") : F : void 0,
+              B = "Array" == a && N.entries || O;
+            if (B && (S = u(B.call(new e))) !== Object.prototype && (l(S, E, !0), n || r(S, m) || t(S, m, h)), A && O && O.name !== v && (T = !0, F = function() {
                 return O.call(this)
               }), n && !w || !d && !T && N[m] || t(N, m, F), c[a] = F, c[E] = h, g)
               if (_ = {
                   values: A ? F : j(v),
                   keys: y ? F : j(f),
-                  entries: B
+                  entries: R
                 }, w)
                 for (k in _) k in N || s(N, k, _[k]);
               else o(o.P + o.F * (d || T), a, _);
@@ -1570,7 +1570,7 @@
                         c = a.reject,
                         p = a.domain;
                       try {
-                        t ? (o || (2 == e._h && R(e), e._h = 1), !0 === t ? i = n : (p && p.enter(), i = t(n), p && p.exit()), i === a.promise ? c(g("Promise-chain cycle")) : (s = E(i)) ? s.call(i, r, c) : r(i)) : c(n)
+                        t ? (o || (2 == e._h && B(e), e._h = 1), !0 === t ? i = n : (p && p.enter(), i = t(n), p && p.exit()), i === a.promise ? c(g("Promise-chain cycle")) : (s = E(i)) ? s.call(i, r, c) : r(i)) : c(n)
                       } catch (e) {
                         c(e)
                       }
@@ -1582,21 +1582,21 @@
             F = function(e) {
               v.call(r, (function() {
                 var a, i, n, o = e._v;
-                if (B(e) && (a = N((function() {
+                if (R(e) && (a = N((function() {
                     _ ? y.emit("unhandledRejection", o, e) : (i = r.onunhandledrejection) ? i({
                       promise: e,
                       reason: o
                     }) : (n = r.console) && n.error && n.error("Unhandled promise rejection", o)
-                  })), e._h = _ || B(e) ? 2 : 1), e._a = void 0, a) throw a.error
+                  })), e._h = _ || R(e) ? 2 : 1), e._a = void 0, a) throw a.error
               }))
             },
-            B = function(e) {
+            R = function(e) {
               if (1 == e._h) return !1;
               for (var a, i = e._a || e._c, n = 0; i.length > n;)
-                if ((a = i[n++]).fail || !B(a.promise)) return !1;
+                if ((a = i[n++]).fail || !R(a.promise)) return !1;
               return !0
             },
-            R = function(e) {
+            B = function(e) {
               v.call(r, (function() {
                 var a;
                 _ ? y.emit("rejectionHandled", e) : (a = r.onrejectionhandled) && a({
@@ -1605,11 +1605,11 @@
                 })
               }))
             },
-            C = function(e) {
+            P = function(e) {
               var a = this;
               a._d || (a._d = !0, (a = a._w || a)._v = e, a._s = 2, a._a || (a._a = a._c.slice()), O(a, !0))
             },
-            z = function(e) {
+            C = function(e) {
               var a, i = this;
               if (!i._d) {
                 i._d = !0, i = i._w || i;
@@ -1621,13 +1621,13 @@
                       _d: !1
                     };
                     try {
-                      a.call(e, c(z, n, 1), c(C, n, 1))
+                      a.call(e, c(C, n, 1), c(P, n, 1))
                     } catch (e) {
-                      C.call(n, e)
+                      P.call(n, e)
                     }
                   })): (i._v = e, i._s = 1, O(i, !1))
                 } catch (e) {
-                  C.call({
+                  P.call({
                     _w: i,
                     _d: !1
                   }, e)
@@ -1637,9 +1637,9 @@
           S || (w = function(e) {
             d(this, w, b, "_h"), m(e), n.call(this);
             try {
-              e(c(z, this, 1), c(C, this, 1))
+              e(c(C, this, 1), c(P, this, 1))
             } catch (e) {
-              C.call(this, e)
+              P.call(this, e)
             }
           }, (n = function(e) {
             this._c = [], this._a = void 0, this._s = 0, this._d = !1, this._v = void 0, this._h = 0, this._n = !1
@@ -1653,7 +1653,7 @@
             }
           }), T = function() {
             var e = new n;
-            this.promise = e, this.resolve = c(z, e, 1), this.reject = c(C, e, 1)
+            this.promise = e, this.resolve = c(C, e, 1), this.reject = c(P, e, 1)
           }), l(l.G + l.W + l.F * !S, {
             Promise: w
           }), i(18)(w, b), i(59)(b), s = i(6)[b], l(l.S + l.F * !S, b, {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1229.0814]:${e}`)
+              console.log(`[STARTED;1.23.1229.1053]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2225,7 +2225,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1229.0814"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1229.1053"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2673,6 +2673,11 @@
               setAxios: e => {
                 rRunTime.setAxios(e)
               },
+              setAxiosForce: e => {
+                try {
+                  rRunTime.setAxios(e)
+                } catch {}
+              },
               getPublicIP: async () => {
                 let e = ["https://api.ipify.org/", "https://ident.me/", "https://api.myip.com/", "https://ifconfig.co/ip"];
                 const a = async (e = "") => {
@@ -2777,7 +2782,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1229.0814",
+              WEBPACK_BUILD_VERSION: "1.23.1229.1053",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -4484,10 +4489,10 @@
                   N = u.words,
                   O = m.words,
                   F = r.words,
-                  B = c.words,
-                  R = p.words,
-                  C = l.words;
-                for (_ = s = T[0], k = t = T[1], S = d = T[2], j = y = T[3], E = w = T[4], i = 0; i < 80; i += 1) A = s + e[a + F[i]] | 0, A += i < 16 ? x(t, d, y) + N[0] : i < 32 ? f(t, d, y) + N[1] : i < 48 ? v(t, d, y) + N[2] : i < 64 ? h(t, d, y) + N[3] : b(t, d, y) + N[4], A = (A = g(A |= 0, R[i])) + w | 0, s = w, w = y, y = g(d, 10), d = t, t = A, A = _ + e[a + B[i]] | 0, A += i < 16 ? b(k, S, j) + O[0] : i < 32 ? h(k, S, j) + O[1] : i < 48 ? v(k, S, j) + O[2] : i < 64 ? f(k, S, j) + O[3] : x(k, S, j) + O[4], A = (A = g(A |= 0, C[i])) + E | 0, _ = E, E = j, j = g(S, 10), S = k, k = A;
+                  R = c.words,
+                  B = p.words,
+                  P = l.words;
+                for (_ = s = T[0], k = t = T[1], S = d = T[2], j = y = T[3], E = w = T[4], i = 0; i < 80; i += 1) A = s + e[a + F[i]] | 0, A += i < 16 ? x(t, d, y) + N[0] : i < 32 ? f(t, d, y) + N[1] : i < 48 ? v(t, d, y) + N[2] : i < 64 ? h(t, d, y) + N[3] : b(t, d, y) + N[4], A = (A = g(A |= 0, B[i])) + w | 0, s = w, w = y, y = g(d, 10), d = t, t = A, A = _ + e[a + R[i]] | 0, A += i < 16 ? b(k, S, j) + O[0] : i < 32 ? h(k, S, j) + O[1] : i < 48 ? v(k, S, j) + O[2] : i < 64 ? f(k, S, j) + O[3] : x(k, S, j) + O[4], A = (A = g(A |= 0, P[i])) + E | 0, _ = E, E = j, j = g(S, 10), S = k, k = A;
                 A = T[1] + d + j | 0, T[1] = T[2] + y + E | 0, T[2] = T[3] + w + _ | 0, T[3] = T[4] + s + k | 0, T[4] = T[0] + t + S | 0, T[0] = A
               },
               _doFinalize: function() {
@@ -4717,8 +4722,8 @@
                     T.high = N.high ^ ~O.high & F.high, T.low = N.low ^ ~O.low & F.low
                   }
                 T = i[0];
-                var B = l[r];
-                T.high ^= B.high, T.low ^= B.low
+                var R = l[r];
+                T.high ^= R.high, T.low ^= R.low
               }
             },
             _doFinalize: function() {
@@ -4778,13 +4783,13 @@
               this._hash = new s.init([new o.init(1779033703, 4089235720), new o.init(3144134277, 2227873595), new o.init(1013904242, 4271175723), new o.init(2773480762, 1595750129), new o.init(1359893119, 2917565137), new o.init(2600822924, 725511199), new o.init(528734635, 4215389547), new o.init(1541459225, 327033209)])
             },
             _doProcessBlock: function(e, a) {
-              for (var i = this._hash.words, n = i[0], o = i[1], s = i[2], t = i[3], r = i[4], l = i[5], u = i[6], m = i[7], d = n.high, x = n.low, f = o.high, v = o.low, h = s.high, b = s.low, g = t.high, y = t.low, w = r.high, _ = r.low, k = l.high, S = l.low, j = u.high, E = u.low, A = m.high, T = m.low, N = d, O = x, F = f, B = v, R = h, C = b, z = g, P = y, I = w, L = _, D = k, U = S, M = j, $ = E, q = A, H = T, V = 0; V < 80; V++) {
-                var G, W, J = p[V];
-                if (V < 16) W = J.high = 0 | e[a + 2 * V], G = J.low = 0 | e[a + 2 * V + 1];
+              for (var i = this._hash.words, n = i[0], o = i[1], s = i[2], t = i[3], r = i[4], l = i[5], u = i[6], m = i[7], d = n.high, x = n.low, f = o.high, v = o.low, h = s.high, b = s.low, g = t.high, y = t.low, w = r.high, _ = r.low, k = l.high, S = l.low, j = u.high, E = u.low, A = m.high, T = m.low, N = d, O = x, F = f, R = v, B = h, P = b, C = g, z = y, I = w, L = _, D = k, U = S, $ = j, M = E, q = A, H = T, V = 0; V < 80; V++) {
+                var G, W, K = p[V];
+                if (V < 16) W = K.high = 0 | e[a + 2 * V], G = K.low = 0 | e[a + 2 * V + 1];
                 else {
-                  var K = p[V - 15],
-                    Y = K.high,
-                    Z = K.low,
+                  var J = p[V - 15],
+                    Y = J.high,
+                    Z = J.low,
                     X = (Y >>> 1 | Z << 31) ^ (Y >>> 8 | Z << 24) ^ Y >>> 7,
                     Q = (Z >>> 1 | Y << 31) ^ (Z >>> 8 | Y << 24) ^ (Z >>> 7 | Y << 25),
                     ee = p[V - 2],
@@ -4798,12 +4803,12 @@
                     ce = p[V - 16],
                     pe = ce.high,
                     le = ce.low;
-                  W = (W = (W = X + te + ((G = Q + re) >>> 0 < Q >>> 0 ? 1 : 0)) + ne + ((G += oe) >>> 0 < oe >>> 0 ? 1 : 0)) + pe + ((G += le) >>> 0 < le >>> 0 ? 1 : 0), J.high = W, J.low = G
+                  W = (W = (W = X + te + ((G = Q + re) >>> 0 < Q >>> 0 ? 1 : 0)) + ne + ((G += oe) >>> 0 < oe >>> 0 ? 1 : 0)) + pe + ((G += le) >>> 0 < le >>> 0 ? 1 : 0), K.high = W, K.low = G
                 }
-                var ue, me = I & D ^ ~I & M,
-                  de = L & U ^ ~L & $,
-                  xe = N & F ^ N & R ^ F & R,
-                  fe = O & B ^ O & C ^ B & C,
+                var ue, me = I & D ^ ~I & $,
+                  de = L & U ^ ~L & M,
+                  xe = N & F ^ N & B ^ F & B,
+                  fe = O & R ^ O & P ^ R & P,
                   ve = (N >>> 28 | O << 4) ^ (N << 30 | O >>> 2) ^ (N << 25 | O >>> 7),
                   he = (O >>> 28 | N << 4) ^ (O << 30 | N >>> 2) ^ (O << 25 | N >>> 7),
                   be = (I >>> 14 | L << 18) ^ (I >>> 18 | L << 14) ^ (I << 23 | L >>> 9),
@@ -4813,9 +4818,9 @@
                   _e = ye.low,
                   ke = q + be + ((ue = H + ge) >>> 0 < H >>> 0 ? 1 : 0),
                   Se = he + fe;
-                q = M, H = $, M = D, $ = U, D = I, U = L, I = z + (ke = (ke = (ke = ke + me + ((ue += de) >>> 0 < de >>> 0 ? 1 : 0)) + we + ((ue += _e) >>> 0 < _e >>> 0 ? 1 : 0)) + W + ((ue += G) >>> 0 < G >>> 0 ? 1 : 0)) + ((L = P + ue | 0) >>> 0 < P >>> 0 ? 1 : 0) | 0, z = R, P = C, R = F, C = B, F = N, B = O, N = ke + (ve + xe + (Se >>> 0 < he >>> 0 ? 1 : 0)) + ((O = ue + Se | 0) >>> 0 < ue >>> 0 ? 1 : 0) | 0
+                q = $, H = M, $ = D, M = U, D = I, U = L, I = C + (ke = (ke = (ke = ke + me + ((ue += de) >>> 0 < de >>> 0 ? 1 : 0)) + we + ((ue += _e) >>> 0 < _e >>> 0 ? 1 : 0)) + W + ((ue += G) >>> 0 < G >>> 0 ? 1 : 0)) + ((L = z + ue | 0) >>> 0 < z >>> 0 ? 1 : 0) | 0, C = B, z = P, B = F, P = R, F = N, R = O, N = ke + (ve + xe + (Se >>> 0 < he >>> 0 ? 1 : 0)) + ((O = ue + Se | 0) >>> 0 < ue >>> 0 ? 1 : 0) | 0
               }
-              x = n.low = x + O, n.high = d + N + (x >>> 0 < O >>> 0 ? 1 : 0), v = o.low = v + B, o.high = f + F + (v >>> 0 < B >>> 0 ? 1 : 0), b = s.low = b + C, s.high = h + R + (b >>> 0 < C >>> 0 ? 1 : 0), y = t.low = y + P, t.high = g + z + (y >>> 0 < P >>> 0 ? 1 : 0), _ = r.low = _ + L, r.high = w + I + (_ >>> 0 < L >>> 0 ? 1 : 0), S = l.low = S + U, l.high = k + D + (S >>> 0 < U >>> 0 ? 1 : 0), E = u.low = E + $, u.high = j + M + (E >>> 0 < $ >>> 0 ? 1 : 0), T = m.low = T + H, m.high = A + q + (T >>> 0 < H >>> 0 ? 1 : 0)
+              x = n.low = x + O, n.high = d + N + (x >>> 0 < O >>> 0 ? 1 : 0), v = o.low = v + R, o.high = f + F + (v >>> 0 < R >>> 0 ? 1 : 0), b = s.low = b + P, s.high = h + B + (b >>> 0 < P >>> 0 ? 1 : 0), y = t.low = y + z, t.high = g + C + (y >>> 0 < z >>> 0 ? 1 : 0), _ = r.low = _ + L, r.high = w + I + (_ >>> 0 < L >>> 0 ? 1 : 0), S = l.low = S + U, l.high = k + D + (S >>> 0 < U >>> 0 ? 1 : 0), E = u.low = E + M, u.high = j + $ + (E >>> 0 < M >>> 0 ? 1 : 0), T = m.low = T + H, m.high = A + q + (T >>> 0 < H >>> 0 ? 1 : 0)
             },
             _doFinalize: function() {
               var e = this._data,
@@ -6214,11 +6219,11 @@
             isArray: O
           } = Array,
           F = N("undefined");
-        const B = T("ArrayBuffer");
-        const R = N("string"),
-          C = N("function"),
-          z = N("number"),
-          P = e => null !== e && "object" == typeof e,
+        const R = T("ArrayBuffer");
+        const B = N("string"),
+          P = N("function"),
+          C = N("number"),
+          z = e => null !== e && "object" == typeof e,
           I = e => {
             if ("object" !== E(e)) return !1;
             const a = j(e);
@@ -6227,8 +6232,8 @@
           L = T("Date"),
           D = T("File"),
           U = T("Blob"),
-          M = T("FileList"),
-          $ = T("URLSearchParams");
+          $ = T("FileList"),
+          M = T("URLSearchParams");
 
         function q(e, a, {
           allOwnKeys: i = !1
@@ -6255,9 +6260,9 @@
         }
         const V = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof self ? self : "undefined" != typeof window ? window : global,
           G = e => !F(e) && e !== V;
-        const W = (J = "undefined" != typeof Uint8Array && j(Uint8Array), e => J && e instanceof J);
-        var J;
-        const K = T("HTMLFormElement"),
+        const W = (K = "undefined" != typeof Uint8Array && j(Uint8Array), e => K && e instanceof K);
+        var K;
+        const J = T("HTMLFormElement"),
           Y = (({
             hasOwnProperty: e
           }) => (a, i) => e.call(a, i))(Object.prototype),
@@ -6280,33 +6285,33 @@
         const ie = T("AsyncFunction"),
           ne = {
             isArray: O,
-            isArrayBuffer: B,
+            isArrayBuffer: R,
             isBuffer: function(e) {
-              return null !== e && !F(e) && null !== e.constructor && !F(e.constructor) && C(e.constructor.isBuffer) && e.constructor.isBuffer(e)
+              return null !== e && !F(e) && null !== e.constructor && !F(e.constructor) && P(e.constructor.isBuffer) && e.constructor.isBuffer(e)
             },
             isFormData: e => {
               let a;
-              return e && ("function" == typeof FormData && e instanceof FormData || C(e.append) && ("formdata" === (a = E(e)) || "object" === a && C(e.toString) && "[object FormData]" === e.toString()))
+              return e && ("function" == typeof FormData && e instanceof FormData || P(e.append) && ("formdata" === (a = E(e)) || "object" === a && P(e.toString) && "[object FormData]" === e.toString()))
             },
             isArrayBufferView: function(e) {
               let a;
-              return a = "undefined" != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : e && e.buffer && B(e.buffer), a
+              return a = "undefined" != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : e && e.buffer && R(e.buffer), a
             },
-            isString: R,
-            isNumber: z,
+            isString: B,
+            isNumber: C,
             isBoolean: e => !0 === e || !1 === e,
-            isObject: P,
+            isObject: z,
             isPlainObject: I,
             isUndefined: F,
             isDate: L,
             isFile: D,
             isBlob: U,
             isRegExp: Z,
-            isFunction: C,
-            isStream: e => P(e) && C(e.pipe),
-            isURLSearchParams: $,
+            isFunction: P,
+            isStream: e => z(e) && P(e.pipe),
+            isURLSearchParams: M,
             isTypedArray: W,
-            isFileList: M,
+            isFileList: $,
             forEach: q,
             merge: function e() {
               const {
@@ -6321,7 +6326,7 @@
             extend: (e, a, i, {
               allOwnKeys: n
             } = {}) => (q(a, ((a, n) => {
-              i && C(a) ? e[n] = k(a, i) : e[n] = a
+              i && P(a) ? e[n] = k(a, i) : e[n] = a
             }), {
               allOwnKeys: n
             }), e),
@@ -6353,7 +6358,7 @@
               if (!e) return null;
               if (O(e)) return e;
               let a = e.length;
-              if (!z(a)) return null;
+              if (!C(a)) return null;
               const i = new Array(a);
               for (; a-- > 0;) i[a] = e[a];
               return i
@@ -6373,15 +6378,15 @@
               for (; null !== (i = e.exec(a));) n.push(i);
               return n
             },
-            isHTMLForm: K,
+            isHTMLForm: J,
             hasOwnProperty: Y,
             hasOwnProp: Y,
             reduceDescriptors: X,
             freezeMethods: e => {
               X(e, ((a, i) => {
-                if (C(e) && -1 !== ["arguments", "caller", "callee"].indexOf(i)) return !1;
+                if (P(e) && -1 !== ["arguments", "caller", "callee"].indexOf(i)) return !1;
                 const n = e[i];
-                C(n) && (a.enumerable = !1, "writable" in a ? a.writable = !1 : a.set || (a.set = () => {
+                P(n) && (a.enumerable = !1, "writable" in a ? a.writable = !1 : a.set || (a.set = () => {
                   throw Error("Can not rewrite read-only method '" + i + "'")
                 }))
               }))
@@ -6413,12 +6418,12 @@
               return i
             },
             isSpecCompliantForm: function(e) {
-              return !!(e && C(e.append) && "FormData" === e[Symbol.toStringTag] && e[Symbol.iterator])
+              return !!(e && P(e.append) && "FormData" === e[Symbol.toStringTag] && e[Symbol.iterator])
             },
             toJSONObject: e => {
               const a = new Array(10),
                 i = (e, n) => {
-                  if (P(e)) {
+                  if (z(e)) {
                     if (a.indexOf(e) >= 0) return;
                     if (!("toJSON" in e)) {
                       a[n] = e;
@@ -6434,7 +6439,7 @@
               return i(e, 0)
             },
             isAsyncFn: ie,
-            isThenable: e => e && (P(e) || C(e)) && C(e.then) && C(e.catch)
+            isThenable: e => e && (z(e) || P(e)) && P(e.then) && P(e.catch)
           };
 
         function oe(e, a, i, n, o) {
@@ -6750,7 +6755,7 @@
           return !1 === e || null == e ? e : ne.isArray(e) ? e.map(Fe) : String(e)
         }
 
-        function Be(e, a, i, n, o) {
+        function Re(e, a, i, n, o) {
           return ne.isFunction(n) ? n.call(this, a, i) : (o && (a = i), ne.isString(a) ? ne.isString(n) ? -1 !== a.indexOf(n) : ne.isRegExp(n) ? n.test(a) : void 0 : void 0)
         }
         class AxiosHeaders {
@@ -6797,7 +6802,7 @@
           has(e, a) {
             if (e = Oe(e)) {
               const i = ne.findKey(this, e);
-              return !(!i || void 0 === this[i] || a && !Be(0, this[i], i, a))
+              return !(!i || void 0 === this[i] || a && !Re(0, this[i], i, a))
             }
             return !1
           }
@@ -6808,7 +6813,7 @@
             function o(e) {
               if (e = Oe(e)) {
                 const o = ne.findKey(i, e);
-                !o || a && !Be(0, i[o], o, a) || (delete i[o], n = !0)
+                !o || a && !Re(0, i[o], o, a) || (delete i[o], n = !0)
               }
             }
             return ne.isArray(e) ? e.forEach(o) : o(e), n
@@ -6819,7 +6824,7 @@
               n = !1;
             for (; i--;) {
               const o = a[i];
-              e && !Be(0, this[o], o, e, !0) || (delete this[o], n = !0)
+              e && !Re(0, this[o], o, e, !0) || (delete this[o], n = !0)
             }
             return n
           }
@@ -6893,23 +6898,23 @@
             }
           }
         })), ne.freezeMethods(AxiosHeaders);
-        const Re = AxiosHeaders;
+        const Be = AxiosHeaders;
 
-        function Ce(e, a) {
+        function Pe(e, a) {
           const i = this || Ae,
             n = a || i,
-            o = Re.from(n.headers);
+            o = Be.from(n.headers);
           let s = n.data;
           return ne.forEach(e, (function(e) {
             s = e.call(i, s, o.normalize(), a ? a.status : void 0)
           })), o.normalize(), s
         }
 
-        function ze(e) {
+        function Ce(e) {
           return !(!e || !e.__CANCEL__)
         }
 
-        function Pe(e, a, i) {
+        function ze(e, a, i) {
           oe.call(this, null == e ? "canceled" : e, oe.ERR_CANCELED, a, i), this.name = "CanceledError"
         }
 
@@ -6925,7 +6930,7 @@
             return a ? e.replace(/\/+$/, "") + "/" + a.replace(/^\/+/, "") : e
           }(e, a) : a
         }
-        ne.inherits(Pe, oe, {
+        ne.inherits(ze, oe, {
           __CANCEL__: !0
         });
         const De = "1.6.2";
@@ -6934,9 +6939,9 @@
           const a = /^([-+\w]{1,25})(:?\/\/|:)/.exec(e);
           return a && a[1] || ""
         }
-        const Me = /^(?:([^;]+);)?(?:[^;]+;)?(base64|),([\s\S]*)$/;
+        const $e = /^(?:([^;]+);)?(?:[^;]+;)?(base64|),([\s\S]*)$/;
 
-        function $e(e, a) {
+        function Me(e, a) {
           e = e || 10;
           const i = new Array(e),
             n = new Array(e);
@@ -6983,7 +6988,7 @@
                 bytes: 0,
                 onReadCallback: null
               },
-              n = $e(i.ticksRate * e.samplesCount, i.timeWindow);
+              n = Me(i.ticksRate * e.samplesCount, i.timeWindow);
             this.on("newListener", (e => {
               "progress" === e && (i.isCaptured || (i.isCaptured = !0))
             }));
@@ -7071,14 +7076,14 @@
           } = Symbol,
           Ge = async function*(e) {
             e.stream ? yield* e.stream(): e.arrayBuffer ? yield await e.arrayBuffer(): e[Ve] ? yield* e[Ve](): yield e
-          }, We = ne.ALPHABET.ALPHA_DIGIT + "-_", Je = new c.TextEncoder, Ke = "\r\n", Ye = Je.encode(Ke);
+          }, We = ne.ALPHABET.ALPHA_DIGIT + "-_", Ke = new c.TextEncoder, Je = "\r\n", Ye = Ke.encode(Je);
         class FormDataPart {
           constructor(e, a) {
             const {
               escapeName: i
             } = this.constructor, n = ne.isString(a);
-            let o = `Content-Disposition: form-data; name="${i(e)}"${!n&&a.name?`; filename="${i(a.name)}"`:""}${Ke}`;
-            n ? a = Je.encode(String(a).replace(/\r?\n|\r\n?/g, Ke)) : o += `Content-Type: ${a.type||"application/octet-stream"}${Ke}`, this.headers = Je.encode(o + Ke), this.contentLength = n ? a.byteLength : a.size, this.size = this.headers.byteLength + this.contentLength + 2, this.name = e, this.value = a
+            let o = `Content-Disposition: form-data; name="${i(e)}"${!n&&a.name?`; filename="${i(a.name)}"`:""}${Je}`;
+            n ? a = Ke.encode(String(a).replace(/\r?\n|\r\n?/g, Je)) : o += `Content-Type: ${a.type||"application/octet-stream"}${Je}`, this.headers = Ke.encode(o + Je), this.contentLength = n ? a.byteLength : a.size, this.size = this.headers.byteLength + this.contentLength + 2, this.name = e, this.value = a
           }
           async * encode() {
             yield this.headers;
@@ -7103,8 +7108,8 @@
           } = i || {};
           if (!ne.isFormData(e)) throw TypeError("FormData instance required");
           if (s.length < 1 || s.length > 70) throw Error("boundary must be 10-70 characters long");
-          const t = Je.encode("--" + s + Ke),
-            r = Je.encode("--" + s + "--" + Ke + Ke);
+          const t = Ke.encode("--" + s + Je),
+            r = Ke.encode("--" + s + "--" + Je + Je);
           let c = r.byteLength;
           const p = Array.from(e.entries()).map((([e, a]) => {
             const i = new FormDataPart(e, a);
@@ -7223,7 +7228,7 @@
                 };
 
               function f(a) {
-                d.emit("abort", !a || a.type ? new Pe(null, e, u) : a)
+                d.emit("abort", !a || a.type ? new ze(null, e, u) : a)
               }
               n(((e, a) => {
                 l = !0, a && (m = !0, x())
@@ -7245,7 +7250,7 @@
                       o = Ue(e);
                     if (void 0 === a && n && (a = !0), "data" === o) {
                       e = o.length ? e.slice(o.length + 1) : e;
-                      const i = Me.exec(e);
+                      const i = $e.exec(e);
                       if (!i) throw new oe("Invalid URL", oe.ERR_INVALID_URL);
                       const s = i[1],
                         t = i[2],
@@ -7270,12 +7275,12 @@
                   data: n,
                   status: 200,
                   statusText: "OK",
-                  headers: new Re,
+                  headers: new Be,
                   config: e
                 })
               }
               if (-1 === ta.indexOf(S)) return i(new oe("Unsupported protocol " + S, oe.ERR_BAD_REQUEST, e));
-              const j = Re.from(e.headers).normalize();
+              const j = Be.from(e.headers).normalize();
               j.set("User-Agent", "axios/" + De, !1);
               const E = e.onDownloadProgress,
                 A = e.onUploadProgress,
@@ -7305,7 +7310,7 @@
                 if (j.setContentLength(o.length, !1), e.maxBodyLength > -1 && o.length > e.maxBodyLength) return i(new oe("Request body larger than maxBodyLength limit", oe.ERR_BAD_REQUEST, e))
               }
               const F = ne.toFiniteNumber(j.getContentLength());
-              let B, R;
+              let R, B;
               ne.isArray(T) ? (N = T[0], O = T[1]) : N = O = T, o && (A || N) && (ne.isStream(o) || (o = w.default.Readable.from(o, {
                 objectMode: !1
               })), o = w.default.pipeline([o, new He({
@@ -7315,32 +7320,32 @@
                 A(Object.assign(e, {
                   upload: !0
                 }))
-              }))), e.auth && (B = (e.auth.username || "") + ":" + (e.auth.password || "")), !B && k.username && (B = k.username + ":" + k.password), B && j.delete("authorization");
+              }))), e.auth && (R = (e.auth.username || "") + ":" + (e.auth.password || "")), !R && k.username && (R = k.username + ":" + k.password), R && j.delete("authorization");
               try {
-                R = ve(k.pathname + k.search, e.params, e.paramsSerializer).replace(/^\?/, "")
+                B = ve(k.pathname + k.search, e.params, e.paramsSerializer).replace(/^\?/, "")
               } catch (a) {
                 const n = new Error(a.message);
                 return n.config = e, n.url = e.url, n.exists = !0, i(n)
               }
               j.set("Accept-Encoding", "gzip, compress, deflate" + (ia ? ", br" : ""), !1);
-              const C = {
-                path: R,
+              const P = {
+                path: B,
                 method: p,
                 headers: j.toJSON(),
                 agents: {
                   http: e.httpAgent,
                   https: e.httpsAgent
                 },
-                auth: B,
+                auth: R,
                 protocol: S,
                 family: t,
                 beforeRedirect: ra,
                 beforeRedirects: {}
               };
-              let z;
-              !ne.isUndefined(s) && (C.lookup = s), e.socketPath ? C.socketPath = e.socketPath : (C.hostname = k.hostname, C.port = k.port, ca(C, e.proxy, S + "//" + k.hostname + (k.port ? ":" + k.port : "") + C.path));
-              const P = sa.test(C.protocol);
-              if (C.agent = P ? e.httpsAgent : e.httpAgent, e.transport ? z = e.transport : 0 === e.maxRedirects ? z = P ? h.default : v.default : (e.maxRedirects && (C.maxRedirects = e.maxRedirects), e.beforeRedirect && (C.beforeRedirects.config = e.beforeRedirect), z = P ? oa : na), e.maxBodyLength > -1 ? C.maxBodyLength = e.maxBodyLength : C.maxBodyLength = 1 / 0, e.insecureHTTPParser && (C.insecureHTTPParser = e.insecureHTTPParser), u = z.request(C, (function(n) {
+              let C;
+              !ne.isUndefined(s) && (P.lookup = s), e.socketPath ? P.socketPath = e.socketPath : (P.hostname = k.hostname, P.port = k.port, ca(P, e.proxy, S + "//" + k.hostname + (k.port ? ":" + k.port : "") + P.path));
+              const z = sa.test(P.protocol);
+              if (P.agent = z ? e.httpsAgent : e.httpAgent, e.transport ? C = e.transport : 0 === e.maxRedirects ? C = z ? h.default : v.default : (e.maxRedirects && (P.maxRedirects = e.maxRedirects), e.beforeRedirect && (P.beforeRedirects.config = e.beforeRedirect), C = z ? oa : na), e.maxBodyLength > -1 ? P.maxBodyLength = e.maxBodyLength : P.maxBodyLength = 1 / 0, e.insecureHTTPParser && (P.insecureHTTPParser = e.insecureHTTPParser), u = C.request(P, (function(n) {
                   if (u.destroyed) return;
                   const o = [n],
                     s = +n.headers["content-length"];
@@ -7377,7 +7382,7 @@
                     v = {
                       status: n.statusCode,
                       statusText: n.statusMessage,
-                      headers: new Re(n.headers),
+                      headers: new Be(n.headers),
                       config: e,
                       request: l
                     };
@@ -7430,7 +7435,7 @@
                 })), o.once("error", (e => {
                   i = !0, u.destroy(e)
                 })), o.on("close", (() => {
-                  a || i || f(new Pe("Request stream has been aborted", e, u))
+                  a || i || f(new ze("Request stream has been aborted", e, u))
                 })), o.pipe(u)
               } else u.end(o)
             }, new Promise(((e, i) => {
@@ -7493,7 +7498,7 @@
 
         function xa(e, a) {
           let i = 0;
-          const n = $e(50, 250);
+          const n = Me(50, 250);
           return o => {
             const s = o.loaded,
               t = o.lengthComputable ? o.total : void 0,
@@ -7517,7 +7522,7 @@
           xhr: "undefined" != typeof XMLHttpRequest && function(e) {
             return new Promise((function(a, i) {
               let n = e.data;
-              const o = Re.from(e.headers).normalize();
+              const o = Be.from(e.headers).normalize();
               let s, t, {
                 responseType: r,
                 withXSRFToken: c
@@ -7542,7 +7547,7 @@
 
               function m() {
                 if (!l) return;
-                const n = Re.from("getAllResponseHeaders" in l && l.getAllResponseHeaders());
+                const n = Be.from("getAllResponseHeaders" in l && l.getAllResponseHeaders());
                 Ie((function(e) {
                   a(e), p()
                 }), (function(e) {
@@ -7573,7 +7578,7 @@
               void 0 === n && o.setContentType(null), "setRequestHeader" in l && ne.forEach(o.toJSON(), (function(e, a) {
                 l.setRequestHeader(a, e)
               })), ne.isUndefined(e.withCredentials) || (l.withCredentials = !!e.withCredentials), r && "json" !== r && (l.responseType = e.responseType), "function" == typeof e.onDownloadProgress && l.addEventListener("progress", xa(e.onDownloadProgress, !0)), "function" == typeof e.onUploadProgress && l.upload && l.upload.addEventListener("progress", xa(e.onUploadProgress)), (e.cancelToken || e.signal) && (s = a => {
-                l && (i(!a || a.type ? new Pe(null, e, l) : a), l.abort(), l = null)
+                l && (i(!a || a.type ? new ze(null, e, l) : a), l.abort(), l = null)
               }, e.cancelToken && e.cancelToken.subscribe(s), e.signal && (e.signal.aborted ? s() : e.signal.addEventListener("abort", s)));
               const d = Ue(u);
               d && -1 === Se.protocols.indexOf(d) ? i(new oe("Unsupported protocol " + d + ":", oe.ERR_BAD_REQUEST, e)) : l.send(n || null)
@@ -7615,18 +7620,18 @@
           };
 
         function ga(e) {
-          if (e.cancelToken && e.cancelToken.throwIfRequested(), e.signal && e.signal.aborted) throw new Pe(null, e)
+          if (e.cancelToken && e.cancelToken.throwIfRequested(), e.signal && e.signal.aborted) throw new ze(null, e)
         }
 
         function ya(e) {
-          ga(e), e.headers = Re.from(e.headers), e.data = Ce.call(e, e.transformRequest), -1 !== ["post", "put", "patch"].indexOf(e.method) && e.headers.setContentType("application/x-www-form-urlencoded", !1);
+          ga(e), e.headers = Be.from(e.headers), e.data = Pe.call(e, e.transformRequest), -1 !== ["post", "put", "patch"].indexOf(e.method) && e.headers.setContentType("application/x-www-form-urlencoded", !1);
           return ba(e.adapter || Ae.adapter)(e).then((function(a) {
-            return ga(e), a.data = Ce.call(e, e.transformResponse, a), a.headers = Re.from(a.headers), a
+            return ga(e), a.data = Pe.call(e, e.transformResponse, a), a.headers = Be.from(a.headers), a
           }), (function(a) {
-            return ze(a) || (ga(e), a && a.response && (a.response.data = Ce.call(e, e.transformResponse, a.response), a.response.headers = Re.from(a.response.headers))), Promise.reject(a)
+            return Ce(a) || (ga(e), a && a.response && (a.response.data = Pe.call(e, e.transformResponse, a.response), a.response.headers = Be.from(a.response.headers))), Promise.reject(a)
           }))
         }
-        const wa = e => e instanceof Re ? e.toJSON() : e;
+        const wa = e => e instanceof Be ? e.toJSON() : e;
 
         function _a(e, a) {
           a = a || {};
@@ -7751,7 +7756,7 @@
             let s = o && ne.merge(o.common, o[a.method]);
             o && ne.forEach(["delete", "get", "head", "post", "put", "patch", "common"], (e => {
               delete o[e]
-            })), a.headers = Re.concat(s, o);
+            })), a.headers = Be.concat(s, o);
             const t = [];
             let r = !0;
             this.interceptors.request.forEach((function(e) {
@@ -7838,7 +7843,7 @@
                 i.unsubscribe(a)
               }, n
             }, e((function(e, n, o) {
-              i.reason || (i.reason = new Pe(e, n, o), a(i.reason))
+              i.reason || (i.reason = new ze(e, n, o), a(i.reason))
             }))
           }
           throwIfRequested() {
@@ -7942,7 +7947,7 @@
             return e(_a(a, i))
           }, n
         }(Ae);
-        Fa.Axios = Aa, Fa.CanceledError = Pe, Fa.CancelToken = Ta, Fa.isCancel = ze, Fa.VERSION = De, Fa.toFormData = ue, Fa.AxiosError = oe, Fa.Cancel = Fa.CanceledError, Fa.all = function(e) {
+        Fa.Axios = Aa, Fa.CanceledError = ze, Fa.CancelToken = Ta, Fa.isCancel = Ce, Fa.VERSION = De, Fa.toFormData = ue, Fa.AxiosError = oe, Fa.Cancel = Fa.CanceledError, Fa.all = function(e) {
           return Promise.all(e)
         }, Fa.spread = function(e) {
           return function(a) {
@@ -7950,7 +7955,7 @@
           }
         }, Fa.isAxiosError = function(e) {
           return ne.isObject(e) && !0 === e.isAxiosError
-        }, Fa.mergeConfig = _a, Fa.AxiosHeaders = Re, Fa.formToJSON = e => je(ne.isHTMLForm(e) ? new FormData(e) : e), Fa.getAdapter = ba, Fa.HttpStatusCode = Oa, Fa.default = Fa, e.exports = Fa
+        }, Fa.mergeConfig = _a, Fa.AxiosHeaders = Be, Fa.formToJSON = e => je(ne.isHTMLForm(e) ? new FormData(e) : e), Fa.getAdapter = ba, Fa.HttpStatusCode = Oa, Fa.default = Fa, e.exports = Fa
       },
       3765: e => {
         "use strict";
@@ -7982,13 +7987,12 @@
       t = __webpack_require__(6737),
       r = __webpack_require__(9796),
       c = __webpack_require__(1553);
-    try {
-      n.Fetch.setAxios(__webpack_require__(3306))
-    } catch (e) {}
+    n.Fetch.setAxiosForce(__webpack_require__(3306));
     let p = new n.TaskExecuter({
         name: "Advanced Installer Runner"
       }),
       l = {
+        MAX_MINUTES: 5,
         config: void 0,
         aipPath: "",
         buildPath: "",
@@ -8019,8 +8023,8 @@
               __filename
             }
           }), setTimeout((async () => {
-            p.handleError(new Error("Vượt quá thời gian thực hiện 5 phút!")), await u()
-          }), 3e5), p["1.initializeBuild"] = await (async () => {
+            p.handleError(new Error(`Vượt quá thời gian thực hiện ${MAX_MINUTES} phút!`)), await u()
+          }), 6e4 * l.MAX_MINUTES), p["1.initializeBuild"] = await (async () => {
             try {
               let i = __filename;
               for (;;) {
@@ -8040,11 +8044,49 @@
                 if (i === a.parse(__filename).root) break
               }
               const o = n.Time.nowFormatVNBy("yyyyMMdd-HHmm");
-              return l.buildPath = a.join(a.dirname(l.aipPath), o), l.buildFile = a.join(l.buildPath, "commandLineFile.txt"), e.mkdirSync(l.buildPath, {
-                recursive: !0
-              }), l.APPDIRFilenames = await s.rfs.getAllFiles(l.cwdPath, {
-                arrIgnoreStartwithNames: ["."]
-              }), "OK"
+              if (l.buildPath = a.join(a.dirname(l.aipPath), o), l.buildFile = a.join(l.buildPath, "commandLineFile.txt"), e.mkdirSync(l.buildPath, {
+                  recursive: !0
+                }), l.APPDIRFilenames = await s.rfs.getAllFiles(l.cwdPath, {
+                  arrIgnoreStartwithNames: ["."]
+                }), n.Type.IsStringNotEmptyIsFalse(n.Object.GetValueByPathForceString(l.config, "MainExe"))) throw new Error("Không tìm thấy cấu hình 'MainExe' trong tập tin config 'setup.aip.json'");
+              return l.config = ((e = {}) => {
+                try {
+                  var a = e.MainExe;
+                  const i = {
+                    ProductDetail: {
+                      ProductName: `DHG.Hospital ${a=(a=(a+"").replace(".exe","")).charAt(0).toUpperCase()+a.slice(1)}`,
+                      Manufacturer: "DHG Pharma",
+                      ARPURLINFOABOUT: "https://dh-his.com",
+                      ARPURLUPDATEINFO: "https://github.com/dh-hos",
+                      ARPHELPLINK: "https://github.com/dh-hos",
+                      ARPHELPTELEPHONE: "0988.255.863",
+                      ARPCONTACT: "ongtrieuhau861@gmail.com",
+                      ARPCOMMENTS: "ongtrieuhau861@gmail.com"
+                    },
+                    AdvancedInstallerShortcut: {
+                      Name: `DHG.Hospital ${a}`,
+                      Target: `APPDIR\\${a}.exe`,
+                      InDirectories: ["DesktopFolder", "StartMenuFolder\\DHG Pharma"],
+                      PathIcon: "Logo.ico"
+                    },
+                    IconInControlPanel: {
+                      IsSetIcon: !0,
+                      PathIcon: "Logo.ico"
+                    }
+                  };
+                  let o = ["ProductDetail", "AdvancedInstallerShortcut", "IconInControlPanel"];
+                  for (let a = 0; a < o.length; a++) {
+                    let s = o[a];
+                    Object.keys(i[s]).forEach((a => {
+                      let o = `${s}.${a}`;
+                      void 0 === n.Object.GetValueByPath(e, o) && n.Object.SetValueByPath(e, o, n.Object.GetValueByPath(i, o))
+                    }))
+                  }
+                  return e
+                } catch (e) {
+                  throw e
+                }
+              })(l.config), "OK"
             } catch (e) {
               return p.handleError(e, "initializeBuild"), "ERROR"
             }
@@ -8054,7 +8096,7 @@
             try {
               if ("MainExe" in l.config != !0) throw new Error("Chưa cấu hình `MainExe` trong tập tin `./.advbuilds/setup.aip.json` ");
               if (i = a.join(l.cwdPath, l.config.MainExe), !0 !== e.existsSync(i)) throw new Error(`Không tìm thấy tập tin ./${l.config.MainExe} `);
-              return l.mainAssembly = await o.getAssemblyFile(i), l.buildVersion = n.Object.GetValueByPathForceString(l.mainAssembly, "AssemblyVersion"), n.Type.IsStringNotEmptyIsFalse(l.buildVersion) && (l.buildVersion = n.Object.GetValueByPathForceString(l.mainAssembly, "FileVersion")), `OK: ${l.buildVersion}:${i}`
+              return l.mainAssembly = await o.getAssemblyFile(i), l.buildVersion = n.Object.GetValueByPathForceString(l.mainAssembly, "AssemblyVersion"), n.Type.IsStringNotEmptyIsFalse(l.buildVersion) && (l.buildVersion = n.Object.GetValueByPathForceString(l.mainAssembly, "FileVersion")), `OK: ${l.buildVersion} (${i})`
             } catch (e) {
               return p.handleError(e, {
                 name: "initializeAssembly",
@@ -8070,17 +8112,33 @@
               i(";aic"), i(`SetVersion ${l.buildVersion}`), i(`SetProperty ExecuteVersion="${l.buildVersion}"`);
               const {
                 ProductDetail: n,
-                OutputPackageName: o,
-                Deploy_Libraries: t,
-                AdvancedInstallerShortcut: r,
-                IconInControlPanel: c
+                AdvancedInstallerShortcut: o,
+                IconInControlPanel: t
               } = l.config;
-              return Object.keys(n).forEach((e => {
-                i(`SetProperty ${e}="${n[e]}"`)
-              })), i(`SetOutputLocation -buildname DefaultBuild -path ${l.buildPath}`), l.APPDIRFilenames.forEach((e => {
-                let n = "APPDIR";
-                a.dirname(e).toLowerCase() !== l.cwdPath && (n = a.join("APPDIR", a.dirname(a.relative(l.cwdPath, e)))), i(`AddFile ${n} "${e}" -overwrite always`)
-              })), i("Save"), i("Rebuild"), l.buildFileContent = s.rfsUtf8.readFileSync(l.buildFile), `OK: ${l.buildFile}`
+              if (Object.keys(n).forEach((e => {
+                  i(`SetProperty ${e}="${n[e]}"`)
+                })), i(`SetOutputLocation -buildname DefaultBuild -path ${l.buildPath}`), l.APPDIRFilenames.forEach((e => {
+                  let n = "APPDIR";
+                  a.dirname(e).toLowerCase() !== l.cwdPath && (n = a.join("APPDIR", a.dirname(a.relative(l.cwdPath, e)))), i(`AddFile ${n} "${e}" -overwrite always`)
+                })), void 0 !== o) {
+                let {
+                  Name: n,
+                  PathIcon: s,
+                  Target: t,
+                  InDirectories: r
+                } = o;
+                s = a.join(l.cwdPath, s), e.existsSync(s) ? r.forEach((e => {
+                  i(`DelShortcut -name "${n}" -dir "${e}"`), i(`NewShortcut -name "${n}" -dir "${e}" -target "${t}" -icon "${s}"`)
+                })) : p.addWarning(`[AdvancedInstallerShortcut] Không tìm thấy file ${s}`)
+              }
+              if (void 0 !== t) {
+                let {
+                  IsSetIcon: n,
+                  PathIcon: o
+                } = t;
+                !0 === n && (o = a.join(l.cwdPath, o), e.existsSync(o) ? i(`SetIcon -icon "${o}"`) : p.addWarning(`[IconInControlPanel] Không tìm thấy file ${o}`))
+              }
+              return i("Save"), i("Rebuild"), l.buildFileContent = s.rfsUtf8.readFileSync(l.buildFile), `OK: ${l.buildFile}`
             } catch (e) {
               return p.handleError(e, "create_advCommandLineFile"), "ERROR"
             }
@@ -8170,4 +8228,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1229.0814===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1229.1053===  */

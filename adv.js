@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1229.0802=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1229.0814=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1229.0802]:${e}`)
+              console.log(`[STARTED;1.23.1229.0814]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2225,7 +2225,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1229.0802"
+                  e.WEBPACK_BUILD_VERSION = "1.23.1229.0814"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2777,7 +2777,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1229.0802",
+              WEBPACK_BUILD_VERSION: "1.23.1229.0814",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -8054,7 +8054,7 @@
             try {
               if ("MainExe" in l.config != !0) throw new Error("Chưa cấu hình `MainExe` trong tập tin `./.advbuilds/setup.aip.json` ");
               if (i = a.join(l.cwdPath, l.config.MainExe), !0 !== e.existsSync(i)) throw new Error(`Không tìm thấy tập tin ./${l.config.MainExe} `);
-              return l.mainAssembly = await o.getAssemblyFile(i), l.buildVersion = n.Object.GetValueByPathForceString(l.mainAssembly, "AssemblyVersion"), n.Type.IsStringNotEmptyIsFalse(l.buildVersion) && (l.buildVersion = n.Object.GetValueByPathForceString(l.mainAssembly, "FileVersion")), "OK"
+              return l.mainAssembly = await o.getAssemblyFile(i), l.buildVersion = n.Object.GetValueByPathForceString(l.mainAssembly, "AssemblyVersion"), n.Type.IsStringNotEmptyIsFalse(l.buildVersion) && (l.buildVersion = n.Object.GetValueByPathForceString(l.mainAssembly, "FileVersion")), `OK: ${l.buildVersion}:${i}`
             } catch (e) {
               return p.handleError(e, {
                 name: "initializeAssembly",
@@ -8080,7 +8080,7 @@
               })), i(`SetOutputLocation -buildname DefaultBuild -path ${l.buildPath}`), l.APPDIRFilenames.forEach((e => {
                 let n = "APPDIR";
                 a.dirname(e).toLowerCase() !== l.cwdPath && (n = a.join("APPDIR", a.dirname(a.relative(l.cwdPath, e)))), i(`AddFile ${n} "${e}" -overwrite always`)
-              })), i("Save"), i("Rebuild"), l.buildFileContent = s.rfsUtf8.readFileSync(l.buildFile), "OK"
+              })), i("Save"), i("Rebuild"), l.buildFileContent = s.rfsUtf8.readFileSync(l.buildFile), `OK: ${l.buildFile}`
             } catch (e) {
               return p.handleError(e, "create_advCommandLineFile"), "ERROR"
             }
@@ -8120,8 +8120,10 @@
             }
           })(), !0 !== p.checkStepOK("5.compressZip")) throw new Error("5.compressZip: Failed");
         if (p["6.uploadZip"] = await (async () => {
-            let i = [c.advUpload(l.config.MainExe, l.outputPathZip)];
+            let i = [];
             await (async () => {
+              i.push(c.advUpload(l.config.MainExe, l.outputPathZip))
+            })(), await (async () => {
               const o = (a = "") => {
                   try {
                     return !0 !== e.existsSync(a) ? [] : n.String.parseBetweenForceArrayEmptyWithoutTrim("[", "]", s.rfsUtf8.readFileSync(a))
@@ -8155,7 +8157,7 @@
             if (l.downloadLinks = await Promise.allSettled(i).then((e => {
                 var a = e.filter((e => "fulfilled" === e.status));
                 return n.Type.IsArrayNotEmpty(a) ? a.map((e => e.value)) : []
-              })), n.Type.IsArrayNotEmpty(l.downloadLinks)) return `OK:${l.downloadLinks.reduce(((e,a)=>e=e+";"+a),"")}`
+              })), n.Type.IsArrayNotEmpty(l.downloadLinks)) return `OK: ${JSON.stringify(l.downloadLinks,null,2)}`
           })(), !0 !== p.checkStepOK("6.uploadZip")) throw new Error("6.uploadZip: Failed");
         p.endTask({
           showLog: !0
@@ -8168,4 +8170,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1229.0802===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1229.0814===  */

@@ -1,4 +1,4 @@
-/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1231.1610=== */
+/*! [adv.js]; ===WEBPACK BUILD: --buildversion=1.24.0108.0947=== */
 (() => {
   var __webpack_modules__ = {
       9118: (e, a, i) => {
@@ -1744,7 +1744,7 @@
             const logStarted = ({
               filename: e = ""
             }) => {
-              console.log(`[STARTED;1.23.1231.1610]:${e}`)
+              console.log(`[STARTED;1.24.0108.0947]:${e}`)
             };
             class Gscript {
               constructor() {
@@ -2225,7 +2225,7 @@
                   e.error = a, e.errorString = a + ""
                 }
                 try {
-                  e.WEBPACK_BUILD_VERSION = "1.23.1231.1610"
+                  e.WEBPACK_BUILD_VERSION = "1.24.0108.0947"
                 } catch {}
                 try {
                   e.DataInputs = {};
@@ -2782,7 +2782,7 @@
             this.startTime = new Date, this.startTimeVN = rTime.formatVN(this.startTime);
             let i = {
               ...a,
-              WEBPACK_BUILD_VERSION: "1.23.1231.1610",
+              WEBPACK_BUILD_VERSION: "1.24.0108.0947",
               cwd: process.cwd(),
               __by: "startTask"
             };
@@ -7991,7 +7991,7 @@
         name: "Advanced Installer Runner"
       }),
       p = {
-        MAX_MINUTES: 5,
+        MAX_MINUTES: 7,
         config: void 0,
         aipPath: "",
         buildPath: "",
@@ -8021,7 +8021,7 @@
               __filename
             }
           }), setTimeout((async () => {
-            c.handleError(new Error(`Vượt quá thời gian thực hiện ${MAX_MINUTES} phút!`)), await l()
+            c.handleError(new Error(`Vượt quá thời gian thực hiện ${p.MAX_MINUTES} phút!`)), await l()
           }), 6e4 * p.MAX_MINUTES), c["1.initializeBuild"] = await (async () => {
             try {
               let i = __filename;
@@ -8207,4 +8207,4 @@
     })()
   })()
 })();
- /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.23.1231.1610===  */
+ /*!  [adv.js]; ===WEBPACK BUILD: --buildversion=1.24.0108.0947===  */

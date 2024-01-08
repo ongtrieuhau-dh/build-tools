@@ -716,6 +716,7 @@ const AES = (() => {
       v.errorMessage = error.message;
       console.error(error.message);
    } finally {
+      v.secret = "***";
       console.log({ ...v });
    }
 })();
